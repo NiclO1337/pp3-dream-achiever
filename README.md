@@ -30,3 +30,177 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 ---
 
 Happy coding!
+
+
+# Dream Achiever
+
+![Amiresponsive image]( TODO: Add link )
+
+
+Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
+
+<hr>
+
+## Table of contents
+
+TODO: Update table of content
+
+* [User Experience (UX)](#user-experience-ux)
+    * [User stories](#user-stories)
+        * [Website goals](#website-goals)
+        * [User goals](#user-goals)
+* [Design](#design)
+    * [Colours](#colours)
+    * [Typography](#typography)
+    * [Images](#images)
+    * [Wireframes](#wireframes)
+    * [Accessiblity](#accessiblity)
+* [Features](#features)
+    * [The welcome image](#the-welcome-image)
+    * [The navigation bar](#the-navigation-bar)
+    * [Links](#links)
+    * [The main content](#the-main-content)
+    * [The recipe section](#the-recipe-section)    
+    * [The Gallery page](#the-gallery-page)
+    * [The About us page](#the-about-us-page)
+    * [The Footer](#the-footer)
+* [Future features](#future-features)
+* [Technologies used](#technologies-used)
+    * [Languages](#languages)
+    * [Frameworks & Tools](#frameworks--tools)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Credits](#credits)
+    * [Content](#content)
+    * [Media](#media)
+    * [Code](#code)
+
+<hr>
+
+## User Experience (UX)
+
+TODO: Add info about site purpose and target user
+
+
+
+
+### User stories
+
+#### Website goals
+- 
+- 
+- 
+- 
+- 
+
+#### User goals
+- 
+- 
+- 
+- 
+
+
+
+## Design
+
+### Wireframes
+
+### Flowchart
+
+
+## Features
+
+### Feature 1
+
+TODO: Add text about feature
+
+<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO: ADD link to image of feature" alt="TODO: ADD name of feature" width="700"/></p> </details>
+
+
+### Feature 2
+
+TODO: Add text about feature
+
+<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO: ADD link to image of feature" alt="TODO: ADD name of feature" width="700"/></p> </details>
+
+
+## Future features
+- 
+- 
+- 
+
+
+## Technologies used
+
+### Languages
+- Python
+
+### Frameworks & Tools
+
+- Git
+- GitHub
+- Balsamiq
+- Lucidchart
+- VS Code
+- w3schools
+- Stack Overflow
+
+
+## Testing
+
+Testing made in separate file [testing.md](testing.md)
+
+## Deployment
+Deployed to Heroku
+
+
+
+### Local development
+
+#### Forking the project for local development
+
+- Log in (or sign up) to Github.
+- Go to the repository for this project, [ TODO: ADD NAME ]( TODO: ADD LINK )
+- Click the Fork button in the top right corner.
+
+#### Cloning the project for local development
+
+- Log in (or sign up) to Github.
+- Go to the repository for this project, [ TODO: ADD NAME ]( TODO: ADD LINK )
+- Click on the code button, select whether you would like to clone with HTTPS, SSH, or GitHub CLI, and copy the link shown.
+Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+Type 'git clone' into the terminal and then paste the link you copied in step 3. 
+- Press enter.
+
+
+Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
+
+
+## Credits
+
+### Content
+
+
+### Media
+
+#### Favicon
+
+
+#### Main page
+
+
+
+
+### Code
+
+- Inspiration from my own previous portfolio projects.
+
+- 
+
+- 
+
+- 
+
+- 
+
+- 
