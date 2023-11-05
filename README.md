@@ -147,6 +147,8 @@ TODO: Add text about feature
 - w3schools
 - Stack Overflow
 
+## Data model
+
 
 ## Testing
 
@@ -197,7 +199,7 @@ Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
 
 - Inspiration from my own previous portfolio projects.
 
-- 
+- Code institute for providing the template with the deployment terminal.
 
 - 
 
