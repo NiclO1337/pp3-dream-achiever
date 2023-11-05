@@ -32,6 +32,8 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 Happy coding!
 
 
+
+
 # Dream Achiever
 
 ![Amiresponsive image]( TODO: Add link )
@@ -148,7 +150,7 @@ TODO: Add text about feature
 
 ## Testing
 
-Testing made in separate file [testing.md](testing.md)
+Testing made in separate file [TESTING.md](TESTING.md)
 
 ## Deployment
 Deployed to Heroku
