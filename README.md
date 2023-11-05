@@ -89,15 +89,15 @@ TODO: Add info about site purpose and target user
 ### User stories
 
 #### Website goals
-- 
-- 
+- Help people clarify their goals and think about ways to achive them
+- Give users financial advice to help reach their goal
 - 
 - 
 - 
 
 #### User goals
-- 
-- 
+- Think about goals and dreams
+- Get helpful tips on how to achive those goals and dreams
 - 
 - 
 
