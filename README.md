@@ -109,6 +109,7 @@ TODO: Add info about site purpose and target user
 
 ### Flowchart
 
+<p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1699357133/Flowchart_-_PP3_phcfzu.png" alt="Flowchart image" width="600"/></p>
 
 ## Features
 
