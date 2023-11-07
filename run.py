@@ -30,6 +30,7 @@ def goal(user):
   user.update({"Cost of goal": cost_of_goal})
   return user
 
+
 def income(user):
   """
   Ask user to input income data
@@ -37,6 +38,16 @@ def income(user):
   income = input('Income:\n')
   user.update({"Income": income})
   return user
+
+
+def expenses(user):
+  """
+  Ask user to input expenses data
+  """
+  expenses = input('Expenses:\n')
+  user.update({"Expenses": expenses})
+  return user
+
 
 def main():
   """
@@ -52,6 +63,8 @@ def main():
   goal(user)
   print(user)
   income(user)
+  print(user)
+  expenses(user)
   print(user)
 
 main()
