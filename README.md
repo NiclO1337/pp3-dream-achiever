@@ -107,24 +107,37 @@ TODO: Add info about site purpose and target user
 
 ### Wireframes
 
+<p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1699387577/PP3_Wireframe_dxzz7q.png
+" alt="Image of wireframes" width="800"/></p>
+
+
 ### Flowchart
 
 <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1699359420/Flowchart_-_PP3_hyhjx7.png" alt="Flowchart image" width="800"/></p>
 
 ## Features
 
-### Feature 1
+### Welcome screen
 
 TODO: Add text about feature
 
 <details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO: ADD link to image of feature" alt="TODO: ADD name of feature" width="700"/></p> </details>
 
 
-### Feature 2
+### Dreams and goals
+
+Starting this budget calculator with thinking about dreams and fun life goals is the best way to make something as boring as a budget calculator into a positive and uplifting user experience.
+
+<details><summary>Screenshot of the dreams and goals feature</summary> <p align="left"><img src="TODO: ADD link to image of feature" alt="Picture of dreams and goals of feature" width="700"/></p> </details>
+
+
+### Feature 3
 
 TODO: Add text about feature
 
 <details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO: ADD link to image of feature" alt="TODO: ADD name of feature" width="700"/></p> </details>
+
+
 
 
 ## Future features
