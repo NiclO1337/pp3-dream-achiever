@@ -128,7 +128,7 @@ TODO: Add text about feature
 
 
 ## Future features
-- 
+- Add option to select different currencies to be displayed
 - 
 - 
 
@@ -185,6 +185,9 @@ Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
 
 ### Content
 
+- [Budgeting Guidelines](https://nomoredebts.org/budgeting/budgeting-guidelines) from Credit Counselling Society
+
+- Budgeting Basics from UNFCU: [The 50-30-20 Rule](https://www.unfcu.org/guides/the-50-30-20-rule/)
 
 ### Media
 
