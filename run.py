@@ -31,21 +31,21 @@ def goal(user):
   return user
 
 
-def income(user):
+def get_income(user):
   """
   Ask user to input income data
   """
   income = input('Income:\n')
-  user.update({"Income": income})
+  user.update({"Income": int(income)})
   return user
 
 
-def expenses(user):
+def get_expenses(user):
   """
   Ask user to input expenses data
   """
   expenses = input('Expenses:\n')
-  user.update({"Expenses": expenses})
+  user.update({"Expenses": int(expenses)})
   return user
 
 
@@ -61,10 +61,9 @@ def main():
   welcome()
   dream()
   goal(user)
+  get_income(user)
+  get_expenses(user)
   print(user)
-  income(user)
-  print(user)
-  expenses(user)
-  print(user)
+
 
 main()
