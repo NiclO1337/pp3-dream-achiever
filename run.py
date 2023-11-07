@@ -3,11 +3,17 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 def welcome():
-  print('Welcome message')
+  print('\nWelcome message\n')
+  print('Press ENTER to continue')
+
+
+def dream():
+  print('Dream')
   
 
 def main():
   welcome()
+  dream()
 
 
 main()
