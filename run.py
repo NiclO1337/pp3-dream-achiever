@@ -18,22 +18,30 @@ def dream():
   input('Press ENTER to continue\n')
 
 
-def goal():
+def goal(user):
   """
   Function to ask user to input a specific financial goal
   """
   print('Goal')
-  input('Goal:\n')
-  input('Estimate cost of goal:\n')
+  goal = input('Goal:\n')
+  cost_of_goal = input('Estimate cost of goal:\n')
 
+  user.update({"Goal": goal})
+  user.update({"Cost of goal": cost_of_goal})
+  return user
 
 def main():
   """
   Main function to call other function in the correct order
   """
+  user = {"Goal": "",
+          "Cost of goal": "",
+          "Income": "",
+          "Expenses": ""}
+  
   welcome()
   dream()
-  goal()
-
+  goal(user)
+  print(user)
 
 main()
