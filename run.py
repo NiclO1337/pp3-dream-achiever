@@ -30,6 +30,14 @@ def goal(user):
   user.update({"Cost of goal": cost_of_goal})
   return user
 
+def income(user):
+  """
+  Ask user to input income data
+  """
+  income = input('Income:\n')
+  user.update({"Income": income})
+  return user
+
 def main():
   """
   Main function to call other function in the correct order
@@ -42,6 +50,8 @@ def main():
   welcome()
   dream()
   goal(user)
+  print(user)
+  income(user)
   print(user)
 
 main()
