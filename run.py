@@ -88,6 +88,7 @@ def main():
     user = {"Goal": "",
             "Cost of goal": "",
             "Income": "",
+            "Extra income": "",
             "Expenses": ""}
 
     welcome()
@@ -95,6 +96,7 @@ def main():
     goal(user)
     cost_of_goal = get_data(user, "Cost of goal")
     income = get_data(user, "Income")
+    extra_income = get_data(user, "Extra income")
     expenses = get_data(user, "Expenses")
     print(user)
 
