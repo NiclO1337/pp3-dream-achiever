@@ -2,79 +2,91 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
-def welcome():
-  """
-  Start application on a welcome screen with a message
-  """
-  print('\nWelcome message\n')
-  input('Press ENTER to continue\n')
+# def welcome():
+#   """
+#   Start application on a welcome screen with a message
+#   """
+#   print('\nWelcome message\n')
+#   input('Press ENTER to continue\n')
 
 
-def dream():
-  """
-  Screen where user think about their dreams
-  """
-  print('Dream\n')  
-  input('Press ENTER to continue\n')
+# def dream():
+#   """
+#   Screen where user think about their dreams
+#   """
+#   print('Dream\n')  
+#   input('Press ENTER to continue\n')
 
 
-def goal(user):
-  """
-  Function to ask user to input a specific financial goal
-  """
-  print('Goal')
-  goal = input('Goal:\n')
-  cost_of_goal = input('Estimate cost of goal:\n')
+# def goal(user):
+#   """
+#   Function to ask user to input a specific financial goal
+#   """
+#   print('Goal')
+#   goal = input('Goal:\n')
+#   cost_of_goal = input('Estimate cost of goal:\n')
 
-  user.update({"Goal": goal})
-  user.update({"Cost of goal": cost_of_goal})
-  return user
+#   user.update({"Goal": goal})
+#   user.update({"Cost of goal": cost_of_goal})
+#   return user
 
 
-def get_income(user):
+def get_data(user, data):
   """
-  Ask user to input income data
+  Ask user to input data
   """
   while True:
 
-    income = input('Income:\n')
-    if validate_numbers(income) == True:
-      user.update({"Income": int(income)})
+    print(user)
+    print(data)
+    data_type = data
+    data = input('{data_type}:\n')
+    if validate_numbers(data) == True:
+      user.update({data_type: int(data)})
       return user
+  
 
+# def get_income(user):
+#   """
+#   Ask user to input income data
+#   """
+#   while True:
 
-def get_expenses(user):
-  """
-  Ask user to input expenses data
-  """
-  expenses = input('Expenses:\n')
-  user.update({"Expenses": int(expenses)})
-  return user
+#     income = input('Income:\n')
+#     if validate_numbers(income) == True:
+#       user.update({"Income": int(income)})
+#       return user
+    
+
+# def get_expenses(user):
+#   """
+  # Ask user to input expenses data
+#   """
+#   expenses = input('Expenses:\n')
+#   user.update({"Expenses": int(expenses)})
+#   return user
 
 
 def validate_numbers(input):
   """
-  Check so that input is number and if it is not raise an error.
+  Check input data to see if it meets the required critera
   """
-  
-  # try:
-  #   input == ""
-  # except ValueError:
-  #   print(f'\nInvalid data: must enter a number \n(Enter 0 if category is not applicable to you)')
-  #   return False
-  
-  if input == "":
-    print(f'\nInvalid data: must enter a number \n(Enter 0 if category is not applicable to you)')
-    return False
 
+  # Check if input is empty
+  if input == "":
+    print(f'\nInvalid data: must enter a number \n(Enter 0 if category is not applicable to you)\n')
+    return False
+  
+  # Check if input is a number
   try:    
     int(input)
   except ValueError:
-    print(f'\nInvalid data: program can only process numbers.')
+    print(f'\nInvalid data: program can only process numbers.\n')
     return False
   
+  # Check if input is a negative number
   if int(input) < 0:
-    print('\nInvalid data: Program can not handle negative numbers')
+    print('\nInvalid data: Program can not handle negative numbers\n')
     return False
 
   return True
@@ -89,11 +101,12 @@ def main():
           "Income": "",
           "Expenses": ""}
   
-  welcome()
-  dream()
-  goal(user)
-  get_income(user)
-  get_expenses(user)
+  # welcome()
+  # dream()
+  # goal(user)
+  # get_income(user)
+  # get_expenses(user)
+  income = get_data(user, "Income")
   print(user)
 
 
