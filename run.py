@@ -37,12 +37,9 @@ def get_data(user, data):
   """
   while True:
 
-    print(user)
-    print(data)
-    data_type = data
-    data = input('{data_type}:\n')
-    if validate_numbers(data) == True:
-      user.update({data_type: int(data)})
+    data_input = input(f'{data}:\n')
+    if validate_numbers(data_input) == True:
+      user.update({data: int(data_input)})
       return user
   
 
@@ -107,6 +104,7 @@ def main():
   # get_income(user)
   # get_expenses(user)
   income = get_data(user, "Income")
+  expenses = get_data(user, "Expenses")
   print(user)
 
 
