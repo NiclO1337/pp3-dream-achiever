@@ -48,34 +48,98 @@ def get_data(user, data):
 
 def get_text(data):
     """
-    Function to print different messages depending on the category of data input
+    Function to print different messages
+    depending on the category of data input
     """
     if data == "Cost of goal":
-        print("Cost of goal")
+        print("\n\nCost of goal\n")
+        print("Estimate the cost of your specified goal.")
+        
     elif data == "Income":
-        print("Income")
+        print("\n\nIncome\n")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        
     elif data == "Extra income":
-        print("Extra income")
+        print("\n\nExtra income\n")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        
     elif data == "Housing":
-        print("Housing")
+        print("\n\nHousing\n")
+        print("This would include mortgage payments, property taxes, strata")
+        print("fees, rent, homeowner insurance, and hydro or electricity.")
+        
     elif data == "Utilities":
-        print("Utilities")
+        print("\n\nUtilities\n")
+        print("Examples of utility costs are cell phone, gas, and internet")
+        print("bills. Nowadays, people also include their streaming services,")
+        print("for example Netflix, under utilities in lieu of what people")
+        print("used to pay commonly for cable services.")
+        
     elif data == "Food":
-        print("Food")
+        print("\n\nFood\n")
+        print("Groceries, personal care products, and things for baby needs")
+        print("are expenses you’d include here. If you like to eat out a lot,")
+        print("you might include those expenses here. But if eating out is")
+        print("more something you do for fun, you can include it under")
+        print("later category Personal & Discretionary")
+        
     elif data == "Transportation":
-        print("Transportation")
+        print("\n\nTransportation\n")
+        print("The money you spend on public transit, taxis, fuel,")
+        print("vehicle insurance, maintenance, and parking are included")
+        print("in this category. This might change depending on whether")
+        print("or not you’re working from home, but some should still")
+        print("be allotted to understand your budget as a whole.")
+        
     elif data == "Clothing":
-        print("Clothing")
+        print("\n\nClothing\n")
+        print("Shoes and clothes for all members of the family.")
+        
     elif data == "Medical":
-        print("Medical")
+        print("\n\nMedical\n")
+        print("This includes premiums, specialists,")
+        print("and over-the-counter medication.")
+        
     elif data == "Personal & Discretionary":
-        print("Personal & Discretionary")
+        print("\n\nPersonal & Discretionary\n")
+        print("Money spent on entertainment, recreation, education,")
+        print("tobacco & alcohol, eating out, gaming, hair cuts, hobbies,")
+        print("and planned charitable giving are some examples. If you")
+        print("spend more in this category, make sure your budget")
+        print("balances by spending less elsewhere.")
+        
     elif data == "Debt Payments":
-        print("Debt Payments")
+        print("\n\nDebt Payments\n")
+        print("Many people find that their budget is quite tight when")
+        print("their monthly debt payments are over 20% of their net")
+        print("income. It’s good practice to save money before you")
+        print("start heavily paying down your debt.\n")
+        print("By following this basic plan and opening separate")
+        print("accounts for different spending, as well as savings accounts,")
+        print("you can  more easily plan out your budget percentages and")
+        print("work towards debt repayment.")
+        
     elif data == "Boring savings":
-        print("Boring savings")
+        print("\n\nSavings: Emergency fund\n")
+        print("If you already have saved up money in an emergency fund,")
+        print("well done! You can enter 0 in this category.")
+        print("If not, it is advised to dedicate savings towards this.")
+        print("A general rule of thumb is to put away at least")
+        print("three to six months’ worth of expenses saved up.")
+        
     elif data == "Fun savings":
-        print("Fun savings")
+        print("\n\nSavings: Fun!\n")
+        print("This is savings that is purely for fun things.")
+        print("For the purpose of this calculator, these savings")
+        print("will be used to reach your specified goal.")
 
     
 def validate_text(input):
