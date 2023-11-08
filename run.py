@@ -23,12 +23,13 @@ def goal(user):
     Function to ask user to input a specific financial goal
     """
     print('Goal')
-    goal = input('Goal:\n')
-    cost_of_goal = input('Estimate cost of goal:\n')
 
-    user.update({"Goal": goal})
-    user.update({"Cost of goal": cost_of_goal})
-    return user
+    while True:
+        
+        goal = input('Goal:\n')
+        if validate_text(goal):
+            user.update({"Goal": goal})
+            return user
 
 
 def get_data(user, data):
@@ -43,36 +44,26 @@ def get_data(user, data):
             return user
 
 
-# def get_income(user):
-#     """
-#     Ask user to input income data
-#     """
-#     while True:
+def validate_text(input):
+    """
+    Check text input to see if it meets the required criteria
+    """
+    # Check if input is empty
+    if input == "":
+        print('Invalid text: must enter a text.')
+        return False
 
-#         income = input('Income:\n')
-#         if validate_numbers(income) == True:
-#             user.update({"Income": int(income)})
-#             return user
-
-
-# def get_expenses(user):
-#     """
-#     Ask user to input expenses data
-#     """
-#     expenses = input('Expenses:\n')
-#     user.update({"Expenses": int(expenses)})
-#     return user
+    return True
 
 
 def validate_numbers(input):
     """
-    Check input data to see if it meets the required critera
+    Check number input to see if it meets the required critera
     """
-
     # Check if input is empty
     if input == "":
-        print(f'\nInvalid data: must enter a number
-              (Enter 0 if category is not applicable to you)\n')
+        print(f'\nInvalid data: must enter a number.')
+        print('(Enter 0 if category is not applicable to you)\n')
         return False
 
     # Check if input is a number
@@ -84,7 +75,7 @@ def validate_numbers(input):
 
     # Check if input is a negative number
     if int(input) < 0:
-        print('\nInvalid data: Program can not handle negative numbers\n')
+        print('\nInvalid data: Program can not calculate with negative numbers\n')
         return False
 
     return True
@@ -102,9 +93,6 @@ def main():
     welcome()
     dream()
     goal(user)
-    # get_income(user)
-    # get_expenses(user)
-    goal = get_data(user, "Goal")
     cost_of_goal = get_data(user, "Cost of goal")
     income = get_data(user, "Income")
     expenses = get_data(user, "Expenses")
