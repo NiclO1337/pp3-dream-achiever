@@ -93,7 +93,16 @@ def main():
     cost_of_goal = get_data(user, "Cost of goal")
     income = get_data(user, "Income")
     extra_income = get_data(user, "Extra income")
-    expenses = get_data(user, "Expenses")
+    housing = get_data(user, "Housing")
+    utilities = get_data(user, "Utilities")
+    food = get_data(user, "Food")
+    transportation = get_data(user, "Transportation")
+    clothing = get_data(user, "Clothing")
+    medical = get_data(user, "Medical")
+    personal_and_discretionary = get_data(user, "Personal & Discretionary")
+    debt_payments = get_data(user, "Debt Payments")
+    savings_emergency = get_data(user, "Boring savings")
+    savings_fun = get_data(user, "Fun savings")
     print(user)
 
 
