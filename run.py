@@ -62,6 +62,10 @@ def validate_numbers(input):
     print(f'\nInvalid data: program can only process numbers.')
     return False
 
+  if int(input) < 0:
+    print('\nInvalid data: Program can not handle negative numbers')
+    return False
+
   return True
 
 
