@@ -36,6 +36,8 @@ def get_data(user, data):
     """
     Ask user to input data
     """
+    get_text(data)
+    
     while True:
 
         data_input = input(f'{data}:\n')
@@ -44,6 +46,18 @@ def get_data(user, data):
             return user
 
 
+def get_text(data):
+    """
+    Function to print different messages depending on the category of data input
+    """
+    if data == "Cost of goal":
+        print("Cost of goal")
+    elif data == "Income":
+        print("Income")
+    elif data == "Extra income":
+        print("Extra income")
+    
+    
 def validate_text(input):
     """
     Check text input to see if it meets the required criteria
