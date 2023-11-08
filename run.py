@@ -25,7 +25,7 @@ def goal(user):
     print('Goal')
 
     while True:
-        
+
         goal = input('Goal:\n')
         if validate_text(goal):
             user.update({"Goal": goal})
@@ -37,7 +37,7 @@ def get_data(user, data):
     Ask user to input data
     """
     get_text(data)
-    
+
     while True:
 
         data_input = input(f'{data}:\n')
@@ -52,9 +52,14 @@ def get_text(data):
     depending on the category of data input
     """
     if data == "Cost of goal":
-        print("\n\nCost of goal\n")
-        print("Estimate the cost of your specified goal.")
-        
+        print("\n\nEstimate the cost of your specified goal.\n")
+        print("You do not have to specify which currency your cost is in,")
+        print("but it is important to always stick to the same currency")
+        print("throughout the calculator.")
+        print("For example, if you live in Norway but have a salery in GBP")
+        print("and like to order german sausages online and pay in EUR.")
+        print("Convert all to whichever currency is easiest or you.\n")
+
     elif data == "Income":
         print("\n\nIncome\n")
         print("")
@@ -62,7 +67,7 @@ def get_text(data):
         print("")
         print("")
         print("")
-        
+
     elif data == "Extra income":
         print("\n\nExtra income\n")
         print("")
@@ -70,78 +75,77 @@ def get_text(data):
         print("")
         print("")
         print("")
-        
+
     elif data == "Housing":
-        print("\n\nHousing\n")
+        print("\n\nHousing costs\n")
         print("This would include mortgage payments, property taxes, strata")
-        print("fees, rent, homeowner insurance, and hydro or electricity.")
-        
+        print("fees, rent, homeowner insurance, and hydro or electricity.\n")
+
     elif data == "Utilities":
         print("\n\nUtilities\n")
         print("Examples of utility costs are cell phone, gas, and internet")
         print("bills. Nowadays, people also include their streaming services,")
         print("for example Netflix, under utilities in lieu of what people")
-        print("used to pay commonly for cable services.")
-        
+        print("used to pay commonly for cable services.\n")
+
     elif data == "Food":
-        print("\n\nFood\n")
+        print("\n\nFood and hygiene products\n")
         print("Groceries, personal care products, and things for baby needs")
         print("are expenses you’d include here. If you like to eat out a lot,")
         print("you might include those expenses here. But if eating out is")
         print("more something you do for fun, you can include it under")
-        print("later category Personal & Discretionary")
-        
+        print("later category Personal & Discretionary\n")
+
     elif data == "Transportation":
-        print("\n\nTransportation\n")
+        print("\n\nTransportation costs\n")
         print("The money you spend on public transit, taxis, fuel,")
         print("vehicle insurance, maintenance, and parking are included")
         print("in this category. This might change depending on whether")
         print("or not you’re working from home, but some should still")
-        print("be allotted to understand your budget as a whole.")
-        
+        print("be allotted to understand your budget as a whole.\n")
+
     elif data == "Clothing":
-        print("\n\nClothing\n")
-        print("Shoes and clothes for all members of the family.")
-        
+        print("\n\nShoes and clothes for all members of the family.\n")
+
     elif data == "Medical":
         print("\n\nMedical\n")
         print("This includes premiums, specialists,")
-        print("and over-the-counter medication.")
-        
+        print("and over-the-counter medication.\n")
+
     elif data == "Personal & Discretionary":
-        print("\n\nPersonal & Discretionary\n")
+        print("\n\nPersonal and discretionary spending\n")
         print("Money spent on entertainment, recreation, education,")
         print("tobacco & alcohol, eating out, gaming, hair cuts, hobbies,")
         print("and planned charitable giving are some examples. If you")
         print("spend more in this category, make sure your budget")
-        print("balances by spending less elsewhere.")
-        
+        print("balances by spending less elsewhere.\n")
+
     elif data == "Debt Payments":
-        print("\n\nDebt Payments\n")
+        print("\n\nDebt payments\n")
         print("Many people find that their budget is quite tight when")
         print("their monthly debt payments are over 20% of their net")
         print("income. It’s good practice to save money before you")
         print("start heavily paying down your debt.\n")
         print("By following this basic plan and opening separate")
-        print("accounts for different spending, as well as savings accounts,")
-        print("you can  more easily plan out your budget percentages and")
-        print("work towards debt repayment.")
-        
+        print("accounts for different spending, as well as savings")
+        print("accounts, you can more easily plan out your budget")
+        print("percentages and work towards debt repayment.\n")
+
     elif data == "Boring savings":
         print("\n\nSavings: Emergency fund\n")
         print("If you already have saved up money in an emergency fund,")
-        print("well done! You can enter 0 in this category.")
+        print("well done! You can enter 0 in this category.\n")
         print("If not, it is advised to dedicate savings towards this.")
-        print("A general rule of thumb is to put away at least")
-        print("three to six months’ worth of expenses saved up.")
-        
+        print("A general rule of thumb is to put away at least three to")
+        print("six months’ worth of expenses for this.\n")
+
     elif data == "Fun savings":
         print("\n\nSavings: Fun!\n")
         print("This is savings that is purely for fun things.")
         print("For the purpose of this calculator, these savings")
-        print("will be used to reach your specified goal.")
+        print("will be used to reach your specified goal.\n")
 
-    
+
 def validate_text(input):
     """
     Check text input to see if it meets the required criteria
@@ -173,7 +177,8 @@ def validate_numbers(input):
 
     # Check if input is a negative number
     if int(input) < 0:
-        print('\nInvalid data: Program can not calculate with negative numbers\n')
+        print(f'\nInvalid data: Program can not'
+              'calculate with negative numbers\n')
         return False
 
     return True
