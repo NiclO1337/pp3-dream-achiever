@@ -85,11 +85,7 @@ def main():
     """
     Main function to call other function in the correct order
     """
-    user = {"Goal": "",
-            "Cost of goal": "",
-            "Income": "",
-            "Extra income": "",
-            "Expenses": ""}
+    user = {}
 
     welcome()
     dream()
