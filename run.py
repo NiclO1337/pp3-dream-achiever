@@ -56,7 +56,27 @@ def get_text(data):
         print("Income")
     elif data == "Extra income":
         print("Extra income")
-    
+    elif data == "Housing":
+        print("Housing")
+    elif data == "Utilities":
+        print("Utilities")
+    elif data == "Food":
+        print("Food")
+    elif data == "Transportation":
+        print("Transportation")
+    elif data == "Clothing":
+        print("Clothing")
+    elif data == "Medical":
+        print("Medical")
+    elif data == "Personal & Discretionary":
+        print("Personal & Discretionary")
+    elif data == "Debt Payments":
+        print("Debt Payments")
+    elif data == "Boring savings":
+        print("Boring savings")
+    elif data == "Fun savings":
+        print("Fun savings")
+
     
 def validate_text(input):
     """
