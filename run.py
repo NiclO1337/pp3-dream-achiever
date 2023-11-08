@@ -35,10 +35,12 @@ def get_income(user):
   """
   Ask user to input income data
   """
-  income = input('Income:\n')
-  validate_numbers(income)
-  user.update({"Income": int(income)})
-  return user
+  while True:
+
+    income = input('Income:\n')
+    if validate_numbers(income) == True:
+      user.update({"Income": int(income)})
+      return user
 
 
 def get_expenses(user):
@@ -55,9 +57,12 @@ def validate_numbers(input):
   Check so that input is number and if it is not raise an error.
   """
   try:    
-    [int(x) for x in input]
-  except:
+    int(input)
+  except ValueError:
     print(f'\nInvalid data: program can only process numbers.')
+    return False
+
+  return True
 
 
 def main():
