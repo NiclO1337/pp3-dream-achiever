@@ -56,12 +56,23 @@ def validate_numbers(input):
   """
   Check so that input is number and if it is not raise an error.
   """
+  
+  # try:
+  #   input == ""
+  # except ValueError:
+  #   print(f'\nInvalid data: must enter a number \n(Enter 0 if category is not applicable to you)')
+  #   return False
+  
+  if input == "":
+    print(f'\nInvalid data: must enter a number \n(Enter 0 if category is not applicable to you)')
+    return False
+
   try:    
     int(input)
   except ValueError:
     print(f'\nInvalid data: program can only process numbers.')
     return False
-
+  
   if int(input) < 0:
     print('\nInvalid data: Program can not handle negative numbers')
     return False
