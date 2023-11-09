@@ -1,6 +1,7 @@
 from pprint import pprint
 import math
 
+
 def welcome():
     """
     Start application on a welcome screen with a message
@@ -236,12 +237,12 @@ def compare_income_cost(user, income):
     Function to compare income with cost to see
     if there is a budget surplus avalible
     """
-    #Get values from user and slice list to get the costs
+    # Get values from user and slice list to get the costs
     costs = list(user.values())[4:]
     expenses = 0
     for cost in costs:
         expenses += cost
-    
+
     budget_surplus = income - expenses
 
     if budget_surplus < 0:
@@ -250,23 +251,23 @@ def compare_income_cost(user, income):
     elif budget_surplus > 0:
         print('Great, you have a budget surplus, we will use this money'
               'towards reaching your goal.')
-        
+
     return budget_surplus
-    
+
 
 def calculate_goal(user, surplus):
     """
     Compare users goal to the fun savings -+ budget surplus
     and check how long it will take to reach this goal
-    """    
+    """
     goal_cost = list(user.values())[1]
     fun_savings = list(user.values())[-1]
     reach_goal = goal_cost / (fun_savings + surplus)
-    
+
     # Function to display time to reach goal in nr of years if applicable
-    years = 0    
-    months = 0    
-    
+    years = 0
+    months = 0
+
     if reach_goal > 12:
         years = reach_goal / 12
         years = math.floor(years)
@@ -278,7 +279,7 @@ def calculate_goal(user, surplus):
     # correctly display time as "year" or "years" in print message
     year = " year and "
     month = " month"
-    
+
     if years > 1:
         year = " years and "
 
@@ -289,15 +290,13 @@ def calculate_goal(user, surplus):
         years = ""
         year = ""
 
-    print(years)
-    print(months)
     print(f'Your goal is: "{list(user.values())[0]}" and with your current '
           f'fun savings (and budget surplus) it will take you {years}{year}'
           f'{months}{month} to reach your goal. If you want to reach this '
           'goal faster you can to either cut some of your other expenses, '
           'try to increase your income or find some new extra income.')
 
-    
+
 def main():
     """
     Main function to call other function in the correct order
@@ -323,26 +322,26 @@ def main():
     # savings_fun = get_data(user, "Fun savings")
 
     user = {"Goal": "Trip to the Bahamas",
-                 "Cost of goal": 50000,
-                 "Income": 23000,
-                 "Extra income": 10000,
-                 "Housing": 14000,
-                 "Utilities": 1500,
-                 "Food": 5000,
-                 "Transportation": 200,
-                 "Clothing": 0,
-                 "Medical": 150,
-                 "Personal & Discretionary": 7000,
-                 "Debt Payments": 0,
-                 "Boring savings": 4000,
-                 "Fun savings": 2000}
+            "Cost of goal": 50000,
+            "Income": 23000,
+            "Extra income": 10000,
+            "Housing": 14000,
+            "Utilities": 1500,
+            "Food": 5000,
+            "Transportation": 200,
+            "Clothing": 0,
+            "Medical": 150,
+            "Personal & Discretionary": 7000,
+            "Debt Payments": 0,
+            "Boring savings": 4000,
+            "Fun savings": 2000}
 
     print(list(user.values()))
     income = user.get("Income") + user.get("Extra income")
     budget_surplus = compare_income_cost(user, income)
-    
+
     calculate_goal(user, budget_surplus)
-    
+
     # pprint(test_user)
 
 
