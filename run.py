@@ -83,7 +83,7 @@ def introduction():
 
     input('Press ENTER to continue...\n')
 
-
+    
 def get_data(user, data):
     """
     Ask user to input data for income 
@@ -195,6 +195,26 @@ def get_text(data):
         print('will be used to reach your specified goal.\n')
 
 
+def collect_data(user):
+    """
+    Collect data from user
+    """    
+    cost_of_goal = get_data(user, "Cost of goal")
+    introduction()
+    income = get_data(user, "Income")
+    extra_income = get_data(user, "Extra income")
+    housing = get_data(user, "Housing")
+    utilities = get_data(user, "Utilities")
+    food = get_data(user, "Food")
+    transportation = get_data(user, "Transportation")
+    clothing = get_data(user, "Clothing")
+    medical = get_data(user, "Medical")
+    personal_and_discretionary = get_data(user, "Personal & Discretionary")
+    debt_payments = get_data(user, "Debt Payments")
+    savings_emergency = get_data(user, "Boring savings")
+    savings_fun = get_data(user, "Fun savings")
+
+
 def validate_text(input):
     """
     Check text input to see if it meets the required criteria
@@ -264,7 +284,6 @@ def check_costs(user, income, category):
     """
     
 
-
 def calculate_goal(user, surplus):
     """
     Compare users goal to the fun savings -+ budget surplus
@@ -316,20 +335,8 @@ def main():
     welcome()
     dream()
     goal(user)
-    cost_of_goal = get_data(user, "Cost of goal")
-    introduction()
-    income = get_data(user, "Income")
-    extra_income = get_data(user, "Extra income")
-    housing = get_data(user, "Housing")
-    utilities = get_data(user, "Utilities")
-    food = get_data(user, "Food")
-    transportation = get_data(user, "Transportation")
-    clothing = get_data(user, "Clothing")
-    medical = get_data(user, "Medical")
-    personal_and_discretionary = get_data(user, "Personal & Discretionary")
-    debt_payments = get_data(user, "Debt Payments")
-    savings_emergency = get_data(user, "Boring savings")
-    savings_fun = get_data(user, "Fun savings")
+    collect_data(user)
+    
 
     # user = {"Goal": "Trip to the Bahamas",
     #         "Cost of goal": 50000,
