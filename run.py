@@ -1,4 +1,5 @@
 from pprint import pprint
+import math
 
 def welcome():
     """
@@ -257,10 +258,17 @@ def calculate_goal(user, surplus):
     """
     Compare users goal to the fun savings -+ budget surplus
     and check how long it will take to reach this goal
-    """
-    print(list(user.values()))
+    """    
     goal_cost = list(user.values())[1]
+    fun_savings = list(user.values())[-1]
     print(goal_cost)
+    print(fun_savings)
+    reach_goal = goal_cost / (fun_savings + surplus)
+    print(reach_goal)
+    print(f'Your goal is: "{list(user.values())[0]}" and with your current '
+          'fun savings (and budget surplus) it will take you '
+          f'{math.floor(reach_goal)} months to reach your goal.'
+          )
 
     
 def main():
@@ -287,7 +295,7 @@ def main():
     # savings_emergency = get_data(user, "Boring savings")
     # savings_fun = get_data(user, "Fun savings")
 
-    user = {"Goal": "Trip",
+    user = {"Goal": "Trip to the Bahamas",
                  "Cost of goal": 50000,
                  "Income": 23000,
                  "Extra income": 10000,
@@ -302,6 +310,7 @@ def main():
                  "Boring savings": 4000,
                  "Fun savings": 2000}
 
+    print(list(user.values()))
     income = user.get("Income") + user.get("Extra income")
     budget_surplus = compare_income_cost(user, income)
     
