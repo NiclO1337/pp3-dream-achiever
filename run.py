@@ -230,19 +230,30 @@ def validate_numbers(input):
     return True
 
 
-def compare_income_cost(user):
+def compare_income_cost(user, income):
     """
     Function to compare income with cost to see
     if there is a budget surplus avalible
     """
     income = user.get("Income") + user.get("Extra income")
-    cost = list(user.values())[4: -1]
-    print(income)
-    print(cost)
-
+    costs = list(user.values())[4:]
+    expenses = 0
+    for cost in costs:
+        expenses += cost
     
-    budget_surplus = ()
+    print(income)
+    print(costs)
+    print(expenses)
+    
+    budget_surplus = income - expenses
 
+    if budget_surplus < 0:
+        print('Looks like your budget exceeds your income. We will have to '
+              'deduct this from your fun savings ')
+    elif budget_surplus > 0:
+        print('Great, you have a budget surplus, we will use this surplus'
+              'towards reaching your goal.')
+    print(budget_surplus)
     
 
 
