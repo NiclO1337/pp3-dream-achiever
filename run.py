@@ -230,6 +230,22 @@ def validate_numbers(input):
     return True
 
 
+def compare_income_cost(user):
+    """
+    Function to compare income with cost to see
+    if there is a budget surplus avalible
+    """
+    income = user.get("Income") + user.get("Extra income")
+    cost = list(user.values())[4: -1]
+    print(income)
+    print(cost)
+
+    
+    budget_surplus = ()
+
+    
+
+
 def main():
     """
     Main function to call other function in the correct order
@@ -254,7 +270,7 @@ def main():
     # savings_emergency = get_data(user, "Boring savings")
     # savings_fun = get_data(user, "Fun savings")
 
-    test_user = {"Goal": "Trip",
+    user = {"Goal": "Trip",
                  "Cost of goal": 50000,
                  "Income": 23000,
                  "Extra income": 10000,
@@ -269,10 +285,10 @@ def main():
                  "Boring savings": 4000,
                  "Fun savings": 2000}
 
-    
+    budget_surplus = compare_income_cost(user)
 
     
-    pprint(test_user)
+    # pprint(test_user)
 
 
 main()
