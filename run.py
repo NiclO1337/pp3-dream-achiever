@@ -261,14 +261,39 @@ def calculate_goal(user, surplus):
     """    
     goal_cost = list(user.values())[1]
     fun_savings = list(user.values())[-1]
-    print(goal_cost)
-    print(fun_savings)
     reach_goal = goal_cost / (fun_savings + surplus)
-    print(reach_goal)
+    reach_goal = 67
+    # Function to display time to reach goal in nr of years if applicable
+    years = 0    
+    months = 0    
+    
+    if reach_goal > 12:
+        years = reach_goal / 12
+        years = math.floor(years)
+        months = math.floor(reach_goal) - (years * 12)
+
+    if reach_goal <= 12:
+        months = math.floor(reach_goal)
+
+    # correctly display time as "year" or "years" in print message
+    year = " year and "
+    month = " month"
+    
+    if years > 1:
+        year = " years and "
+
+    if months > 1:
+        month = " months"
+    # do not display year/years at all if less than 1 year
+    if years == 0:
+        years = ""
+        year = ""
+
+    print(years)
+    print(months)
     print(f'Your goal is: "{list(user.values())[0]}" and with your current '
           'fun savings (and budget surplus) it will take you '
-          f'{math.floor(reach_goal)} months to reach your goal.'
-          )
+          f'{years}{year}{months}{month} to reach your goal.')
 
     
 def main():
