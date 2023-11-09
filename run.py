@@ -62,6 +62,28 @@ def goal(user):
             return user
 
 
+def introduction():
+    """
+    Displays information about the calculator
+    """
+    print('\n\nBudget calculator\n')
+    print('It’s important to write everything out when planning your financial'
+          ' goals, like paying off your debt against your monthly income and '
+          'fixed expenses. This allows you to understand better where you are '
+          'in your finances, as well as help to plan out how '
+          'you’re going to get where you want to be.\n')
+    print('This calculator does not save any information from you.\n'
+          'Good news, your privacy is protected. Bad news, you can not revisit'
+          ' the results of this calculator after you leave or reset.\n'
+          'You will be asked to enter data in the following categories:\n'
+          'Main income, extra income, housing cost, utilities, food,'
+          'transportation, clothing, medical, personal & discretionary, '
+          'debt payments, boring savings and fun savings.\n'
+          '\nA more detailed explanation of the category is provided later.\n')
+
+    input('Press ENTER to continue...\n')
+
+
 def get_data(user, data):
     """
     Ask user to input data
@@ -91,7 +113,7 @@ def get_text(data):
         print("Convert all to whichever currency is easiest or you.\n")
 
     elif data == "Income":
-        print("\n\nIncome\n")
+        print("\n\nMain income\n")
         print("")
         print("")
         print("")
@@ -224,6 +246,7 @@ def main():
     dream()
     goal(user)
     cost_of_goal = get_data(user, "Cost of goal")
+    introduction()
     income = get_data(user, "Income")
     extra_income = get_data(user, "Extra income")
     housing = get_data(user, "Housing")
