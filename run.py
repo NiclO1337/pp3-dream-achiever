@@ -22,7 +22,7 @@ def welcome():
           'giving, you’ll need to lower your spending in your budgeting '
           'process in other areas to allow for these higher expenses.')
 
-    input('Press ENTER to continue...\n')
+    input('\nPress ENTER to continue...\n')
 
 
 def dream():
@@ -32,9 +32,9 @@ def dream():
     print('\nDream\n')
     print('First, let´s start with the fun stuff.\n'
           'Imagine you won the lottery today!\n'
-          'Take a few minuites and think about this.\n'
           'What would you do? Where would you go?\n'
-          'What would your life look like?\n')
+          'What would your life look like?\n'
+          '\nTake a few minuites and think about this.\n')
 
     input('Press ENTER to continue...\n')
 
@@ -79,7 +79,7 @@ def introduction():
           'Main income, extra income, housing cost, utilities, food,'
           'transportation, clothing, medical, personal & discretionary, '
           'debt payments, boring savings and fun savings.\n'
-          '\nA more detailed explanation of the category is provided later.\n')
+          '\nA more detailed explanation of the category will be provided.\n')
 
     input('Press ENTER to continue...\n')
 
@@ -110,8 +110,8 @@ def get_text(data):
         print('but it is important to always stick to the same currency')
         print('throughout the calculator.')
         print('For example, if you live in Norway but have a salery in GBP')
-        print('and like to order german sausages online and pay in EUR.')
-        print('Convert all to whichever currency is easiest or you.\n')
+        print('and like to order german sausages online and pay in EUR =')
+        print('convert all to whichever currency is easiest or you.\n')
 
     elif data == "Income":
         print('\n\nMain income\n')
@@ -247,11 +247,12 @@ def compare_income_cost(user, income):
     budget_surplus = income - expenses
 
     if budget_surplus < 0:
-        print('Looks like your budget exceeds your income, we will have to '
-              'deduct this from your fun savings for now.')
+        print('Looks like your budget exceeds your income with '
+              f'{budget_surplus}, we will have to deduct this from '
+              'your fun savings for now.')
     elif budget_surplus > 0:
-        print('Great, you have a budget surplus, we will use this money'
-              'towards reaching your goal.')
+        print(f'Great, you have a budget surplus of {budget_surplus}, '
+              'we will use this money towards reaching your goal.')
 
     return budget_surplus
 
@@ -299,8 +300,8 @@ def calculate_goal(user, surplus):
         years = ""
         year = ""
 
-    print(f'Your goal is: "{list(user.values())[0]}" and with your current '
-          f'fun savings (and budget surplus) it will take you {years}{year}'
+    print(f'Your goal is: "{list(user.values())[0]}" and based on your current'
+          f' fun savings (and budget surplus) it will take you {years}{year}'
           f'{months}{month} to reach your goal. If you want to reach this '
           'goal faster you can to either cut some of your other expenses, '
           'try to increase your income or find some new extra income.')
@@ -312,40 +313,41 @@ def main():
     """
     user = {}
 
-    # welcome()
-    # dream()
-    # goal(user)
-    # cost_of_goal = get_data(user, "Cost of goal")
-    # introduction()
-    # income = get_data(user, "Income")
-    # extra_income = get_data(user, "Extra income")
-    # housing = get_data(user, "Housing")
-    # utilities = get_data(user, "Utilities")
-    # food = get_data(user, "Food")
-    # transportation = get_data(user, "Transportation")
-    # clothing = get_data(user, "Clothing")
-    # medical = get_data(user, "Medical")
-    # personal_and_discretionary = get_data(user, "Personal & Discretionary")
-    # debt_payments = get_data(user, "Debt Payments")
-    # savings_emergency = get_data(user, "Boring savings")
-    # savings_fun = get_data(user, "Fun savings")
+    welcome()
+    dream()
+    goal(user)
+    cost_of_goal = get_data(user, "Cost of goal")
+    introduction()
+    income = get_data(user, "Income")
+    extra_income = get_data(user, "Extra income")
+    housing = get_data(user, "Housing")
+    utilities = get_data(user, "Utilities")
+    food = get_data(user, "Food")
+    transportation = get_data(user, "Transportation")
+    clothing = get_data(user, "Clothing")
+    medical = get_data(user, "Medical")
+    personal_and_discretionary = get_data(user, "Personal & Discretionary")
+    debt_payments = get_data(user, "Debt Payments")
+    savings_emergency = get_data(user, "Boring savings")
+    savings_fun = get_data(user, "Fun savings")
 
-    user = {"Goal": "Trip to the Bahamas",
-            "Cost of goal": 50000,
-            "Income": 23000,
-            "Extra income": 10000,
-            "Housing": 14000,
-            "Utilities": 1500,
-            "Food": 5000,
-            "Transportation": 200,
-            "Clothing": 0,
-            "Medical": 150,
-            "Personal & Discretionary": 7000,
-            "Debt Payments": 0,
-            "Boring savings": 4000,
-            "Fun savings": 2000}
+    # user = {"Goal": "Trip to the Bahamas",
+    #         "Cost of goal": 50000,
+    #         "Income": 23000,
+    #         "Extra income": 10000,
+    #         "Housing": 14000,
+    #         "Utilities": 1500,
+    #         "Food": 5000,
+    #         "Transportation": 200,
+    #         "Clothing": 0,
+    #         "Medical": 150,
+    #         "Personal & Discretionary": 7000,
+    #         "Debt Payments": 0,
+    #         "Boring savings": 4000,
+    #         "Fun savings": 2000}
 
-    print(list(user.values()))
+    # print(list(user.values()))
+    
     income = user.get("Income") + user.get("Extra income")
     budget_surplus = compare_income_cost(user, income)
     check_costs(user, income, "Housing")
