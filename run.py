@@ -116,7 +116,7 @@ def get_text(data):
     elif data == "Income":
         print('\n\nMain income\n')
         print('Enter the amount from your main source of income here.\n')
-        print('For the calculator to work properly, you need to enter your'
+        print('For the calculator to work properly, you need to enter your '
               'monthly income. Same goes for any extra income and for all '
               'costs. Estimate the average monthly spending on each category.')
 
@@ -247,7 +247,7 @@ def validate_numbers(input):
     # Check if input is a negative number
     if int(input) < 0:
         print(f'\nInvalid data: Program can not '
-              'calculate with negative numbers\n')
+              'calculate with negative numbers.\n')
         return False
 
     return True
@@ -273,6 +273,10 @@ def compare_income_cost(user, income):
     elif budget_surplus > 0:
         print(f'Great, you have a budget surplus of {budget_surplus}, '
               'we will use this money towards reaching your goal.')
+    else:
+        print('Looks like somebody did their homework and came prepared, '
+              f'well done! Your income ({income}) and expenses ({expenses}) '
+              'are the same amount.')
 
     return budget_surplus
 
