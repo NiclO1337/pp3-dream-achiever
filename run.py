@@ -114,19 +114,15 @@ def get_text(data):
 
     elif data == "Income":
         print('\n\nMain income\n')
-        print('Enter the amount from your main source of income here')
-        print('')
-        print('')
-        print('')
-        print('')
+        print('Enter the amount from your main source of income here.\n')
+        print('For the calculator to work properly, you need to enter your'
+              'monthly income. Same goes for any extra income and for all '
+              'costs. Estimate the average monthly spending on each category.')
 
     elif data == "Extra income":
         print('\n\nExtra income\n')
-        print('')
-        print('')
-        print('')
-        print('')
-        print('')
+        print('For example, this could be income from commissions, overtime, '
+              'bonuses, rent (recieved), child support, benefits etc.')
 
     elif data == "Housing":
         print('\n\nHousing costs\n')
