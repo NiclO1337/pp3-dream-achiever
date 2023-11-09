@@ -1,6 +1,4 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+from pprint import pprint
 
 def welcome():
     """
@@ -238,24 +236,43 @@ def main():
     """
     user = {}
 
-    welcome()
-    dream()
-    goal(user)
-    cost_of_goal = get_data(user, "Cost of goal")
-    introduction()
-    income = get_data(user, "Income")
-    extra_income = get_data(user, "Extra income")
-    housing = get_data(user, "Housing")
-    utilities = get_data(user, "Utilities")
-    food = get_data(user, "Food")
-    transportation = get_data(user, "Transportation")
-    clothing = get_data(user, "Clothing")
-    medical = get_data(user, "Medical")
-    personal_and_discretionary = get_data(user, "Personal & Discretionary")
-    debt_payments = get_data(user, "Debt Payments")
-    savings_emergency = get_data(user, "Boring savings")
-    savings_fun = get_data(user, "Fun savings")
-    print(user)
+    # welcome()
+    # dream()
+    # goal(user)
+    # cost_of_goal = get_data(user, "Cost of goal")
+    # introduction()
+    # income = get_data(user, "Income")
+    # extra_income = get_data(user, "Extra income")
+    # housing = get_data(user, "Housing")
+    # utilities = get_data(user, "Utilities")
+    # food = get_data(user, "Food")
+    # transportation = get_data(user, "Transportation")
+    # clothing = get_data(user, "Clothing")
+    # medical = get_data(user, "Medical")
+    # personal_and_discretionary = get_data(user, "Personal & Discretionary")
+    # debt_payments = get_data(user, "Debt Payments")
+    # savings_emergency = get_data(user, "Boring savings")
+    # savings_fun = get_data(user, "Fun savings")
+
+    test_user = {"Goal": "Trip",
+                 "Cost of goal": 50000,
+                 "Income": 23000,
+                 "Extra income": 10000,
+                 "Housing": 14000,
+                 "Utilities": 1500,
+                 "Food": 5000,
+                 "Transportation": 200,
+                 "Clothing": 0,
+                 "Medical": 150,
+                 "Personal & Discretionary": 7000,
+                 "Debt Payments": 0,
+                 "Boring savings": 4000,
+                 "Fun savings": 2000}
+
+    
+
+    
+    pprint(test_user)
 
 
 main()
