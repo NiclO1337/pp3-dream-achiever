@@ -86,7 +86,8 @@ def introduction():
 
 def get_data(user, data):
     """
-    Ask user to input data
+    Ask user to input data for income 
+    and expenses in each category
     """
     get_text(data)
 
@@ -255,6 +256,14 @@ def compare_income_cost(user, income):
     return budget_surplus
 
 
+def check_costs(user, income, category):
+    """
+    Function to compare costs to the recommended values
+    and write budget recommendation to user
+    """
+    
+
+
 def calculate_goal(user, surplus):
     """
     Compare users goal to the fun savings -+ budget surplus
@@ -339,6 +348,9 @@ def main():
     print(list(user.values()))
     income = user.get("Income") + user.get("Extra income")
     budget_surplus = compare_income_cost(user, income)
+    check_costs(user, income, "Housing")
+
+
 
     calculate_goal(user, budget_surplus)
 
