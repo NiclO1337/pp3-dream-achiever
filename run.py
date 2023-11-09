@@ -235,28 +235,34 @@ def compare_income_cost(user, income):
     Function to compare income with cost to see
     if there is a budget surplus avalible
     """
-    income = user.get("Income") + user.get("Extra income")
+    #Get values from user and slice list to get the costs
     costs = list(user.values())[4:]
     expenses = 0
     for cost in costs:
         expenses += cost
     
-    print(income)
-    print(costs)
-    print(expenses)
-    
     budget_surplus = income - expenses
 
     if budget_surplus < 0:
-        print('Looks like your budget exceeds your income. We will have to '
-              'deduct this from your fun savings ')
+        print('Looks like your budget exceeds your income, we will have to '
+              'deduct this from your fun savings for now.')
     elif budget_surplus > 0:
-        print('Great, you have a budget surplus, we will use this surplus'
+        print('Great, you have a budget surplus, we will use this money'
               'towards reaching your goal.')
-    print(budget_surplus)
+        
+    return budget_surplus
     
 
+def calculate_goal(user, surplus):
+    """
+    Compare users goal to the fun savings -+ budget surplus
+    and check how long it will take to reach this goal
+    """
+    print(list(user.values()))
+    goal_cost = list(user.values())[1]
+    print(goal_cost)
 
+    
 def main():
     """
     Main function to call other function in the correct order
@@ -296,8 +302,10 @@ def main():
                  "Boring savings": 4000,
                  "Fun savings": 2000}
 
-    budget_surplus = compare_income_cost(user)
-
+    income = user.get("Income") + user.get("Extra income")
+    budget_surplus = compare_income_cost(user, income)
+    
+    calculate_goal(user, budget_surplus)
     
     # pprint(test_user)
 
