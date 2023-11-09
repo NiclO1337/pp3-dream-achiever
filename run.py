@@ -6,23 +6,53 @@ def welcome():
     """
     Start application on a welcome screen with a message
     """
-    print('\nWelcome message\n')
-    input('Press ENTER to continue\n')
+    print('\nWelcome to the DREAM ACHIEVER budget calculator!\n'
+          'This tool will help you reach your dreams and goals.\n')
+    print('Budgeting Guidelines for Income:')
+    print('Many people wonder how much of their income they should spend on '
+          'their home, vehicle, groceries, clothes, etc. Below are some '
+          'guidelines to give you a general idea and a starting point for your'
+          ' budget. What that will look like depends on your income, family '
+          'circumstances, monthly expenses, and where you live.\n'
+          'Start working with these budgeting guidelines by developing your '
+          'budget with your net income. You have left this money after '
+          'government deductions from your paycheque but before voluntary '
+          'deductions like RRSPs, pensions, or other savings. If you have '
+          'expenses like high debt payments, childcare, school expenses, or '
+          'giving, you’ll need to lower your spending in your budgeting '
+          'process in other areas to allow for these higher expenses.')
+
+    input('Press ENTER to continue...\n')
 
 
 def dream():
     """
     Screen where user think about their dreams
     """
-    print('Dream\n')
-    input('Press ENTER to continue\n')
+    print('\nDream\n')
+    print('First, let´s start with the fun stuff.\n'
+          'Imagine you won the lottery today!\n'
+          'Take a few minuites and think about this.\n'
+          'What would you do? Where would you go?\n'
+          'What would your life look like?\n')
+
+    input('Press ENTER to continue...\n')
 
 
 def goal(user):
     """
     Function to ask user to input a specific financial goal
     """
-    print('Goal')
+    print('\nGoal\n')
+    print('Okey, so this calculator will NOT help you win the lottery.\n'
+          'However, we will begin a journey towards actualizing your dream.\n'
+          'Take a part of your dream, one goal, the one thing that would '
+          'bring you the best quality of life improvement right now. '
+          'Could be for example getting away on a vacation, just for relaxing '
+          'or have an exciting adventure. Or moving to a new place. '
+          'Or buying an expensive watch. Something that is important to you.')
+    print('\nYou do not need to write any details here, '
+          'can be just a keyword.')
 
     while True:
 
@@ -177,7 +207,7 @@ def validate_numbers(input):
 
     # Check if input is a negative number
     if int(input) < 0:
-        print(f'\nInvalid data: Program can not'
+        print(f'\nInvalid data: Program can not '
               'calculate with negative numbers\n')
         return False
 
