@@ -330,6 +330,24 @@ def calculate_goal(user, surplus):
           'try to increase your income or find some new extra income.')
 
 
+def run_calculations(user):
+    """
+    Run all calculations to check if there is a budget surplus 
+    and check how long it will take to reach the specified goal.
+    Then compares each category of costs with the general recommendation.
+    """
+    # Add income's together to use in other calculations
+    income = user.get("Income") + user.get("Extra income")
+    
+    budget_surplus = compare_income_cost(user, income)
+    calculate_goal(user, budget_surplus)
+    
+    check_costs(user, income, "Housing")
+
+
+
+    
+
 def main():
     """
     Main function to call other function in the correct order
@@ -340,7 +358,7 @@ def main():
     dream()
     goal(user)
     collect_data(user)
-    
+    run_calculations(user)
 
     # user = {"Goal": "Trip to the Bahamas",
     #         "Cost of goal": 50000,
@@ -357,17 +375,7 @@ def main():
     #         "Boring savings": 4000,
     #         "Fun savings": 2000}
 
-    # print(list(user.values()))
+    print(list(user.values()))
     
-    income = user.get("Income") + user.get("Extra income")
-    budget_surplus = compare_income_cost(user, income)
-    check_costs(user, income, "Housing")
-
-
-
-    calculate_goal(user, budget_surplus)
-
-    # pprint(test_user)
-
 
 main()
