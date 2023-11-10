@@ -380,23 +380,37 @@ def get_cost_text(category):
     elif category == "Utilities":
         print('\n\nUtilities\n')
 
+        guideline_percent = 5
+
     elif category == "Food":
         print('\n\nFood and hygiene products\n')
+
+        guideline_percent = 15
 
     elif category == "Transportation":
         print('\n\nTransportation costs\n')
 
+        guideline_percent = 17.5
+
     elif category == "Clothing":
         print('\n\nShoes and clothes for all members of the family.\n')
+
+        guideline_percent = 4
 
     elif category == "Medical":
         print('\n\nMedical\n')
 
+        guideline_percent = 3
+
     elif category == "Personal & Discretionary":
         print('\n\nPersonal and discretionary spending\n')
 
+        guideline_percent = 7.5
+
     elif category == "Debt Payments":
         print('\n\nDebt payments\n')
+
+        guideline_percent = 10    
 
     return guideline_percent
 
@@ -409,7 +423,7 @@ def check_costs(user, income, category):
 
     guideline_percent = get_cost_text(category)
 
-    percent_of_income = round(user.get(category) / income * 100)
+    percent_of_income = round((user.get(category) / income * 100), 2)
     print(percent_of_income)
     print(guideline_percent)
 
@@ -428,7 +442,25 @@ def run_calculations(user):
     # calculate_goal(user, budget_surplus)
     
     check_costs(user, income, "Housing")
+    check_costs(user, income, "Utilities")
+    check_costs(user, income, "Food")
+    check_costs(user, income, "Transportation")
+    check_costs(user, income, "Clothing")
+    check_costs(user, income, "Medical")
+    check_costs(user, income, "Personal & Discretionary")
+    check_costs(user, income, "Debt Payments")
 
+
+    
+    # utilities = get_data(user, "Utilities")
+    # food = get_data(user, "Food")
+    # transportation = get_data(user, "Transportation")
+    # clothing = get_data(user, "Clothing")
+    # medical = get_data(user, "Medical")
+    # personal_and_discretionary = get_data(user, "Personal & Discretionary")
+    # debt_payments = get_data(user, "Debt Payments")
+    # savings_emergency = get_data(user, "Boring savings")
+    # savings_fun = get_data(user, "Fun savings")
 
 
     
