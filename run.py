@@ -193,6 +193,12 @@ def get_text(data):
         print('For the purpose of this calculator, these savings')
         print('will be used to reach your specified goal.\n')
 
+    elif data == "Initial savings":
+        print('\n\nInitial savings\n')
+        print('Do you already have any amount of savings that')
+        print('you want to dedicate towards reaching your goal.')
+        print('If you do not, that is okey, just enter 0\n')
+
 
 def collect_data(user):
     """
@@ -210,6 +216,7 @@ def collect_data(user):
     debt_payments = get_data(user, "Debt Payments")
     savings_emergency = get_data(user, "Boring savings")
     savings_fun = get_data(user, "Fun savings")
+    initial_savings = get_data(user, "Initial savings")
 
 
 def validate_text(input):
@@ -334,7 +341,7 @@ def calculate_goal(user, surplus):
         months_text = ""
         and_text = ""
 
-    print(f'Your goal is: "{list(user.values())[0]}". Your current '
+    print(f'Your goal is: "{list(user.values())[0]}" and your current '
           f'savings towards your goal is {goal_funds} per month.')
 
     if goal_funds < 0:
@@ -402,7 +409,7 @@ def main():
     # goal(user)
     # cost_of_goal = get_data(user, "Cost of goal")
     # introduction()
-    # collect_data(user)
+    collect_data(user)
     
     # print(list(user.values()))
     
