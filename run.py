@@ -180,15 +180,15 @@ def get_text(data):
         print('percentages and work towards debt repayment.\n')
 
     elif data == "Boring savings":
-        print('\n\nSavings: Emergency fund\n')
+        print('\n\nBoring savings\n')
         print('If you already have saved up money in an emergency fund,')
-        print('well done! You can enter 0 in this category.\n')
-        print('If not, it is advised to dedicate savings towards this.')
-        print('A general rule of thumb is to put away at least three to')
-        print('six months’ worth of expenses for this.\n')
+        print('well done! If not, it is advised to dedicate savings towards')
+        print('this. It is also a good idea to have some savings set aside')
+        print('for retirement. This category could also include savings for')
+        print('grandchildren or any other types of long term savings.')
 
     elif data == "Fun savings":
-        print('\n\nSavings: Fun!\n')
+        print('\n\nSavings: Fun goal!\n')
         print('This is savings that is purely for fun things.')
         print('For the purpose of this calculator, these savings')
         print('will be used to reach your specified goal.\n')
@@ -428,6 +428,9 @@ def check_costs(user, income, category):
     print(guideline_percent)
 
 
+    # Boring saving recommendation
+    # print('A general rule of thumb is to put away at least three to')
+    # print('six months’ worth of expenses for this.\n')
 
 def run_calculations(user):
     """
