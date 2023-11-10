@@ -365,26 +365,45 @@ def calculate_goal(user, surplus):
     input('Press ENTER to continue...\n')
         
 
+def get_cost_text(category):
+    """
+    Function to print different messages
+    depending on the category of cost
+    """
+    if category == "Housing":
+        print('\n\nHousing costs\n')
+
+    elif category == "Utilities":
+        print('\n\nUtilities\n')
+
+    elif category == "Food":
+        print('\n\nFood and hygiene products\n')
+
+    elif category == "Transportation":
+        print('\n\nTransportation costs\n')
+
+    elif category == "Clothing":
+        print('\n\nShoes and clothes for all members of the family.\n')
+
+    elif category == "Medical":
+        print('\n\nMedical\n')
+
+    elif category == "Personal & Discretionary":
+        print('\n\nPersonal and discretionary spending\n')
+
+    elif category == "Debt Payments":
+        print('\n\nDebt payments\n')
+
+
 def check_costs(user, income, category):
     """
     Function to compare costs to the recommended values
     and write budget recommendation to user
     """
 
-    # get_text(data)
+    get_cost_text(category)
 
-    #     while True:
-
-    #         data_input = input(f'{data}:\n')
-    #         if validate_numbers(data_input):
-    #             user.update({data: int(data_input)})
-    #             return user
-
-    # get_cost_text(category)
-
-    percent_of_income = user.get(category) / income
-    print(percent_of_income)
-    percent_of_income = round(percent_of_income * 100)
+    percent_of_income = round(user.get(category) / income * 100)
     print(percent_of_income)
 
 
