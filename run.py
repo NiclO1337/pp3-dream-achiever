@@ -295,7 +295,7 @@ def calculate_goal(user, surplus):
     fun_savings = list(user.values())[-1]
     goal_funds = fun_savings + surplus
     reach_goal = goal_cost / goal_funds
-    reach_goal = 239
+
     # Function to display time to reach goal in nr of years if applicable
     years = 0
     months = 0
@@ -314,15 +314,15 @@ def calculate_goal(user, surplus):
         months = math.ceil(reach_goal)
 
     # correctly display time as "year" or "years" in print message
-    years_text = " year "
-    months_text = " month "
-    and_text = "and "
+    years_text = " year"
+    months_text = " month"
+    and_text = " and "
 
     if years > 1:
-        years_text = " years "
+        years_text = " years"
 
     if months > 1:
-        months_text = " months "
+        months_text = " months"
     # do not display year/years at all if less than 1 year
     if years == 0:
         years = ""
@@ -340,16 +340,16 @@ def calculate_goal(user, surplus):
           f'{goal_funds} per month.')
 
     if goal_funds < 0:
-        print('Unfortunally you will not be able to reach your goal.\n')
+        print('At this point, you will not be able to reach your goal.\n')
         
     elif reach_goal > 240:
         print('At this rate it will take you over 20 years to reach your '
               f'goal. Specifically {years}{years_text}{and_text}'
               f'{months}{months_text}.\n')
         
-    else:         
+    else:
         print(f'It will take you {years}{years_text}'
-            f'{and_text}{months}{months_text}to reach your goal. '
+            f'{and_text}{months}{months_text} to reach your goal. '
             'If you want to reach this goal faster you can to either '
             'cut some of your other expenses, try to increase your income '
             'or find some new extra income.\n')
@@ -391,10 +391,10 @@ def main():
             "Transportation": 200,
             "Clothing": 0,
             "Medical": 150,
-            "Personal & Discretionary": 7000,
+            "Personal & Discretionary": 2000,
             "Debt Payments": 0,
             "Boring savings": 4000,
-            "Fun savings": 2000}    
+            "Fun savings": 2000}
 
     # welcome()
     # dream()
