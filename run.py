@@ -267,14 +267,14 @@ def compare_income_cost(user, income):
     if budget_surplus < 0:
         print('Looks like your budget exceeds your income with '
               f'{budget_surplus}, we will have to deduct this from '
-              'your fun savings for now.')
+              'your fun savings for now.\n')
     elif budget_surplus > 0:
         print(f'Great, you have a budget surplus of {budget_surplus}, '
-              'we will use this money towards reaching your goal.')
+              'we will use this money towards reaching your goal.\n')
     else:
         print('Looks like somebody did their homework and came prepared, '
               f'well done! Your income ({income}) and expenses ({expenses}) '
-              'are the same amount.')
+              'are the same amount.\n')
 
     return budget_surplus
 
@@ -293,8 +293,9 @@ def calculate_goal(user, surplus):
     """
     goal_cost = list(user.values())[1]
     fun_savings = list(user.values())[-1]
-    reach_goal = goal_cost / (fun_savings + surplus)
-    reach_goal = 22.3
+    goal_funds = fun_savings + surplus
+    reach_goal = goal_cost / goal_funds
+    reach_goal = 239
     # Function to display time to reach goal in nr of years if applicable
     years = 0
     months = 0
@@ -334,12 +335,27 @@ def calculate_goal(user, surplus):
         months_text = ""
         and_text = ""
 
-    print(f'Your goal is: "{list(user.values())[0]}" and based on your current'
-          f' fun savings (and budget surplus) it will take you {years}{years_text}'
-          f'{and_text}{months}{months_text}to reach your goal. If you want to reach this '
-          'goal faster you can to either cut some of your other expenses, '
-          'try to increase your income or find some new extra income.')
+    print(f'Your goal is: "{list(user.values())[0]}" and based on '
+          'your current fun savings (and budget surplus) totalling '
+          f'{goal_funds} per month.')
 
+    if goal_funds < 0:
+        print('Unfortunally you will not be able to reach your goal.\n')
+        
+    elif reach_goal > 240:
+        print('At this rate it will take you over 20 years to reach your '
+              f'goal. Specifically {years}{years_text}{and_text}'
+              f'{months}{months_text}.\n')
+        
+    else:         
+        print(f'It will take you {years}{years_text}'
+            f'{and_text}{months}{months_text}to reach your goal. '
+            'If you want to reach this goal faster you can to either '
+            'cut some of your other expenses, try to increase your income '
+            'or find some new extra income.\n')
+        
+    print('Let´s look through your expenses and '
+          'think about ways to reduce them.')
 
 def run_calculations(user):
     """
