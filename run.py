@@ -170,14 +170,8 @@ def get_text(data):
 
     elif data == "Debt Payments":
         print('\n\nDebt payments\n')
-        print('Many people find that their budget is quite tight when')
-        print('their monthly debt payments are over 20% of their net')
-        print('income. It’s good practice to save money before you')
-        print('start heavily paying down your debt.\n')
-        print('By following this basic plan and opening separate')
-        print('accounts for different spending, as well as savings')
-        print('accounts, you can more easily plan out your budget')
-        print('percentages and work towards debt repayment.\n')
+        print('Here you can enter the monthly payments on various debts.')
+        print('Could be for example credit card debt or loan for a car.')
 
     elif data == "Boring savings":
         print('\n\nBoring savings\n')
@@ -409,9 +403,27 @@ def get_cost_text(category):
 
     elif category == "Debt Payments":
         print('\n\nDebt payments\n')
+        print('Many people find that their budget is quite tight when')
+        print('their monthly debt payments are over 20% of their net')
+        print('income. It’s good practice to save money before you')
+        print('start heavily paying down your debt.\n')
+        print('By following this basic plan and opening separate')
+        print('accounts for different spending, as well as savings')
+        print('accounts, you can more easily plan out your budget')
+        print('percentages and work towards debt repayment.\n')
 
         guideline_percent = 10    
 
+    elif category == "Boring saving":
+        print('\n\nBoring saving\n')
+        print('A general rule of thumb is to put away at least three to six '
+              'months’ worth of expenses in an emergency fund. It is also '
+              'advised to start saving up for your retirement as early as '
+              'possible. How much you need for this is depending on what '
+              'other pension plans or workplace pension you have already.')
+        
+        guideline_percent = 10
+        
     return guideline_percent
 
 
@@ -428,9 +440,8 @@ def check_costs(user, income, category):
     print(guideline_percent)
 
 
-    # Boring saving recommendation
-    # print('A general rule of thumb is to put away at least three to')
-    # print('six months’ worth of expenses for this.\n')
+    
+    
 
 def run_calculations(user):
     """
@@ -452,18 +463,9 @@ def run_calculations(user):
     check_costs(user, income, "Medical")
     check_costs(user, income, "Personal & Discretionary")
     check_costs(user, income, "Debt Payments")
+    check_costs(user, income, "Boring savings")
 
 
-    
-    # utilities = get_data(user, "Utilities")
-    # food = get_data(user, "Food")
-    # transportation = get_data(user, "Transportation")
-    # clothing = get_data(user, "Clothing")
-    # medical = get_data(user, "Medical")
-    # personal_and_discretionary = get_data(user, "Personal & Discretionary")
-    # debt_payments = get_data(user, "Debt Payments")
-    # savings_emergency = get_data(user, "Boring savings")
-    # savings_fun = get_data(user, "Fun savings")
 
 
     
