@@ -377,9 +377,9 @@ def get_cost_text(category):
 
     elif category == "Utilities":
         print('\n\nUtilities\n')
-        print('Comparing offers from different providers can save costs.'
+        print('Comparing offers from different providers can save costs. '
               'Limiting the amount of different streaming services you '
-              'subscribe to at the same time can make a big impact.')
+              'subscribe to at the same time can make a big impact too.')
 
         guideline_percent = 5
 
@@ -397,8 +397,8 @@ def get_cost_text(category):
         print('Transportation needs are very different for example based on '
               'family circumstances or where you live and work. In some '
               'situations public transportation will be a cheaper option. '
-              'Walking and riding bicycle´s are cheap alternatives. Also '
-              'has the added benefit getting more exercise and it is'
+              'Walking and riding bicycle´s are cheap alternatives while also '
+              'having the added benefit getting more exercise and it is '
               'environmentally friendly.')
         
 
@@ -406,9 +406,9 @@ def get_cost_text(category):
 
     elif category == "Clothing":
         print('\n\nShoes and clothes for all members of the family.\n')
-        print('Use shoes and clothes for a longer time before replacing '
-              'to cut costs in this category. Can also look into buying '
-              'second hand items.')
+        print('Use shoes and clothes for a longer period of time before '
+              'replacing to cut costs in this category. Can also look into '
+              'buying second hand items.')
 
         guideline_percent = 4
 
@@ -422,7 +422,7 @@ def get_cost_text(category):
 
     elif category == "Personal & Discretionary":
         print('\n\nPersonal and discretionary spending\n')
-        print('The content for this category will vary much from person to'
+        print('The content for this category will vary much from person to '
               'person depending on circumstances. If you spend more in this '
               'category, make sure your budget balances by '
               'spending less elsewhere.')
@@ -442,7 +442,7 @@ def get_cost_text(category):
 
         guideline_percent = 10    
 
-    elif category == "Boring saving":
+    elif category == "Boring savings":
         print('\n\nBoring saving\n')
         print('A general rule of thumb is to put away at least three to six '
               'months’ worth of expenses in an emergency fund. It is also '
@@ -460,17 +460,27 @@ def check_costs(user, income, category):
     Function to compare costs to the recommended values
     and write budget recommendation to user
     """
-
+    # Get text associated with each category and get the guideline percentage    
     guideline_percent = get_cost_text(category)
 
+    # Convert user budget to percentage with 2 decimals
     percent_of_income = round((user.get(category) / income * 100), 2)
-    print(percent_of_income)
-    print(guideline_percent)
 
+    comparason = ""
+    if guideline_percent > percent_of_income:
+        comparason = "below this at"
+    elif guideline_percent < percent_of_income:
+        comparason = "above this at"
+    else:
+        comparason = "also"
 
+    print('\nGeneral guidelines to spend in this category is '
+          f'{guideline_percent}% of your total income. \nYour budget for this '
+          f'is currently {comparason} {percent_of_income}%.')
+
+    input('\nPress ENTER to continue...')
     
     
-
 def run_calculations(user):
     """
     Run all calculations to check if there is a budget surplus 
