@@ -263,13 +263,14 @@ def compare_income_cost(user, income):
     if there is a budget surplus avalible
     """
     # Get values from user and slice list to get the costs
-    costs = list(user.values())[4:]
+    costs = list(user.values())[4:-1]
     expenses = 0
     for cost in costs:
         expenses += cost
 
     budget_surplus = income - expenses
 
+    # Print different messages based on the value of the budget surplus
     if budget_surplus < 0:
         print('Looks like your budget exceeds your income with '
               f'{budget_surplus}, we will have to deduct this from '
@@ -297,8 +298,12 @@ def calculate_goal(user, surplus):
     Compare users goal to the fun savings -+ budget surplus
     and check how long it will take to reach this goal
     """
+    
     goal_cost = list(user.values())[1]
-    fun_savings = list(user.values())[-1]
+    fun_savings = list(user.values())[-2]
+    print(fun_savings)
+    initial_savings = list(user.values())[-1]
+    print(initial_savings)
     goal_funds = fun_savings + surplus
     reach_goal = goal_cost / goal_funds
 
@@ -402,16 +407,17 @@ def main():
             "Personal & Discretionary": 2000,
             "Debt Payments": 0,
             "Boring savings": 4000,
-            "Fun savings": 2000}
+            "Fun savings": 2000,
+            "Initial savings": 20000}
 
     # welcome()
     # dream()
     # goal(user)
     # cost_of_goal = get_data(user, "Cost of goal")
     # introduction()
-    collect_data(user)
+    # collect_data(user)
     
-    # print(list(user.values()))
+    print(list(user.values()))
     
     run_calculations(user)
 
