@@ -294,36 +294,49 @@ def calculate_goal(user, surplus):
     goal_cost = list(user.values())[1]
     fun_savings = list(user.values())[-1]
     reach_goal = goal_cost / (fun_savings + surplus)
-
+    reach_goal = 22.3
     # Function to display time to reach goal in nr of years if applicable
     years = 0
     months = 0
 
+    # If months is higher than 12, display time in years and months
     if reach_goal > 12:
         years = reach_goal / 12
         years = math.floor(years)
         months = math.ceil(reach_goal) - (years * 12)
+        if months == 12:
+            years += 1
+            months = 0
 
+    # If months is 12 or less, only display months and not years
     if reach_goal <= 12:
         months = math.ceil(reach_goal)
 
     # correctly display time as "year" or "years" in print message
-    year = " year and "
-    month = " month"
+    years_text = " year "
+    months_text = " month "
+    and_text = "and "
 
     if years > 1:
-        year = " years and "
+        years_text = " years "
 
     if months > 1:
-        month = " months"
+        months_text = " months "
     # do not display year/years at all if less than 1 year
     if years == 0:
         years = ""
-        year = ""
+        years_text = ""
+        and_text = ""
+
+    # do not display months or the word and if months = 0
+    if months == 0:
+        months = ""
+        months_text = ""
+        and_text = ""
 
     print(f'Your goal is: "{list(user.values())[0]}" and based on your current'
-          f' fun savings (and budget surplus) it will take you {years}{year}'
-          f'{months}{month} to reach your goal. If you want to reach this '
+          f' fun savings (and budget surplus) it will take you {years}{years_text}'
+          f'{and_text}{months}{months_text}to reach your goal. If you want to reach this '
           'goal faster you can to either cut some of your other expenses, '
           'try to increase your income or find some new extra income.')
 
@@ -351,31 +364,36 @@ def main():
     Main function to call other function in the correct order
     """
     user = {}
+    
+    user = {"Goal": "Trip to the Bahamas",
+            "Cost of goal": 50000,
+            "Income": 23000,
+            "Extra income": 10000,
+            "Housing": 14000,
+            "Utilities": 1500,
+            "Food": 5000,
+            "Transportation": 200,
+            "Clothing": 0,
+            "Medical": 150,
+            "Personal & Discretionary": 7000,
+            "Debt Payments": 0,
+            "Boring savings": 4000,
+            "Fun savings": 2000}    
 
-    welcome()
-    dream()
-    goal(user)
-    cost_of_goal = get_data(user, "Cost of goal")
-    introduction()
-    collect_data(user)
+    # welcome()
+    # dream()
+    # goal(user)
+    # cost_of_goal = get_data(user, "Cost of goal")
+    # introduction()
+    # collect_data(user)
+    
+    # print(list(user.values()))
+    
     run_calculations(user)
 
-    # user = {"Goal": "Trip to the Bahamas",
-    #         "Cost of goal": 50000,
-    #         "Income": 23000,
-    #         "Extra income": 10000,
-    #         "Housing": 14000,
-    #         "Utilities": 1500,
-    #         "Food": 5000,
-    #         "Transportation": 200,
-    #         "Clothing": 0,
-    #         "Medical": 150,
-    #         "Personal & Discretionary": 7000,
-    #         "Debt Payments": 0,
-    #         "Boring savings": 4000,
-    #         "Fun savings": 2000}
 
-    print(list(user.values()))
+
+    
     
 
 main()
