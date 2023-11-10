@@ -82,10 +82,10 @@ def introduction():
 
     input('Press ENTER to continue...\n')
 
-    
+
 def get_data(user, data):
     """
-    Ask user to input data for income 
+    Ask user to input data for income
     and expenses in each category
     """
     get_text(data)
@@ -177,7 +177,7 @@ def get_text(data):
         print('well done! If not, it is advised to dedicate savings towards')
         print('this. It is also a good idea to have some savings set aside')
         print('for retirement. This category could also include savings for')
-        print('grandchildren or any other types of long term savings.')
+        print('grandchildren or any other types of long term savings.\n')
 
     elif data == "Fun savings":
         print('\n\nSavings: Fun goal!\n')
@@ -195,7 +195,7 @@ def get_text(data):
 def collect_data(user):
     """
     Collect data from user
-    """    
+    """
     income = get_data(user, "Income")
     extra_income = get_data(user, "Extra income")
     housing = get_data(user, "Housing")
@@ -265,13 +265,13 @@ def compare_income_cost(user, income):
     # Print different messages based on the value of the budget surplus
     if budget_surplus < 0:
         print('Looks like your budget exceeds your income with '
-              f'{budget_surplus}, we will have to deduct this from '
+              f'\n{budget_surplus}, we will have to deduct this from '
               'your fun savings for now.\n')
     elif budget_surplus > 0:
-        print(f'Great, you have a budget surplus of {budget_surplus}, '
+        print(f'\nGreat, you have a budget surplus of {budget_surplus}, '
               'we will use this money towards reaching your goal.\n')
     else:
-        print('Looks like somebody did their homework and came prepared, '
+        print('\nLooks like somebody did their homework and came prepared, '
               f'well done! Your income ({income}) and expenses ({expenses}) '
               'are the same amount.\n')
 
@@ -283,7 +283,7 @@ def calculate_goal(user, surplus):
     Compare users goal to the fun savings -+ budget surplus
     and check how long it will take to reach this goal
     """
-    
+
     goal_cost = list(user.values())[1]
     fun_savings = list(user.values())[-2]
     initial_savings = list(user.values())[-1]
@@ -293,7 +293,7 @@ def calculate_goal(user, surplus):
     # Check if user can already afford their goal
     if initial_savings >= goal_cost:
         print('Good news, you already have enough savings to reach your goal!')
-    else:        
+    else:
         # Function to display time to reach goal in nr of years if applicable
         years = 0
         months = 0
@@ -334,28 +334,28 @@ def calculate_goal(user, surplus):
             and_text = ""
 
         print(f'Your goal is: "{list(user.values())[0]}" and your current '
-            f'savings towards your goal is {goal_funds} per month.')
+              f'savings towards your goal is {goal_funds} per month.')
 
         if goal_funds < 0:
             print('At this point, you will not be able to reach your goal.')
-            
+
         elif reach_goal > 240:
             print('At this rate it will take you over 20 years to reach your '
-                f'goal. Specifically {years}{years_text}{and_text}'
-                f'{months}{months_text}.')
-            
+                  f'goal. Specifically {years}{years_text}{and_text}'
+                  f'{months}{months_text}.')
+
         else:
             print(f'It will take you {years}{years_text}'
-                f'{and_text}{months}{months_text} to reach your goal. '
-                'If you want to reach this goal faster you can to either '
-                'cut some of your other expenses, try to increase your income '
-                'or find some new extra income.')
-            
+                  f'{and_text}{months}{months_text} to reach your goal. '
+                  'If you want to reach this goal faster you can to either '
+                  'cut some of your other expenses, try to increase your '
+                  'income or find some new extra income.')
+
     print('\nLet´s look through your expenses and '
           'think about ways to reduce them.\n')
 
     input('Press ENTER to continue...\n')
-        
+
 
 def get_cost_text(category):
     """
@@ -363,7 +363,7 @@ def get_cost_text(category):
     depending on the category of cost
     """
     guideline_percent = 0
-    
+
     if category == "Housing":
         print('\n\nHousing costs\n')
         print('Other than moving to a cheaper place, there are many small '
@@ -400,7 +400,6 @@ def get_cost_text(category):
               'Walking and riding bicycle´s are cheap alternatives while also '
               'having the added benefit getting more exercise and it is '
               'environmentally friendly.')
-        
 
         guideline_percent = 17.5
 
@@ -438,9 +437,9 @@ def get_cost_text(category):
         print('By following this basic plan and opening separate')
         print('accounts for different spending, as well as savings')
         print('accounts, you can more easily plan out your budget')
-        print('percentages and work towards debt repayment.\n')
+        print('percentages and work towards debt repayment.')
 
-        guideline_percent = 10    
+        guideline_percent = 10
 
     elif category == "Boring savings":
         print('\n\nBoring saving\n')
@@ -449,9 +448,9 @@ def get_cost_text(category):
               'advised to start saving up for your retirement as early as '
               'possible. How much you need for this is depending on what '
               'other pension plans or workplace pension you have already.')
-        
+
         guideline_percent = 10
-        
+
     return guideline_percent
 
 
@@ -460,12 +459,13 @@ def check_costs(user, income, category):
     Function to compare costs to the recommended values
     and write budget recommendation to user
     """
-    # Get text associated with each category and get the guideline percentage    
+    # Get text associated with each category and get the guideline percentage
     guideline_percent = get_cost_text(category)
 
     # Convert user budget to percentage with 2 decimals
     percent_of_income = round((user.get(category) / income * 100), 2)
 
+    # Change text depending on if budget is below, above or same as guideline
     comparason = ""
     if guideline_percent > percent_of_income:
         comparason = "below this at"
@@ -479,20 +479,20 @@ def check_costs(user, income, category):
           f'is currently {comparason} {percent_of_income}%.')
 
     input('\nPress ENTER to continue...')
-    
-    
+
+
 def run_calculations(user):
     """
-    Run all calculations to check if there is a budget surplus 
+    Run all calculations to check if there is a budget surplus
     and check how long it will take to reach the specified goal.
     Then compares each category of costs with the general recommendation.
     """
     # Add income's together to use in other calculations
     income = user.get("Income") + user.get("Extra income")
-    
-    # budget_surplus = compare_income_cost(user, income)
-    # calculate_goal(user, budget_surplus)
-    
+
+    budget_surplus = compare_income_cost(user, income)
+    calculate_goal(user, budget_surplus)
+
     check_costs(user, income, "Housing")
     check_costs(user, income, "Utilities")
     check_costs(user, income, "Food")
@@ -504,46 +504,38 @@ def run_calculations(user):
     check_costs(user, income, "Boring savings")
 
 
-
-
-    
-
 def main():
     """
     Main function to call other function in the correct order
     """
     user = {}
-    
-    user = {"Goal": "Trip to the Bahamas",
-            "Cost of goal": 50000,
-            "Income": 23000,
-            "Extra income": 10000,
-            "Housing": 14000,
-            "Utilities": 1500,
-            "Food": 5000,
-            "Transportation": 150,
-            "Clothing": 200,
-            "Medical": 150,
-            "Personal & Discretionary": 7000,
-            "Debt Payments": 0,
-            "Boring savings": 4000,
-            "Fun savings": 2000,
-            "Initial savings": 10000}
 
-    # welcome()
-    # dream()
-    # goal(user)
-    # cost_of_goal = get_data(user, "Cost of goal")
-    # introduction()
-    # collect_data(user)
-    
-    print(list(user.values()))
-    
+    # user = {"Goal": "Trip to the Bahamas",
+    #         "Cost of goal": 50000,
+    #         "Income": 23000,
+    #         "Extra income": 10000,
+    #         "Housing": 14000,
+    #         "Utilities": 1500,
+    #         "Food": 5000,
+    #         "Transportation": 150,
+    #         "Clothing": 200,
+    #         "Medical": 150,
+    #         "Personal & Discretionary": 7000,
+    #         "Debt Payments": 0,
+    #         "Boring savings": 4000,
+    #         "Fun savings": 2000,
+    #         "Initial savings": 10000}
+
+    welcome()
+    dream()
+    goal(user)
+    cost_of_goal = get_data(user, "Cost of goal")
+    introduction()
+    collect_data(user)
+
+    # print(list(user.values()))
+
     run_calculations(user)
 
-
-
-    
-    
 
 main()
