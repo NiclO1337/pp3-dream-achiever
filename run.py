@@ -10,12 +10,11 @@ def welcome():
           'This tool will help you reach your dreams and goals.\n')
     print('Budgeting Guidelines for Income:')
     print('Many people wonder how much of their income they should spend on '
-          'their home, vehicle, groceries, clothes, etc. Below are some '
-          'guidelines to give you a general idea and a starting point for your'
-          ' budget. What that will look like depends on your income, family '
-          'circumstances, monthly expenses, and where you live.\n'
-          'Start working with these budgeting guidelines by developing your '
-          'budget with your net income. You have left this money after '
+          'their home, vehicle, groceries, clothes, etc. At the end of this '
+          'calculator we will compare your expenses to the recommended '
+          'guidlines and think about possible changes you can make.\n'
+          'Start working with this budget calculator by developing your '
+          'budget with your net income. You have this money left after '
           'government deductions from your paycheque but before voluntary '
           'deductions like RRSPs, pensions, or other savings. If you have '
           'expenses like high debt payments, childcare, school expenses, or '
@@ -32,9 +31,9 @@ def dream():
     print('\nDream\n')
     print('First, let´s start with the fun stuff.\n'
           'Imagine you won the lottery today!\n'
-          'What would you do? Where would you go?\n'
+          '\nWhat would you do? Where would you go?\n'
           'What would your life look like?\n'
-          '\nTake a few minuites and think about this.\n')
+          '\nTake a few minutes and think about this.\n')
 
     input('Press ENTER to continue...\n')
 
@@ -50,7 +49,7 @@ def goal(user):
           'bring you the best quality of life improvement right now. '
           'Could be for example getting away on a vacation, just for relaxing '
           'or have an exciting adventure. Or moving to a new place. '
-          'Or buying an expensive watch. Something that is important to you.')
+          'Or buying an expensive watch. One thing that is important to you.')
     print('\nYou do not need to write any details here, '
           'can be just a keyword.')
 
@@ -110,15 +109,15 @@ def get_text(data):
         print('but it is important to always stick to the same currency')
         print('throughout the calculator.')
         print('For example, if you live in Norway but have a salery in GBP')
-        print('and like to order german sausages online and pay in EUR =')
-        print('convert all to whichever currency is easiest or you.\n')
+        print('and like to order german sausages online and pay in EUR then ')
+        print('convert everything to whichever currency is easiest or you.\n')
 
     elif data == "Income":
         print('\n\nMain income\n')
         print('Enter the amount from your main source of income here.\n')
         print('For the calculator to work properly, you need to enter your '
               'monthly income. Same goes for any extra income and for all '
-              'costs. Estimate the average monthly spending on each category.')
+              'costs. Estimate the average monthly on each category.')
 
     elif data == "Extra income":
         print('\n\nExtra income\n')
@@ -335,8 +334,8 @@ def calculate_goal(user, surplus):
         months_text = ""
         and_text = ""
 
-    print(f'Your goal is: "{list(user.values())[0]}" and based on '
-          'your current fun savings (and budget surplus) totalling '
+    print(f'Your goal is: "{list(user.values())[0]}". Your current '
+          'fun savings together with you budget surplus are totalling '
           f'{goal_funds} per month.')
 
     if goal_funds < 0:
@@ -355,7 +354,10 @@ def calculate_goal(user, surplus):
             'or find some new extra income.\n')
         
     print('Let´s look through your expenses and '
-          'think about ways to reduce them.')
+          'think about ways to reduce them.\n')
+
+    input('Press ENTER to continue...\n')
+    
 
 def run_calculations(user):
     """
@@ -381,27 +383,27 @@ def main():
     """
     user = {}
     
-    user = {"Goal": "Trip to the Bahamas",
-            "Cost of goal": 50000,
-            "Income": 23000,
-            "Extra income": 10000,
-            "Housing": 14000,
-            "Utilities": 1500,
-            "Food": 5000,
-            "Transportation": 200,
-            "Clothing": 0,
-            "Medical": 150,
-            "Personal & Discretionary": 2000,
-            "Debt Payments": 0,
-            "Boring savings": 4000,
-            "Fun savings": 2000}
+    # user = {"Goal": "Trip to the Bahamas",
+    #         "Cost of goal": 50000,
+    #         "Income": 23000,
+    #         "Extra income": 10000,
+    #         "Housing": 14000,
+    #         "Utilities": 1500,
+    #         "Food": 5000,
+    #         "Transportation": 200,
+    #         "Clothing": 0,
+    #         "Medical": 150,
+    #         "Personal & Discretionary": 2000,
+    #         "Debt Payments": 0,
+    #         "Boring savings": 4000,
+    #         "Fun savings": 2000}
 
-    # welcome()
-    # dream()
-    # goal(user)
-    # cost_of_goal = get_data(user, "Cost of goal")
-    # introduction()
-    # collect_data(user)
+    welcome()
+    dream()
+    goal(user)
+    cost_of_goal = get_data(user, "Cost of goal")
+    introduction()
+    collect_data(user)
     
     # print(list(user.values()))
     
