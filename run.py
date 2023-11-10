@@ -164,9 +164,7 @@ def get_text(data):
         print('\n\nPersonal and discretionary spending\n')
         print('Money spent on entertainment, recreation, education,')
         print('tobacco & alcohol, eating out, gaming, hair cuts, hobbies,')
-        print('and planned charitable giving are some examples. If you')
-        print('spend more in this category, make sure your budget')
-        print('balances by spending less elsewhere.\n')
+        print('and planned charitable giving are some examples.\n')
 
     elif data == "Debt Payments":
         print('\n\nDebt payments\n')
@@ -368,36 +366,66 @@ def get_cost_text(category):
     
     if category == "Housing":
         print('\n\nHousing costs\n')
+        print('Other than moving to a cheaper place, there are many small '
+              'things you can do to reduce your living costs. For example it '
+              'is a good idea to regularly check what the best avalible '
+              'interest rate on your mortgage. Comparing offers from '
+              'different companies on for example insurance and electricity '
+              'can save a lot of money. ')
 
         guideline_percent = 35
 
     elif category == "Utilities":
         print('\n\nUtilities\n')
+        print('Comparing offers from different providers can save costs.'
+              'Limiting the amount of different streaming services you '
+              'subscribe to at the same time can make a big impact.')
 
         guideline_percent = 5
 
     elif category == "Food":
         print('\n\nFood and hygiene products\n')
+        print('There are many ways to cut down on food costs, from where '
+              'you do your grocery shopping to what you choose to eat. '
+              'Can also be a good idea to take advantage of coupon deals '
+              'and special prices avalible in the store.')
 
         guideline_percent = 15
 
     elif category == "Transportation":
         print('\n\nTransportation costs\n')
+        print('Transportation needs are very different for example based on '
+              'family circumstances or where you live and work. In some '
+              'situations public transportation will be a cheaper option. '
+              'Walking and riding bicycle´s are cheap alternatives. Also '
+              'has the added benefit getting more exercise and it is'
+              'environmentally friendly.')
+        
 
         guideline_percent = 17.5
 
     elif category == "Clothing":
         print('\n\nShoes and clothes for all members of the family.\n')
+        print('Use shoes and clothes for a longer time before replacing '
+              'to cut costs in this category. Can also look into buying '
+              'second hand items.')
 
         guideline_percent = 4
 
     elif category == "Medical":
         print('\n\nMedical\n')
+        print('Hard cost to try and cut, if you need it you need it. '
+              'Some studies say that a healthy lifestyle can reduce '
+              'future medical costs.')
 
         guideline_percent = 3
 
     elif category == "Personal & Discretionary":
         print('\n\nPersonal and discretionary spending\n')
+        print('The content for this category will vary much from person to'
+              'person depending on circumstances. If you spend more in this '
+              'category, make sure your budget balances by '
+              'spending less elsewhere.')
 
         guideline_percent = 7.5
 
