@@ -286,13 +286,6 @@ def compare_income_cost(user, income):
     return budget_surplus
 
 
-def check_costs(user, income, category):
-    """
-    Function to compare costs to the recommended values
-    and write budget recommendation to user
-    """
-    
-
 def calculate_goal(user, surplus):
     """
     Compare users goal to the fun savings -+ budget surplus
@@ -372,6 +365,31 @@ def calculate_goal(user, surplus):
     input('Press ENTER to continue...\n')
         
 
+def check_costs(user, income, category):
+    """
+    Function to compare costs to the recommended values
+    and write budget recommendation to user
+    """
+
+    # get_text(data)
+
+    #     while True:
+
+    #         data_input = input(f'{data}:\n')
+    #         if validate_numbers(data_input):
+    #             user.update({data: int(data_input)})
+    #             return user
+
+    # get_cost_text(category)
+
+    percent_of_income = user.get(category) / income
+    print(percent_of_income)
+    percent_of_income = round(percent_of_income * 100)
+    print(percent_of_income)
+
+
+
+
 def run_calculations(user):
     """
     Run all calculations to check if there is a budget surplus 
@@ -381,8 +399,8 @@ def run_calculations(user):
     # Add income's together to use in other calculations
     income = user.get("Income") + user.get("Extra income")
     
-    budget_surplus = compare_income_cost(user, income)
-    calculate_goal(user, budget_surplus)
+    # budget_surplus = compare_income_cost(user, income)
+    # calculate_goal(user, budget_surplus)
     
     check_costs(user, income, "Housing")
 
