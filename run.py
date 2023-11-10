@@ -370,8 +370,12 @@ def get_cost_text(category):
     Function to print different messages
     depending on the category of cost
     """
+    guideline_percent = 0
+    
     if category == "Housing":
         print('\n\nHousing costs\n')
+
+        guideline_percent = 35
 
     elif category == "Utilities":
         print('\n\nUtilities\n')
@@ -394,6 +398,8 @@ def get_cost_text(category):
     elif category == "Debt Payments":
         print('\n\nDebt payments\n')
 
+    return guideline_percent
+
 
 def check_costs(user, income, category):
     """
@@ -401,11 +407,11 @@ def check_costs(user, income, category):
     and write budget recommendation to user
     """
 
-    get_cost_text(category)
+    guideline_percent = get_cost_text(category)
 
     percent_of_income = round(user.get(category) / income * 100)
     print(percent_of_income)
-
+    print(guideline_percent)
 
 
 
