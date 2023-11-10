@@ -335,8 +335,7 @@ def calculate_goal(user, surplus):
         and_text = ""
 
     print(f'Your goal is: "{list(user.values())[0]}". Your current '
-          'fun savings together with you budget surplus are totalling '
-          f'{goal_funds} per month.')
+          f'savings towards your goal is {goal_funds} per month.')
 
     if goal_funds < 0:
         print('At this point, you will not be able to reach your goal.\n')
@@ -383,27 +382,27 @@ def main():
     """
     user = {}
     
-    # user = {"Goal": "Trip to the Bahamas",
-    #         "Cost of goal": 50000,
-    #         "Income": 23000,
-    #         "Extra income": 10000,
-    #         "Housing": 14000,
-    #         "Utilities": 1500,
-    #         "Food": 5000,
-    #         "Transportation": 200,
-    #         "Clothing": 0,
-    #         "Medical": 150,
-    #         "Personal & Discretionary": 2000,
-    #         "Debt Payments": 0,
-    #         "Boring savings": 4000,
-    #         "Fun savings": 2000}
+    user = {"Goal": "Trip to the Bahamas",
+            "Cost of goal": 50000,
+            "Income": 23000,
+            "Extra income": 10000,
+            "Housing": 14000,
+            "Utilities": 1500,
+            "Food": 5000,
+            "Transportation": 200,
+            "Clothing": 0,
+            "Medical": 150,
+            "Personal & Discretionary": 2000,
+            "Debt Payments": 0,
+            "Boring savings": 4000,
+            "Fun savings": 2000}
 
-    welcome()
-    dream()
-    goal(user)
-    cost_of_goal = get_data(user, "Cost of goal")
-    introduction()
-    collect_data(user)
+    # welcome()
+    # dream()
+    # goal(user)
+    # cost_of_goal = get_data(user, "Cost of goal")
+    # introduction()
+    # collect_data(user)
     
     # print(list(user.values()))
     
