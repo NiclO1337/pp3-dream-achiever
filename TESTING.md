@@ -87,22 +87,17 @@ Result after optimization
 | **Header / navigation bar** | 
 |  |  |  |  |  |
 | **Other features** |
-| Form submission |   |  |  |  |
-| Form reset |  |  |  |  |  |
-| Hover buttons | Show hover effect on mouse-over | Mouse over buttons | Hover effect is displayed |  |
+|  |  |  |  |  |
 
 
 ### Browser
-Website has been tested on Google Chrome, Microsoft Edge, Safari, and Samsung Internet Browser.
+Website has been tested on Google Chrome, Microsoft Edge, Firefox, and Samsung Internet Browser.
 
 | Feature tested \  On browser | Google Chrome | Microsoft Edge | Firefox | Samsung Internet  |
 | --- | --- | --- | --- | --- |
-| Click navigation links |  |  |  | |
-| Click social media icons |   |  |  |  |
-| Internal links on main page |  |  |  |  |
+|  |  |  |  |  |
 | **Other features** |
-| Form submission |  |  |  |  |
-| Play recipe video |  |  |  |  |
+|  |  |  |  |  |
 
 ### Devices
 Manually tested on mobile device (Xiaomi 12), tablet (Samsung Galaxy tab S4) laptop, and desktop computer.
