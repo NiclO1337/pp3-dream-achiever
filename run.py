@@ -301,74 +301,76 @@ def calculate_goal(user, surplus):
     
     goal_cost = list(user.values())[1]
     fun_savings = list(user.values())[-2]
-    print(fun_savings)
     initial_savings = list(user.values())[-1]
-    print(initial_savings)
     goal_funds = fun_savings + surplus
-    reach_goal = goal_cost / goal_funds
+    reach_goal = (goal_cost - initial_savings) / goal_funds
 
-    # Function to display time to reach goal in nr of years if applicable
-    years = 0
-    months = 0
+    # Check if user can already afford their goal
+    if initial_savings >= goal_cost:
+        print('Good news, you already have enough savings to reach your goal!')
+    else:        
+        # Function to display time to reach goal in nr of years if applicable
+        years = 0
+        months = 0
 
-    # If months is higher than 12, display time in years and months
-    if reach_goal > 12:
-        years = reach_goal / 12
-        years = math.floor(years)
-        months = math.ceil(reach_goal) - (years * 12)
-        if months == 12:
-            years += 1
-            months = 0
+        # If months is higher than 12, display time in years and months
+        if reach_goal > 12:
+            years = reach_goal / 12
+            years = math.floor(years)
+            months = math.ceil(reach_goal) - (years * 12)
+            if months == 12:
+                years += 1
+                months = 0
 
-    # If months is 12 or less, only display months and not years
-    if reach_goal <= 12:
-        months = math.ceil(reach_goal)
+        # If months is 12 or less, only display months and not years
+        if reach_goal <= 12:
+            months = math.ceil(reach_goal)
 
-    # correctly display time as "year" or "years" in print message
-    years_text = " year"
-    months_text = " month"
-    and_text = " and "
+        # correctly display time as "year" or "years" in print message
+        years_text = " year"
+        months_text = " month"
+        and_text = " and "
 
-    if years > 1:
-        years_text = " years"
+        if years > 1:
+            years_text = " years"
 
-    if months > 1:
-        months_text = " months"
-    # do not display year/years at all if less than 1 year
-    if years == 0:
-        years = ""
-        years_text = ""
-        and_text = ""
+        if months > 1:
+            months_text = " months"
+        # do not display year/years at all if less than 1 year
+        if years == 0:
+            years = ""
+            years_text = ""
+            and_text = ""
 
-    # do not display months or the word and if months = 0
-    if months == 0:
-        months = ""
-        months_text = ""
-        and_text = ""
+        # do not display months or the word and if months = 0
+        if months == 0:
+            months = ""
+            months_text = ""
+            and_text = ""
 
-    print(f'Your goal is: "{list(user.values())[0]}" and your current '
-          f'savings towards your goal is {goal_funds} per month.')
+        print(f'Your goal is: "{list(user.values())[0]}" and your current '
+            f'savings towards your goal is {goal_funds} per month.')
 
-    if goal_funds < 0:
-        print('At this point, you will not be able to reach your goal.\n')
-        
-    elif reach_goal > 240:
-        print('At this rate it will take you over 20 years to reach your '
-              f'goal. Specifically {years}{years_text}{and_text}'
-              f'{months}{months_text}.\n')
-        
-    else:
-        print(f'It will take you {years}{years_text}'
-            f'{and_text}{months}{months_text} to reach your goal. '
-            'If you want to reach this goal faster you can to either '
-            'cut some of your other expenses, try to increase your income '
-            'or find some new extra income.\n')
-        
-    print('Let´s look through your expenses and '
+        if goal_funds < 0:
+            print('At this point, you will not be able to reach your goal.')
+            
+        elif reach_goal > 240:
+            print('At this rate it will take you over 20 years to reach your '
+                f'goal. Specifically {years}{years_text}{and_text}'
+                f'{months}{months_text}.')
+            
+        else:
+            print(f'It will take you {years}{years_text}'
+                f'{and_text}{months}{months_text} to reach your goal. '
+                'If you want to reach this goal faster you can to either '
+                'cut some of your other expenses, try to increase your income '
+                'or find some new extra income.')
+            
+    print('\nLet´s look through your expenses and '
           'think about ways to reduce them.\n')
 
     input('Press ENTER to continue...\n')
-    
+        
 
 def run_calculations(user):
     """
@@ -401,14 +403,14 @@ def main():
             "Housing": 14000,
             "Utilities": 1500,
             "Food": 5000,
-            "Transportation": 200,
-            "Clothing": 0,
+            "Transportation": 150,
+            "Clothing": 200,
             "Medical": 150,
-            "Personal & Discretionary": 2000,
+            "Personal & Discretionary": 7000,
             "Debt Payments": 0,
             "Boring savings": 4000,
             "Fun savings": 2000,
-            "Initial savings": 20000}
+            "Initial savings": 10000}
 
     # welcome()
     # dream()
