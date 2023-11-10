@@ -199,8 +199,6 @@ def collect_data(user):
     """
     Collect data from user
     """    
-    cost_of_goal = get_data(user, "Cost of goal")
-    introduction()
     income = get_data(user, "Income")
     extra_income = get_data(user, "Extra income")
     housing = get_data(user, "Housing")
@@ -357,6 +355,8 @@ def main():
     welcome()
     dream()
     goal(user)
+    cost_of_goal = get_data(user, "Cost of goal")
+    introduction()
     collect_data(user)
     run_calculations(user)
 
