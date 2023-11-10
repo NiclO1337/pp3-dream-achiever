@@ -142,8 +142,9 @@ TODO: Add text about feature
 
 ## Future features
 - Add option to select different currencies to be displayed
+- Add option to select weekly or monthly income
 - Add data into a spreadsheet and send a budget template with data in email to the user
-- 
+- Add option to enter a starting value for the goal savings.
 
 
 ## Technologies used
