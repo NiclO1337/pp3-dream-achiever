@@ -116,12 +116,12 @@ def get_text(data):
         print('Enter the amount from your main source of income here.\n')
         print('For the calculator to work properly, you need to enter your '
               'monthly income. Same goes for any extra income and for all '
-              'costs. Estimate the average monthly on each category.')
+              'costs. Estimate the average monthly on each category.\n')
 
     elif data == "Extra income":
         print('\n\nExtra income\n')
         print('For example, this could be income from commissions, overtime, '
-              'bonuses, rent (recieved), child support, benefits etc.')
+              'bonuses, rent (recieved), child support, benefits etc.\n')
 
     elif data == "Housing":
         print('\n\nHousing costs\n')
@@ -287,7 +287,10 @@ def calculate_goal(user, surplus):
     fun_savings = list(user.values())[-2]
     initial_savings = list(user.values())[-1]
     goal_funds = fun_savings + surplus
-    reach_goal = (goal_cost - initial_savings) / goal_funds
+    if goal_funds <= 0:
+        reach_goal = 0
+    else:
+        reach_goal = (goal_cost - initial_savings) / goal_funds
 
     # Check if user can already afford their goal
     if initial_savings >= goal_cost:
@@ -335,7 +338,7 @@ def calculate_goal(user, surplus):
         print(f'Your goal is: "{list(user.values())[0]}" and your current '
               f'savings towards your goal is {goal_funds} per month.')
 
-        if goal_funds < 0:
+        if goal_funds <= 0:
             print('At this point, you will not be able to reach your goal.')
 
         elif reach_goal > 240:
@@ -462,7 +465,10 @@ def check_costs(user, income, category):
     guideline_percent = get_cost_text(category)
 
     # Convert user budget to percentage with 2 decimals
-    percent_of_income = round((user.get(category) / income * 100), 2)
+    if income == 0:
+        percent_of_income = 0
+    else:
+        percent_of_income = round((user.get(category) / income * 100), 2)
 
     # Change text depending on if budget is below, above or same as guideline
     comparason = ""
@@ -474,8 +480,12 @@ def check_costs(user, income, category):
         comparason = "also"
 
     print('\nGeneral guidelines to spend in this category is '
-          f'{guideline_percent}% of your total income. \nYour budget for this '
-          f'is currently {comparason} {percent_of_income}%.')
+          f'{guideline_percent}% of your total income.')
+    if income == 0:
+        print('Unable to calculate you % since your income is set to 0.')
+    else:
+        print('Your budget for this is currently '
+          f'{comparason} {percent_of_income}%.')
 
     input('\nPress ENTER to continue...')
 
