@@ -263,14 +263,14 @@ def compare_income_cost(user, income):
 
     # Print different messages based on the value of the budget surplus
     if budget_surplus < 0:
-        print('Looks like your budget exceeds your income with '
-              f'\n{budget_surplus}, we will have to deduct this from '
+        print('\n\nLooks like your budget exceeds your income with '
+              f'{budget_surplus}, we will have to deduct this from '
               'your fun savings for now.\n')
     elif budget_surplus > 0:
-        print(f'\nGreat, you have a budget surplus of {budget_surplus}, '
+        print(f'\n\nGreat, you have a budget surplus of {budget_surplus}, '
               'we will use this money towards reaching your goal.\n')
     else:
-        print('\nLooks like somebody did their homework and came prepared, '
+        print('\n\nLooks like somebody did their homework and came prepared, '
               f'well done! Your income ({income}) and expenses ({expenses}) '
               'are the same amount.\n')
 
@@ -518,17 +518,41 @@ def another_recommendation():
     Give user another helpful tip and give
     the option to start calculator over again
     """
+    print('\n\nThank you')
+    print('for using our budget calculator, we hope this helped you '
+          'to think about your expenses and also clarify your dreams and '
+          'goals. This is the first step needed towards achieving them. '
+          'Here is another general helpful tip for you to think about if the '
+          'categories above was too confusing.\n')
+    
+    input('\nPress ENTER to learn about the 50-30-20 rule...\n')
+    
     print('The 50-30-20 Rule\n')
     print('The 50-30-20 rule splits expenses into just three categories. It '
           'also offers recommendations on how much money to use for each. '
           'With some basic information, you can get on the road to financial '
           'well-being.\n')
-    print('Needs 50%\n About half of your budget should go toward needs. '
+
+    input('\nPress ENTER to continue...\n')
+    
+    print('Needs: 50%\nAbout half of your budget should go toward needs. '
           'These are expenses that must be met no matter what, for example '
           'rent/mortgage payments, minimum payments on loans, healthcare, '
-          'and groceries.')
-    print('Wants 30%\n' )
+          'and groceries.\n')       
     
+    print('Wants: 30%\nYou subscribe to a streaming service to watch your '
+          'favorite show, not because you need the subscription to live. '
+          'Wants are things you enjoy that you spend money on by choice. '
+          'This could be subscriptions, supplies for hobbies, restaurant '
+          'meals and vacations.\n')
+    
+    print('Savings: 20%\nThe remaining 20% of your budget should go toward '
+          'the future. You may put money in an emergency fund, or save toward '
+          'a down payment on a home. Paying down debt beyond the minimum '
+          'payment amount belongs in this category, too.')
+
+    
+
 
 def main():
     """
