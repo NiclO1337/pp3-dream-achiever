@@ -515,8 +515,7 @@ def run_calculations(user):
 
 def another_recommendation():
     """
-    Give user another helpful tip and give
-    the option to start calculator over again
+    Thank the user for using the calculator and give another helpful tip
     """
     print('\n\nThank you')
     print('for using our budget calculator, we hope this helped you '
@@ -551,7 +550,35 @@ def another_recommendation():
           'a down payment on a home. Paying down debt beyond the minimum '
           'payment amount belongs in this category, too.')
 
-    
+    input('\nPress ENTER to continue...\n')
+
+
+def start_over():
+    """
+    Give user the option to start calculator over again
+    """
+
+        # while True:
+
+        # data_input = input(f'{data}:\n')
+        # if validate_numbers(data_input):
+        #     user.update({data: int(data_input)})
+        #     return user
+
+    print('Dream achiever')
+    print('Would you like to start over with another calculation?')
+
+    while True:
+        
+        start_over = input('Write Yes or No:\n')
+        if start_over == "Yes" or "yes" or "Y" or "y":
+            welcome()
+        elif start_over == "No" or "no" or "N" or "n":
+            print('Thank you again for using our calculator, you are welcome '
+                  'back anytime, have a nice day!')
+        else: 
+            print('Sorry, I do not understand what you mean')
+            return False
 
 
 def main():
@@ -577,16 +604,14 @@ def main():
     #         "Initial savings": 10000}
 
     welcome()
-    dream()
-    goal(user)
-    cost_of_goal = get_data(user, "Cost of goal")
-    introduction()
-    collect_data(user)
-
-    # print(list(user.values()))
-
-    run_calculations(user)
-    another_recommendation()
+    # dream()
+    # goal(user)
+    # cost_of_goal = get_data(user, "Cost of goal")
+    # introduction()
+    # collect_data(user)
+    # run_calculations(user)
+    # another_recommendation()
+    start_over()
 
 
 main()
