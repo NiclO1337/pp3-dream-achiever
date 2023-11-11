@@ -1,4 +1,3 @@
-from pprint import pprint
 import math
 
 
@@ -504,6 +503,23 @@ def run_calculations(user):
     check_costs(user, income, "Boring savings")
 
 
+def another_recommendation():
+    """
+    Give user another helpful tip and give
+    the option to start calculator over again
+    """
+    print('The 50-30-20 Rule\n')
+    print('The 50-30-20 rule splits expenses into just three categories. It '
+          'also offers recommendations on how much money to use for each. '
+          'With some basic information, you can get on the road to financial '
+          'well-being.\n')
+    print('Needs 50%\n About half of your budget should go toward needs. '
+          'These are expenses that must be met no matter what, for example '
+          'rent/mortgage payments, minimum payments on loans, healthcare, '
+          'and groceries.')
+    print('Wants 30%\n' )
+    
+
 def main():
     """
     Main function to call other function in the correct order
@@ -536,6 +552,7 @@ def main():
     # print(list(user.values()))
 
     run_calculations(user)
+    another_recommendation()
 
 
 main()
