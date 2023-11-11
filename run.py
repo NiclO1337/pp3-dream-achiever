@@ -485,7 +485,7 @@ def check_costs(user, income, category):
         print('Unable to calculate you % since your income is set to 0.')
     else:
         print('Your budget for this is currently '
-          f'{comparason} {percent_of_income}%.')
+              f'{comparason} {percent_of_income}%.')
 
     input('\nPress ENTER to continue...')
 
@@ -523,9 +523,9 @@ def another_recommendation():
           'goals. This is the first step needed towards achieving them. '
           'Here is another general helpful tip for you to think about if the '
           'categories above was too confusing.\n')
-    
+
     input('\nPress ENTER to learn about the 50-30-20 rule...\n')
-    
+
     print('The 50-30-20 Rule\n')
     print('The 50-30-20 rule splits expenses into just three categories. It '
           'also offers recommendations on how much money to use for each. '
@@ -533,18 +533,18 @@ def another_recommendation():
           'well-being.\n')
 
     input('\nPress ENTER to continue...\n')
-    
+
     print('Needs: 50%\nAbout half of your budget should go toward needs. '
           'These are expenses that must be met no matter what, for example '
           'rent/mortgage payments, minimum payments on loans, healthcare, '
           'and groceries.\n')       
-    
+
     print('Wants: 30%\nYou subscribe to a streaming service to watch your '
           'favorite show, not because you need the subscription to live. '
           'Wants are things you enjoy that you spend money on by choice. '
           'This could be subscriptions, supplies for hobbies, restaurant '
           'meals and vacations.\n')
-    
+
     print('Savings: 20%\nThe remaining 20% of your budget should go toward '
           'the future. You may put money in an emergency fund, or save toward '
           'a down payment on a home. Paying down debt beyond the minimum '
@@ -558,7 +558,7 @@ def another_recommendation():
 #     Validate the start over response
 #     """
 #     # or "yes" or "Y" or "y" or "No" or "no" or "N" or "n":
-    
+
 #     if start_over == "Yes" or "yes" or "Y" or "y":
 #         return True
 
@@ -567,7 +567,7 @@ def another_recommendation():
 #         return True
 
 #     return False
-    
+
 
 # def start_over():
 #     """
@@ -577,11 +577,11 @@ def another_recommendation():
 #     print('Would you like to start over with another calculation?')
 
 #     while True:
-        
+
 #         start_over = input('Write Yes or No:\n')
 #         if validate_start_over(start_over):
 #             break
-#         else: 
+#         else:
 #             print('Sorry, I do not understand what you mean')
 
 def main():
