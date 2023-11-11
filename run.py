@@ -553,12 +553,27 @@ def another_recommendation():
     input('\nPress ENTER to continue...\n')
 
 
+def validate_start_over(start_over):
+    """
+    Validate the start over response
+    """
+    # or "yes" or "Y" or "y" or "No" or "no" or "N" or "n":
+    
+    if start_over == "Yes" or "yes" or "Y" or "y":
+        return True
+
+    if start_over == "No" or "no" or "N" or "n":
+        return True
+
+    return False
+    
+
 def start_over():
     """
     Give user the option to start calculator over again
     """
 
-        # while True:
+    # while True:
 
         # data_input = input(f'{data}:\n')
         # if validate_numbers(data_input):
@@ -571,15 +586,10 @@ def start_over():
     while True:
         
         start_over = input('Write Yes or No:\n')
-        if start_over == "Yes" or "yes" or "Y" or "y":
-            welcome()
-        elif start_over == "No" or "no" or "N" or "n":
-            print('Thank you again for using our calculator, you are welcome '
-                  'back anytime, have a nice day!')
+        if validate_start_over(start_over):
+            break
         else: 
             print('Sorry, I do not understand what you mean')
-            return False
-
 
 def main():
     """
