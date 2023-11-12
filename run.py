@@ -195,19 +195,19 @@ def collect_data(user):
     """
     Collect data from user
     """
-    income = get_data(user, "Income")
-    extra_income = get_data(user, "Extra income")
-    housing = get_data(user, "Housing")
-    utilities = get_data(user, "Utilities")
-    food = get_data(user, "Food")
-    transportation = get_data(user, "Transportation")
-    clothing = get_data(user, "Clothing")
-    medical = get_data(user, "Medical")
-    personal_and_discretionary = get_data(user, "Personal & Discretionary")
-    debt_payments = get_data(user, "Debt Payments")
-    savings_emergency = get_data(user, "Boring savings")
-    savings_fun = get_data(user, "Fun savings")
-    initial_savings = get_data(user, "Initial savings")
+    get_data(user, "Income")
+    get_data(user, "Extra income")
+    get_data(user, "Housing")
+    get_data(user, "Utilities")
+    get_data(user, "Food")
+    get_data(user, "Transportation")
+    get_data(user, "Clothing")
+    get_data(user, "Medical")
+    get_data(user, "Personal & Discretionary")
+    get_data(user, "Debt Payments")
+    get_data(user, "Boring savings")
+    get_data(user, "Fun savings")
+    get_data(user, "Initial savings")
 
 
 def validate_text(input):
@@ -553,36 +553,37 @@ def another_recommendation():
     input('\nPress ENTER to continue...\n')
 
 
-# def validate_start_over(start_over):
-#     """
-#     Validate the start over response
-#     """
-#     # or "yes" or "Y" or "y" or "No" or "no" or "N" or "n":
+def validate_start_over(start_over):
+    """
+    Validate the start over response
+    """
+    # or "yes" or "Y" or "y" or "No" or "no" or "N" or "n":
 
-#     if start_over == "Yes" or "yes" or "Y" or "y":
-#         return True
+    if start_over == "Yes" or "yes" or "Y" or "y":
+        return True
 
-#     if start_over == "No" or "no" or "N" or "n":
-#         print('Thank you')
-#         return True
+    if start_over == "No" or "no" or "N" or "n":
+        print('Thank you')
+        return True
 
-#     return False
+    return False
 
 
-# def start_over():
-#     """
-#     Give user the option to start calculator over again
-#     """
-#     print('Dream achiever')
-#     print('Would you like to start over with another calculation?')
+def start_over():
+    """
+    Give user the option to start calculator over again
+    """
+    print('Dream achiever')
+    print('Would you like to start over with another calculation?')
 
-#     while True:
+    while True:
 
-#         start_over = input('Write Yes or No:\n')
-#         if validate_start_over(start_over):
-#             break
-#         else:
-#             print('Sorry, I do not understand what you mean')
+        start_over = input('Write Yes or No:\n')
+        if validate_start_over(start_over):
+            break
+        else:
+            print('Sorry, I do not understand what you mean')
+
 
 def main():
     """
@@ -609,7 +610,7 @@ def main():
     welcome()
     dream()
     goal(user)
-    cost_of_goal = get_data(user, "Cost of goal")
+    get_data(user, "Cost of goal")
     introduction()
     collect_data(user)
     run_calculations(user)
