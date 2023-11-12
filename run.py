@@ -553,7 +553,7 @@ def another_recommendation():
     input('\nPress ENTER to continue...\n')
 
 
-def validate_start_over(start_over, responses):
+def validate_response(start_over, responses):
     """
     Validate the start over response
     """    
@@ -561,9 +561,7 @@ def validate_start_over(start_over, responses):
         print('Sorry, I do not understand what you mean')
         return False
 
-    
-    return True
-    
+    return True    
 
 
 def start_over():
@@ -573,17 +571,15 @@ def start_over():
     print('Dream achiever')
     print('Would you like to start over with another calculation?')
 
-    responses = ["Yes", "yes", "Y", "y", "No", "no", "N", "n"]
+    responses = ["Yes", "yes", "YES", "Y", "y", "No", "no", "NO", "N", "n"]
 
     while True:
         
         start_over = input('Write Yes or No:\n')
-        if validate_start_over(start_over, responses):
+        if validate_response(start_over, responses):
             break
             
-    print(start_over)
-    if start_over in responses[0:4]:
-        print('Yes')
+    if start_over in responses[0:5]:
         main()
     else:
         print('No')
