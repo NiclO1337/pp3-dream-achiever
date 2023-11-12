@@ -161,6 +161,7 @@ TODO: Add text about feature
 - VS Code
 - w3schools
 - Stack Overflow
+- Pyfiglet
 
 ## Data model
 
@@ -219,7 +220,7 @@ Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
 
 - Code institute for providing the template with the deployment terminal.
 
-- 
+- Pyfiglet [tutorial](https://www.youtube.com/watch?v=rk5moDXR5Nk)
 
 - 
 
