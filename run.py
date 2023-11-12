@@ -513,19 +513,25 @@ def run_calculations(user):
     check_costs(user, income, "Boring savings")
 
 
-def another_recommendation():
+def thank_you():
     """
     Thank the user for using the calculator and give another helpful tip
     """
     print('\n\nThank you')
     print('for using our budget calculator, we hope this helped you '
           'to think about your expenses and also clarify your dreams and '
-          'goals. This is the first step needed towards achieving them. '
-          'Here is another general helpful tip for you to think about if the '
-          'categories above was too confusing.\n')
+          'goals. This is the first step needed towards achieving them. \n')
+    print('Would you like to learn about another helpful tip you can use '
+          'when plannin your budget? It is called the 50-30-20 rule.\n')
 
     input('\nPress ENTER to learn about the 50-30-20 rule...\n')
 
+
+
+def another_recommendation():
+    """
+    Give another helpful tip if user chooses to learn it
+    """
     print('The 50-30-20 Rule\n')
     print('The 50-30-20 rule splits expenses into just three categories. It '
           'also offers recommendations on how much money to use for each. '
@@ -575,7 +581,7 @@ def start_over():
 
     while True:
         
-        start_over = input('Write Yes or No:\n')
+        start_over = input('Answer with "Yes" or "No":\n')
         if validate_response(start_over, responses):
             break
             
@@ -614,7 +620,8 @@ def main():
     # introduction()
     # collect_data(user)
     # run_calculations(user)
-    # another_recommendation()
+    thank_you()
+    another_recommendation()
     start_over()
 
 
