@@ -518,15 +518,24 @@ def thank_you():
     Thank the user for using the calculator and give another helpful tip
     """
     print('\n\nThank you')
-    print('for using our budget calculator, we hope this helped you '
+    print('for using our budget calculator!\nWe hope this helped you '
           'to think about your expenses and also clarify your dreams and '
-          'goals. This is the first step needed towards achieving them. \n')
+          'goals. This is the first step needed towards achieving them.\n')
     print('Would you like to learn about another helpful tip you can use '
           'when plannin your budget? It is called the 50-30-20 rule.\n')
 
-    input('\nPress ENTER to learn about the 50-30-20 rule...\n')
+    responses = ["Yes", "yes", "YES", "Y", "y", "No", "no", "NO", "N", "n"]
+    question = 'Answer with "Yes" or "No"'
 
+    response = ask_question(responses, question)
 
+    if response in responses[0:5]:
+        print('Yes')
+        another_recommendation()        
+    else:
+        print('No')
+        start_over()
+        
 
 def another_recommendation():
     """
@@ -557,7 +566,9 @@ def another_recommendation():
           'payment amount belongs in this category, too.')
 
     input('\nPress ENTER to continue...\n')
-
+    
+    start_over()
+    
 
 def start_over():
     """
@@ -576,6 +587,12 @@ def start_over():
         main()
     else:
         print('No')
+        good_bye()
+        
+
+def good_bye():
+    print('Good bye')
+    
         
 
 def ask_question(responses, question):
@@ -634,8 +651,6 @@ def main():
     # collect_data(user)
     # run_calculations(user)
     thank_you()
-    another_recommendation()
-    start_over()
-
+    
 
 main()
