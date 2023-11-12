@@ -559,6 +559,24 @@ def another_recommendation():
     input('\nPress ENTER to continue...\n')
 
 
+def start_over():
+    """
+    Give user the option to start calculator over again
+    """
+    print('Dream achiever')
+    print('Would you like to start over with another calculation?')
+
+    responses = ["Yes", "yes", "YES", "Y", "y", "No", "no", "NO", "N", "n"]
+    question = 'Answer with "Yes" or "No"'
+
+    response = ask_question(responses, question)
+
+    if response in responses[0:5]:
+        print('Yes')
+        main()
+    else:
+        print('No')
+        
 
 def ask_question(responses, question):
     """
@@ -577,33 +595,14 @@ def ask_question(responses, question):
 
 def validate_response(response, responses):
     """
-    Validate the start over response
+    Validate the the response and give feedback to user if wrong
     """    
     if response not in responses:
         print('Sorry, I do not understand what you mean.')
         return False
 
     return True    
-
-
-def start_over():
-    """
-    Give user the option to start calculator over again
-    """
-    print('Dream achiever')
-    print('Would you like to start over with another calculation?')
-
-    responses = ["Yes", "yes", "YES", "Y", "y", "No", "no", "NO", "N", "n"]
-    question = 'Answer with "Yes" or "No"'
-
-    response = ask_question(responses, question)
-
-    if response in responses[0:5]:
-        print('Yes')
-        main()
-    else:
-        print('No')
-    
+   
 
 def main():
     """
@@ -634,8 +633,8 @@ def main():
     # introduction()
     # collect_data(user)
     # run_calculations(user)
-    # thank_you()
-    # another_recommendation()
+    thank_you()
+    another_recommendation()
     start_over()
 
 
