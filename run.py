@@ -530,10 +530,8 @@ def thank_you():
     response = ask_question(responses, question)
 
     if response in responses[0:5]:
-        print('Yes')
         another_recommendation()        
     else:
-        print('No')
         start_over()
         
 
@@ -583,15 +581,21 @@ def start_over():
     response = ask_question(responses, question)
 
     if response in responses[0:5]:
-        print('Yes')
         main()
     else:
-        print('No')
         good_bye()
-        
+
 
 def good_bye():
+    """
+    Say good bye to user
+    """
     print('Good bye')
+    print('Hope you had a pleasant experience and good luck reaching '
+          'all of your dreams and goals!')
+    print('\nIf you changed your mind and want to do another calculation '
+          'click on "Run program" button above.\n\n'
+          'Have a nice day!')
     
         
 
@@ -643,13 +647,13 @@ def main():
     #         "Fun savings": 2000,
     #         "Initial savings": 10000}
 
-    # welcome()
-    # dream()
-    # goal(user)
-    # get_data(user, "Cost of goal")
-    # introduction()
-    # collect_data(user)
-    # run_calculations(user)
+    welcome()
+    dream()
+    goal(user)
+    get_data(user, "Cost of goal")
+    introduction()
+    collect_data(user)
+    run_calculations(user)
     thank_you()
     
 
