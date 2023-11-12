@@ -168,7 +168,7 @@ def get_text(data):
     elif data == "Debt Payments":
         print('\n\nDebt payments\n')
         print('Here you can enter the monthly payments on various debts.')
-        print('Could be for example credit card debt or loan for a car.')
+        print('Could be for example credit card debt or loan for a car.\n')
 
     elif data == "Boring savings":
         print('\n\nBoring savings\n')
@@ -530,10 +530,10 @@ def thank_you():
     response = ask_question(responses, question)
 
     if response in responses[0:5]:
-        another_recommendation()        
+        another_recommendation()
     else:
         start_over()
-        
+
 
 def another_recommendation():
     """
@@ -550,7 +550,7 @@ def another_recommendation():
     print('Needs: 50%\nAbout half of your budget should go toward needs. '
           'These are expenses that must be met no matter what, for example '
           'rent/mortgage payments, minimum payments on loans, healthcare, '
-          'and groceries.\n')       
+          'and groceries.\n')
 
     print('Wants: 30%\nYou subscribe to a streaming service to watch your '
           'favorite show, not because you need the subscription to live. '
@@ -564,9 +564,9 @@ def another_recommendation():
           'payment amount belongs in this category, too.')
 
     input('\nPress ENTER to continue...\n')
-    
+
     start_over()
-    
+
 
 def start_over():
     """
@@ -596,8 +596,7 @@ def good_bye():
     print('\nIf you changed your mind and want to do another calculation '
           'click on "Run program" button above.\n\n'
           'Have a nice day!')
-    
-        
+
 
 def ask_question(responses, question):
     """
@@ -606,7 +605,7 @@ def ask_question(responses, question):
     one of the valid options in the responses list.
     """
     while True:
-        
+
         response = input(f'{question}:\n')
         if validate_response(response, responses):
             break
@@ -617,13 +616,13 @@ def ask_question(responses, question):
 def validate_response(response, responses):
     """
     Validate the the response and give feedback to user if wrong
-    """    
+    """
     if response not in responses:
         print('Sorry, I do not understand what you mean.')
         return False
 
-    return True    
-   
+    return True
+
 
 def main():
     """
@@ -655,6 +654,6 @@ def main():
     collect_data(user)
     run_calculations(user)
     thank_you()
-    
+
 
 main()
