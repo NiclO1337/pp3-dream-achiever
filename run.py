@@ -1,10 +1,16 @@
 import math
+import pyfiglet
 
 
 def welcome():
     """
     Start application on a welcome screen with a message
     """
+    print(pyfiglet.figlet_format('Dream Achiever',
+                                 font="big_money-se",
+                                 justify="center"))
+    
+
     print('\nWelcome to the DREAM ACHIEVER budget calculator!\n'
           'This tool will help you reach your dreams and goals.\n')
     print('Budgeting Guidelines for Income:')
@@ -12,8 +18,8 @@ def welcome():
           'their home, vehicle, groceries, clothes, etc. At the end of this '
           'calculator we will compare your expenses to the recommended '
           'guidlines and think about possible changes you can make.\n'
-          'Start working with this budget calculator by developing your '
-          'budget with your net income. You have this money left after '
+          'Start working with this budget calculator by developing your \
+          budget with your net income. You have this money left after '
           'government deductions from your paycheque but before voluntary '
           'deductions like RRSPs, pensions, or other savings. If you have '
           'expenses like high debt payments, childcare, school expenses, or '
