@@ -77,7 +77,7 @@ you.\n\nYou do not need to write any details here, can be just a keyword.\n\n')
             return user
 
 
-def introduction():
+def intro_budget_calc():
     """
     Displays information about the calculator
     """
@@ -211,18 +211,18 @@ def collect_data(user):
     """
     Collect data from user
     """
-    get_data(user, "Income")
-    get_data(user, "Extra income")
-    get_data(user, "Housing")
-    get_data(user, "Utilities")
-    get_data(user, "Food")
-    get_data(user, "Transportation")
-    get_data(user, "Clothing")
-    get_data(user, "Medical")
-    get_data(user, "Personal & Discretionary")
-    get_data(user, "Debt Payments")
-    get_data(user, "Boring savings")
-    get_data(user, "Fun savings")
+    # get_data(user, "Income")
+    # get_data(user, "Extra income")
+    # get_data(user, "Housing")
+    # get_data(user, "Utilities")
+    # get_data(user, "Food")
+    # get_data(user, "Transportation")
+    # get_data(user, "Clothing")
+    # get_data(user, "Medical")
+    # get_data(user, "Personal & Discretionary")
+    # get_data(user, "Debt Payments")
+    # get_data(user, "Boring savings")
+    # get_data(user, "Fun savings")
     get_data(user, "Initial savings")
 
 
@@ -699,29 +699,29 @@ def main():
     """
     user = {}
 
-    # user = {"Goal": "Trip to the Bahamas",
-    #         "Cost of goal": 50000,
-    #         "Income": 23000,
-    #         "Extra income": 10000,
-    #         "Housing": 14000,
-    #         "Utilities": 1500,
-    #         "Food": 5000,
-    #         "Transportation": 150,
-    #         "Clothing": 200,
-    #         "Medical": 150,
-    #         "Personal & Discretionary": 7000,
-    #         "Debt Payments": 0,
-    #         "Boring savings": 4000,
-    #         "Fun savings": 2000,
-    #         "Initial savings": 10000}
+    user = {"Goal": "Trip to the Bahamas",
+            "Cost of goal": 50000,
+            "Income": 23000,
+            "Extra income": 10000,
+            "Housing": 14000,
+            "Utilities": 1500,
+            "Food": 5000,
+            "Transportation": 150,
+            "Clothing": 200,
+            "Medical": 150,
+            "Personal & Discretionary": 7000,
+            "Debt Payments": 0,
+            "Boring savings": 4000,
+            "Fun savings": 2000,
+            "Initial savings": 10000}
 
     # welcome()
     # dream()
     # goal(user)
     # get_data(user, "Cost of goal")
-    introduction()
+    # intro_budget_calc()
     collect_data(user)
-    # run_calculations(user)
+    run_calculations(user)
     # thank_you()
 
 
