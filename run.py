@@ -540,12 +540,15 @@ def thank_you():
     """
     Thank the user for using the calculator and give another helpful tip
     """
-    print('\n\nThank you')
-    print('for using our budget calculator!\nWe hope this helped you '
-          'to think about your expenses and also clarify your dreams and '
-          'goals. This is the first step needed towards achieving them.\n')
-    print('Would you like to learn about another helpful tip you can use '
-          'when plannin your budget? It is called the 50-30-20 rule.\n')
+    type_row_slow(big_heading('Thank  '))
+    type_text_slow('                 you for using our budget calculator!\
+\nWe hope this helped you to think about your \
+expenses and also clarify your\ndreams and goals. This is the first step \
+needed towards achieving them.\n')
+    time.sleep(0.8)
+    type_row_fast('\n\nWould you like to learn about another helpful tip you \
+can use when\nplanning your budget? It is called the 50-30-20 rule.\n')
+
 
     responses = ["Yes", "yes", "YES", "Y", "y", "No", "no", "NO", "N", "n"]
     question = 'Answer with "Yes" or "No"'
