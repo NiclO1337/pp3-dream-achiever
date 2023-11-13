@@ -391,89 +391,84 @@ def get_cost_text(category):
     guideline_percent = 0
 
     if category == "Housing":
-        print('\n\nHousing costs\n')
-        print('Other than moving to a cheaper place, there are many small '
-              'things you can do to reduce your living costs. For example it '
-              'is a good idea to regularly check what the best avalible '
-              'interest rate on your mortgage. Comparing offers from '
-              'different companies on for example insurance and electricity '
-              'can save a lot of money. ')
+        type_row_fast(heading('\nHousing'))
+        type_row_fast('\n\nOther than moving to a cheaper place, there are \
+many small things you can do to\nreduce your living costs. For example it is \
+a good idea to regularly check what\nthe best avalible interest rate on your \
+mortgage. Comparing offers from different\ncompanies on for example insurance \
+and electricity can save a lot of money.')
 
         guideline_percent = 35
 
     elif category == "Utilities":
-        print('\n\nUtilities\n')
-        print('Comparing offers from different providers can save costs. '
-              'Limiting the amount of different streaming services you '
-              'subscribe to at the same time can make a big impact too.')
+        type_row_fast(heading('\nUtilities'))
+        type_row_fast('\n\nComparing offers from different providers can save \
+costs.\nLimiting the amount of different streaming services you \n\
+subscribe to at the same time can make a big impact too.')
 
         guideline_percent = 5
 
     elif category == "Food":
-        print('\n\nFood and hygiene products\n')
-        print('There are many ways to cut down on food costs, from where '
-              'you do your grocery shopping to what you choose to eat. '
-              'Can also be a good idea to take advantage of coupon deals '
-              'and special prices avalible in the store.')
+        type_row_fast(heading('\nFood and hygiene products'))
+        type_row_fast('\n\nThere are many ways to cut down on food costs, \
+from where you do your grocery\nshopping to what you choose to eat. Can also \
+be a good idea to take advantage\nof coupon deals and special prices avalible \
+in the store.')
 
         guideline_percent = 15
 
     elif category == "Transportation":
-        print('\n\nTransportation costs\n')
-        print('Transportation needs are very different for example based on '
-              'family circumstances or where you live and work. In some '
-              'situations public transportation will be a cheaper option. '
-              'Walking and riding bicycle´s are cheap alternatives while also '
-              'having the added benefit getting more exercise and it is '
-              'environmentally friendly.')
+        type_row_fast(heading('\nTransportation'))
+        type_row_fast('\n\nTransportation needs are very different for \
+example based on family\ncircumstances or where you live and work. In some \
+situations public \ntransportation will be a cheaper option. Walking and \
+riding bicycle´s\nare cheap alternatives while also having the added benefit \
+getting \nmore exercise and it is environmentally friendly.')
 
         guideline_percent = 17.5
 
     elif category == "Clothing":
-        print('\n\nShoes and clothes for all members of the family.\n')
-        print('Use shoes and clothes for a longer period of time before '
-              'replacing to cut costs in this category. Can also look into '
-              'buying second hand items.')
+        type_row_fast(heading('\nClothing'))
+        type_row_fast('\n\nUse shoes and clothes for a longer period of time\n\
+before replacing to cut costs in this category.\nCan also look into \
+buying second hand items.')
 
         guideline_percent = 4
 
     elif category == "Medical":
-        print('\n\nMedical\n')
-        print('Hard cost to try and cut, if you need it you need it. '
-              'Some studies say that a healthy lifestyle can reduce '
-              'future medical costs.')
+        type_row_fast(heading('\nMedical'))
+        type_row_fast('\n\nHard cost to try and cut, if you need it you need \
+it. Some studies \nsay that a healthy lifestyle can reduce future \
+medical costs.')
 
         guideline_percent = 3
 
     elif category == "Personal & Discretionary":
-        print('\n\nPersonal and discretionary spending\n')
-        print('The content for this category will vary much from person to '
-              'person depending on circumstances. If you spend more in this '
-              'category, make sure your budget balances by '
-              'spending less elsewhere.')
+        type_row_fast(heading('\nPersonal & Discretionary'))
+        type_row_fast('\n\nThe content for this category will vary much from \
+person to person depending\non circumstances. If you spend more in this \
+category, make sure your budget\nbalances by spending less elsewhere.')
 
         guideline_percent = 7.5
 
     elif category == "Debt Payments":
-        print('\n\nDebt payments\n')
-        print('Many people find that their budget is quite tight when')
-        print('their monthly debt payments are over 20% of their net')
-        print('income. It’s good practice to save money before you')
-        print('start heavily paying down your debt.\n')
-        print('By following this basic plan and opening separate')
-        print('accounts for different spending, as well as savings')
-        print('accounts, you can more easily plan out your budget')
-        print('percentages and work towards debt repayment.')
+        type_row_fast(heading('\nDebt Payments'))
+        type_row_fast('\n\nMany people find that their budget is quite tight \
+when their monthly debt\npayments are over 20% of their net income. It’s good \
+practice to save money\nbefore you start heavily paying down your debt.\n\n\
+By following this basic plan and opening separate accounts for different\n\
+spending, as well as savings accounts, you can more easily plan out your\n\
+budget percentages and work towards debt repayment.')
 
         guideline_percent = 10
 
     elif category == "Boring savings":
-        print('\n\nBoring saving\n')
-        print('A general rule of thumb is to put away at least three to six '
-              'months’ worth of expenses in an emergency fund. It is also '
-              'advised to start saving up for your retirement as early as '
-              'possible. How much you need for this is depending on what '
-              'other pension plans or workplace pension you have already.')
+        type_row_fast(heading('\nBoring savings'))
+        type_row_fast('\n\nA general rule of thumb is to put away at least \
+three to six months’ worth of\nexpenses in an emergency fund. It is also \
+advised to start saving up for your\nretirement as early as possible. How \
+much you need for this is depending on\nwhat other pension plans or \
+workplace pension you have already.')
 
         guideline_percent = 10
 
@@ -503,12 +498,12 @@ def check_costs(user, income, category):
     else:
         comparason = "also"
 
-    type_row_fast(f'\nGeneral guidelines to spend in this category is \
+    type_row_fast(f'\n\nGeneral guidelines to spend in this category is \
 {guideline_percent}% of your total income.')
     if income == 0:
-        type_row_fast('Unable to calculate you % since your income is: 0.')
+        type_row_fast('\nUnable to calculate you % since your income is: 0.')
     else:
-        type_row_fast(f'Your budget for this is currently \
+        type_row_fast(f'\nYour budget for this is currently \
 {comparason} {percent_of_income}%.')
 
     type_text_slow('\n\nPress ENTER to continue...\n')
@@ -733,8 +728,8 @@ def main():
     # get_data(user, "Cost of goal")
     # intro_budget_calc()
     # collect_data(user)
-    run_calculations(user)
-    # thank_you()
+    # run_calculations(user)
+    thank_you()
 
 
 main()
