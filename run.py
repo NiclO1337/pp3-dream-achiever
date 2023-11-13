@@ -18,20 +18,21 @@ def welcome():
 calculator!\n           This tool will help you reach your dreams and goals.')
     time.sleep(1)
 
-    print('Budgeting Guidelines for Income:')
-    print('Many people wonder how much of their income they should spend on '
-          'their home, vehicle, groceries, clothes, etc. At the end of this '
-          'calculator we will compare your expenses to the recommended '
-          'guidlines and think about possible changes you can make.\n'
-          'Start working with this budget calculator by developing your \
-budget with your net income. You have this money left after '
-          'government deductions from your paycheque but before voluntary '
-          'deductions like RRSPs, pensions, or other savings. If you have '
-          'expenses like high debt payments, childcare, school expenses, or '
-          'giving, you’ll need to lower your spending in your budgeting '
-          'process in other areas to allow for these higher expenses.')
+    type_row_slow('\n\n\nBudgeting Guidelines for Income:\n\n\
+Many people wonder how much of their income they should spend on their home, \
+\nvehicle, groceries, clothes, etc. At the end of this calculator we will \
+compare \nyour expenses to the recommended guidlines and think about possible \
+changes you \ncan make.\nStart working with this budget calculator by \
+developing your budget with your \nnet income. You have this money left \
+after government deductions from your pay-\ncheque but before voluntary \
+deductions like RRSPs, pensions, or other savings. \nIf you have expenses \
+like high debt payments, childcare, school expenses, or \ngiving, you’ll need \
+to lower your spending in your budgeting process in other \nareas to allow for \
+these higher expenses.')
 
-    input('\nPress ENTER to continue...\n')
+
+    type_text_slow('\n\nPress ENTER to continue...\n')
+    input()
 
 
 def dream():
