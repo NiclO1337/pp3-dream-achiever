@@ -607,8 +607,8 @@ def start_over():
     """
     Give user the option to start calculator over again
     """
-    print('Dream achiever')
-    print('Would you like to start over with another calculation?')
+    type_row_fast(big_heading('Dream'))
+    type_row_fast('Would you like to start over with another calculation?\n\n')
 
     responses = ["Yes", "yes", "YES", "Y", "y", "No", "no", "NO", "N", "n"]
     question = 'Answer with "Yes" or "No"'
@@ -625,12 +625,11 @@ def good_bye():
     """
     Say good bye to user
     """
-    print('Good bye')
-    print('Hope you had a pleasant experience and good luck reaching '
-          'all of your dreams and goals!')
-    print('\nIf you changed your mind and want to do another calculation '
-          'click on "Run program" button above.\n\n'
-          'Have a nice day!')
+    type_row_fast(big_heading('Good bye'))
+    type_row_fast('Hope you had a pleasant experience and good luck\nreaching \
+all of your dreams and goals!\n\nIf you changed your mind and want to do \
+another calculation\nclick on "Run program" button above.\n\nHave a nice day!')
+    sys.exit()
 
 
 def ask_question(responses, question):
@@ -742,7 +741,7 @@ def main():
     # collect_data(user)
     # run_calculations(user)
     # thank_you()
-    another_recommendation()
+    start_over()
 
 
 main()
