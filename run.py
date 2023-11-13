@@ -77,22 +77,21 @@ def introduction():
     """
     Displays information about the calculator
     """
-    print('\n\nBudget calculator\n')
-    print('It’s important to write everything out when planning your financial'
-          ' goals, like paying off your debt against your monthly income and '
-          'fixed expenses. This allows you to understand better where you are '
-          'in your finances, as well as help to plan out how '
-          'you’re going to get where you want to be.\n')
-    print('This calculator does not save any information from you.\n'
-          'Good news, your privacy is protected. Bad news, you can not revisit'
-          ' the results of this calculator after you leave or reset.\n'
-          'You will be asked to enter data in the following categories:\n'
-          'Main income, extra income, housing cost, utilities, food,'
-          'transportation, clothing, medical, personal & discretionary, '
-          'debt payments, boring savings and fun savings.\n'
-          '\nA more detailed explanation of the category will be provided.\n')
+    type_row_slow(heading('Budget calculator'))
+    time.sleep(0.5)
 
-    input('Press ENTER to continue...\n')
+    type_row_slow('\nIt’s important to write everything out when planning your\
+ financial goals, \nlike paying off your debt against your monthly income and \
+fixed expenses. \nThis allows you to understand better where you are in your \
+finances, as\nwell as help to plan out how you’re going to get where you want \
+to be.\n\nThis calculator does not save any information from you.\n\nYou will \
+be asked to enter data in the following categories:\nMain income, extra \
+income, housing cost, utilities, food, \ntransportation, clothing, medical, \
+personal & discretionary, \ndebt payments, boring savings and fun savings.\
+\n\nA more detailed explanation of the category will be provided.\n')    
+
+    type_text_slow('\n\nPress ENTER to continue...\n')
+    input()
 
 
 def get_data(user, data):
@@ -674,6 +673,7 @@ def heading(text):
     """
     Function to create a heading
     """
+    text = text.upper()
     heading = pyfiglet.figlet_format(text,
                                      font="digital",
                                      justify="center",
@@ -707,8 +707,8 @@ def main():
     # welcome()
     # dream()
     # goal(user)
-    get_data(user, "Cost of goal")
-    # introduction()
+    # get_data(user, "Cost of goal")
+    introduction()
     # collect_data(user)
     # run_calculations(user)
     # thank_you()
