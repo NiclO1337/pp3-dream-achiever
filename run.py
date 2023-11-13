@@ -565,31 +565,40 @@ def another_recommendation():
     """
     Give another helpful tip if user chooses to learn it
     """
-    print('The 50-30-20 Rule\n')
-    print('The 50-30-20 rule splits expenses into just three categories. It '
-          'also offers recommendations on how much money to use for each. '
-          'With some basic information, you can get on the road to financial '
-          'well-being.\n')
+#     type_row_slow(big_heading('50-30-20'))
+#     type_row_fast('The 50-30-20 rule splits expenses into just three \
+# categories. It also offers\nrecommendations on how much money to use for \
+# each. With some basic information,\nyou can get on the road to financial \
+# well-being.')
 
-    input('\nPress ENTER to continue...\n')
+#     type_text_slow('\n\nPress ENTER to continue...\n')
+#     input()
 
-    print('Needs: 50%\nAbout half of your budget should go toward needs. '
-          'These are expenses that must be met no matter what, for example '
-          'rent/mortgage payments, minimum payments on loans, healthcare, '
-          'and groceries.\n')
+    type_row_fast(heading('\nNeeds: 50%'))
+    type_row_fast('\n\nAbout half of your budget should go toward needs. \
+These are expenses\nthat must be met no matter what, for example rent/\
+mortgage payments,\nminimum payments on loans, healthcare, and groceries.')
 
-    print('Wants: 30%\nYou subscribe to a streaming service to watch your '
-          'favorite show, not because you need the subscription to live. '
-          'Wants are things you enjoy that you spend money on by choice. '
-          'This could be subscriptions, supplies for hobbies, restaurant '
-          'meals and vacations.\n')
+    type_text_slow('\n\nPress ENTER to continue...\n')
+    input()
+    
+    type_row_fast(heading('\nWants: 30%'))
+    type_row_fast('\n\nYou subscribe to a streaming service to watch your \
+favorite show, not\nbecause you need the subscription to live. Wants are \
+things you enjoy\nthat you spend money on by choice. This could be \
+subscriptions,\nsupplies for hobbies, restaurant meals and vacations.')
 
-    print('Savings: 20%\nThe remaining 20% of your budget should go toward '
-          'the future. You may put money in an emergency fund, or save toward '
-          'a down payment on a home. Paying down debt beyond the minimum '
-          'payment amount belongs in this category, too.')
+    type_text_slow('\n\nPress ENTER to continue...\n')
+    input()
+    type_row_fast(heading('\nSavings: 20%'))
 
-    input('\nPress ENTER to continue...\n')
+    type_row_fast('\n\nThe remaining 20% of your budget should go toward the \
+future. You may put money\nin an emergency fund, or save toward a down \
+payment on a home. Paying down debt\nbeyond the minimum payment amount \
+belongs in this category, too.')
+
+    type_text_slow('\n\nPress ENTER to continue...\n')
+    input()
 
     start_over()
 
@@ -732,7 +741,8 @@ def main():
     # intro_budget_calc()
     # collect_data(user)
     # run_calculations(user)
-    thank_you()
+    # thank_you()
+    another_recommendation()
 
 
 main()
