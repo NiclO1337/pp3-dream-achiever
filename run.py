@@ -673,6 +673,7 @@ def type_text_slow(message):
         sys.stdout.flush()
         time.sleep(0.05)
 
+
 def main():
     """
     Main function to call other function in the correct order
