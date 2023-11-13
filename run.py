@@ -88,7 +88,7 @@ to be.\n\nThis calculator does not save any information from you.\n\nYou will \
 be asked to enter data in the following categories:\nMain income, extra \
 income, housing cost, utilities, food, \ntransportation, clothing, medical, \
 personal & discretionary, \ndebt payments, boring savings and fun savings.\
-\n\nA more detailed explanation of the category will be provided.\n')    
+\n\nA more detailed explanation of the category will be provided.\n')
 
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
@@ -123,85 +123,85 @@ sausages online and pay in EUR then convert everything to \nwhichever \
 currency is easiest or you.\n\n')
 
     elif data == "Income":
-
-        type_row_slow(heading("Main income"))
-        print('\n\nMain income\n')
-        print('Enter the amount from your main source of income here.\n')
-        print('For the calculator to work properly, you need to enter your '
-              'monthly income. Same goes for any extra income and for all '
-              'costs. Estimate the average monthly on each category.\n')
+        type_row_slow(heading("\nMain income"))
+        type_row_slow('\n\nEnter the amount from your main source of income \
+here.\n\nFor the calculator to work properly, you need to enter your \nmonthly\
+ income. Same goes for any extra income and for all costs. \nEstimate the \
+average monthly on each category.\n\n')
 
     elif data == "Extra income":
-        print('\n\nExtra income\n')
-        print('For example, this could be income from commissions, overtime, '
-              'bonuses, rent (recieved), child support, benefits etc.\n')
+        type_row_slow(heading('\nExtra income'))
+        type_row_slow('\n\nFor example, this could be income from commissions,\
+ overtime, \nbonuses, rent (recieved), child support, benefits etc.\n\n')
 
     elif data == "Housing":
-        print('\n\nHousing costs\n')
-        print('This would include mortgage payments, property taxes, strata')
-        print('fees, rent, homeowner insurance, and hydro or electricity.\n')
+        type_row_slow(heading('\nHousing costs'))
+        type_row_slow('\n\nThis would include mortgage payments, property \
+taxes, strata fees, \nrent, homeowner insurance, and hydro or electricity.\
+\n\n')
 
     elif data == "Utilities":
-        print('\n\nUtilities\n')
-        print('Examples of utility costs are cell phone, gas, and internet')
-        print('bills. Nowadays, people also include their streaming services,')
-        print('for example Netflix, under utilities in lieu of what people')
-        print('used to pay commonly for cable services.\n')
+        type_row_slow(heading('\nUtilities'))
+        type_row_slow('\n\nExamples of utility costs are cell phone, gas, and \
+internet\nbills. Nowadays, people also include their streaming services,\n\
+for example Netflix, under utilities in lieu of what people\n\
+used to pay commonly for cable services.\n\n')
 
     elif data == "Food":
-        print('\n\nFood and hygiene products\n')
-        print('Groceries, personal care products, and things for baby needs')
-        print('are expenses you’d include here. If you like to eat out a lot,')
-        print('you might include those expenses here. But if eating out is')
-        print('more something you do for fun, you can include it under')
-        print('later category Personal & Discretionary\n')
+        type_row_slow(heading('\nFood and hygiene products'))
+        type_row_slow('\n\nGroceries, personal care products, and things for \
+baby needs\nare expenses you’d include here. If you like to eat out a lot,\n\
+you might include those expenses here. But if eating out is\nmore something \
+you do for fun, you can include it under later \n\
+category Personal & Discretionary\n\n')
 
     elif data == "Transportation":
-        print('\n\nTransportation costs\n')
-        print('The money you spend on public transit, taxis, fuel,')
-        print('vehicle insurance, maintenance, and parking are included')
-        print('in this category. This might change depending on whether')
-        print('or not you’re working from home, but some should still')
-        print('be allotted to understand your budget as a whole.\n')
+        type_row_slow(heading('\nTransportation costs'))
+        type_row_slow('\n\nThe money you spend on public transit, taxis, fuel,\
+\nvehicle insurance, maintenance, and parking are included\nin this category. \
+This might change depending on whether\nor not you’re working from home, but \
+some should still\nbe allotted to understand your budget as a whole.\n\n')
 
     elif data == "Clothing":
-        print('\n\nShoes and clothes for all members of the family.\n')
+        type_row_slow(heading('\nClothing'))
+        type_row_slow('\n\nShoes and clothes for all members of the family.\
+\n\n')
 
     elif data == "Medical":
-        print('\n\nMedical\n')
-        print('This includes premiums, specialists,')
-        print('and over-the-counter medication.\n')
+        type_row_slow(heading('\nMedical'))
+        type_row_slow('\n\nThis includes premiums, specialists,\n\
+and over-the-counter medication.\n\n')
 
     elif data == "Personal & Discretionary":
-        print('\n\nPersonal and discretionary spending\n')
-        print('Money spent on entertainment, recreation, education,')
-        print('tobacco & alcohol, eating out, gaming, hair cuts, hobbies,')
-        print('and planned charitable giving are some examples.\n')
+        type_row_slow(heading('\nPersonal & Discretionary'))
+        type_row_slow('\n\nMoney spent on entertainment, recreation, \
+education,\ntobacco & alcohol, eating out, gaming, hair cuts, hobbies,\n\
+and planned charitable giving are some examples.\n\n')
 
     elif data == "Debt Payments":
-        print('\n\nDebt payments\n')
-        print('Here you can enter the monthly payments on various debts.')
-        print('Could be for example credit card debt or loan for a car.\n')
+        type_row_slow(heading('\nDebt Payments'))
+        type_row_slow('\n\nHere you can enter the monthly payments on various \
+debts.\nCould be for example credit card debt or loan for a car.\n\n')
 
     elif data == "Boring savings":
-        print('\n\nBoring savings\n')
-        print('If you already have saved up money in an emergency fund,')
-        print('well done! If not, it is advised to dedicate savings towards')
-        print('this. It is also a good idea to have some savings set aside')
-        print('for retirement. This category could also include savings for')
-        print('grandchildren or any other types of long term savings.\n')
+        type_row_slow(heading('\nBoring savings'))
+        type_row_slow('\n\nIf you already have saved up money in an emergency \
+fund,\nwell done! If not, it is advised to dedicate savings towards\nthis. \
+It is also a good idea to have some savings set aside\nfor retirement. This \
+category could also include savings for\ngrandchildren or any other types of \
+long term savings.\n\n')        
 
     elif data == "Fun savings":
-        print('\n\nSavings: Fun goal!\n')
-        print('This is savings that is purely for fun things.')
-        print('For the purpose of this calculator, these savings')
-        print('will be used to reach your specified goal.\n')
+        type_row_slow(heading('\nFun savings'))
+        type_row_slow('\n\nThis is savings that is purely for fun things. \n\
+For the purpose of this calculator, these savings\nwill be used to reach your \
+specified goal.\n\n')
 
     elif data == "Initial savings":
-        print('\n\nInitial savings\n')
-        print('Do you already have any amount of savings that')
-        print('you want to dedicate towards reaching your goal.')
-        print('If you do not, that is okey, just enter 0\n')
+        type_row_slow(heading('\nInitial savings'))
+        type_row_slow('\n\nDo you already have any amount of savings that \n\
+you want to dedicate towards reaching your goal.\n\
+If you do not, that is okey, just enter 0\n\n')
 
 
 def collect_data(user):
@@ -674,10 +674,7 @@ def heading(text):
     Function to create a heading
     """
     text = text.upper()
-    heading = pyfiglet.figlet_format(text,
-                                     font="digital",
-                                     justify="center",
-                                     width=40)
+    heading = pyfiglet.figlet_format(text, font="digital")
 
     return heading
 
@@ -708,8 +705,8 @@ def main():
     # dream()
     # goal(user)
     # get_data(user, "Cost of goal")
-    introduction()
-    # collect_data(user)
+    # introduction()
+    collect_data(user)
     # run_calculations(user)
     # thank_you()
 
