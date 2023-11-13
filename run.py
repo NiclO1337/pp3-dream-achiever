@@ -22,6 +22,8 @@ def welcome():
                                  justify="center")
 
     type_row_slow(achiever_heading)
+
+    type_row_slow(big_heading('testing...'))
     
     time.sleep(1)
 
@@ -33,27 +35,22 @@ def welcome():
     time.sleep(1)
 
 
-    
-#     print()
-#     print()
-#     print()
-#     print()
-#     print('\nWelcome to the DREAM ACHIEVER budget calculator!\n'
-#           'This tool will help you reach your dreams and goals.\n')
-#     print('Budgeting Guidelines for Income:')
-#     print('Many people wonder how much of their income they should spend on '
-#           'their home, vehicle, groceries, clothes, etc. At the end of this '
-#           'calculator we will compare your expenses to the recommended '
-#           'guidlines and think about possible changes you can make.\n'
-#           'Start working with this budget calculator by developing your \
-# budget with your net income. You have this money left after '
-#           'government deductions from your paycheque but before voluntary '
-#           'deductions like RRSPs, pensions, or other savings. If you have '
-#           'expenses like high debt payments, childcare, school expenses, or '
-#           'giving, you’ll need to lower your spending in your budgeting '
-#           'process in other areas to allow for these higher expenses.')
+    print('\nWelcome to the DREAM ACHIEVER budget calculator!\n'
+          'This tool will help you reach your dreams and goals.\n')
+    print('Budgeting Guidelines for Income:')
+    print('Many people wonder how much of their income they should spend on '
+          'their home, vehicle, groceries, clothes, etc. At the end of this '
+          'calculator we will compare your expenses to the recommended '
+          'guidlines and think about possible changes you can make.\n'
+          'Start working with this budget calculator by developing your \
+budget with your net income. You have this money left after '
+          'government deductions from your paycheque but before voluntary '
+          'deductions like RRSPs, pensions, or other savings. If you have '
+          'expenses like high debt payments, childcare, school expenses, or '
+          'giving, you’ll need to lower your spending in your budgeting '
+          'process in other areas to allow for these higher expenses.')
 
-#     input('\nPress ENTER to continue...\n')
+    input('\nPress ENTER to continue...\n')
 
 
 def dream():
@@ -676,6 +673,17 @@ def type_row_slow(message):
         sys.stdout.flush()
         if character == "\n":
             time.sleep(0.3)
+
+
+def big_heading(text):
+    """
+    Function to create a big heading
+    """
+    heading = pyfiglet.figlet_format(text,
+                                     font="big_money-se",
+                                     justify="center")
+
+    return heading
 
 
 def main():
