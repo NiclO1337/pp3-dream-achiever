@@ -45,7 +45,7 @@ def dream():
     type_text_slow('First, let´s start with the fun stuff.\nImagine you won \
 the lottery today!\n\nWhat would you do? Where would you go?\nWhat would your \
 life look like?\n\nTake a few minutes and think about this.\n')
-        
+
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
 
@@ -61,9 +61,9 @@ def goal(user):
 lottery.\nHowever, we will begin a journey towards actualizing your dream.\n\
 Take a part of your dream, one goal, the one thing that would bring you the\n\
 best quality of life improvement right now. Could be for example getting away \
-\non a vacation, just for relaxing or have an exciting adventure. Or moving to \
-a \nnew place. Or buying an expensive watch. One thing that is important to you.\
-\n\nYou do not need to write any details here, can be just a keyword.\n\n')
+\non a vacation, just for relaxing or have an exciting adventure. Or moving to\
+ a \nnew place. Or buying an expensive watch. One thing that is important to \
+you.\n\nYou do not need to write any details here, can be just a keyword.\n\n')
 
     while True:
 
@@ -116,15 +116,16 @@ def get_text(data):
     depending on the category of data input
     """
     if data == "Cost of goal":
-        print('\n\nEstimate the cost of your specified goal.\n')
-        print('You do not have to specify which currency your cost is in,')
-        print('but it is important to always stick to the same currency')
-        print('throughout the calculator.')
-        print('For example, if you live in Norway but have a salery in GBP')
-        print('and like to order german sausages online and pay in EUR then ')
-        print('convert everything to whichever currency is easiest or you.\n')
+        type_row_slow('\n\nEstimate the cost of your specified goal.\n\nYou do\
+ not have to specify which currency your cost is in, but it is \nimportant \
+to always stick to the same currency throughout the calculator. \nFor example,\
+ if you live in Norway but have a salery in GBP and like to \norder german \
+sausages online and pay in EUR then convert everything to \nwhichever \
+currency is easiest or you.\n\n')
 
     elif data == "Income":
+
+        type_row_slow(heading("Main income"))
         print('\n\nMain income\n')
         print('Enter the amount from your main source of income here.\n')
         print('For the calculator to work properly, you need to enter your '
@@ -669,6 +670,18 @@ def big_heading(text):
     return heading
 
 
+def heading(text):
+    """
+    Function to create a heading
+    """
+    heading = pyfiglet.figlet_format(text,
+                                     font="digital",
+                                     justify="center",
+                                     width=40)
+
+    return heading
+
+
 def main():
     """
     Main function to call other function in the correct order
@@ -693,8 +706,8 @@ def main():
 
     # welcome()
     # dream()
-    goal(user)
-    # get_data(user, "Cost of goal")
+    # goal(user)
+    get_data(user, "Cost of goal")
     # introduction()
     # collect_data(user)
     # run_calculations(user)
