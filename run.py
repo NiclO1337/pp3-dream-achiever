@@ -1,16 +1,50 @@
 import math
 import pyfiglet
+import sys
+import time
+import os
 
 
 def welcome():
     """
     Start application on a welcome screen with a message
     """
+    print('1')
+    print('2')
+    print('3')
+    print('4')
+    print('5')
+    print('6')
+    print('7')
+    print('8')
+    print('9')
+    print('10')
+    print('11')
+    print('12')
+    print('13')
+    print('14')
+    print('15')
+    print('16')
+    print('17')
+    print('18')
+    print('19')
+    print('20')
+    print('21')
+    print('22')
+    print('23')
+    print('24')
     print(pyfiglet.figlet_format('Dream Achiever',
                                  font="big_money-se",
                                  justify="center"))
-    
 
+    welcome = 'Welcome to the DREAM ACHIEVER budget calculator!\n\
+This tool will help you reach your dreams and goals.'
+
+    type_text_slow(welcome)
+    print()
+    print()
+    print()
+    print()
     print('\nWelcome to the DREAM ACHIEVER budget calculator!\n'
           'This tool will help you reach your dreams and goals.\n')
     print('Budgeting Guidelines for Income:')
@@ -19,7 +53,7 @@ def welcome():
           'calculator we will compare your expenses to the recommended '
           'guidlines and think about possible changes you can make.\n'
           'Start working with this budget calculator by developing your \
-          budget with your net income. You have this money left after '
+budget with your net income. You have this money left after '
           'government deductions from your paycheque but before voluntary '
           'deductions like RRSPs, pensions, or other savings. If you have '
           'expenses like high debt payments, childcare, school expenses, or '
@@ -630,6 +664,15 @@ def validate_response(response, responses):
     return True
 
 
+def type_text_slow(message):
+    """
+    Function to write text slowly to terminal
+    """
+    for character in message:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+
 def main():
     """
     Main function to call other function in the correct order
@@ -653,13 +696,13 @@ def main():
     #         "Initial savings": 10000}
 
     welcome()
-    dream()
-    goal(user)
-    get_data(user, "Cost of goal")
-    introduction()
-    collect_data(user)
-    run_calculations(user)
-    thank_you()
+    # dream()
+    # goal(user)
+    # get_data(user, "Cost of goal")
+    # introduction()
+    # collect_data(user)
+    # run_calculations(user)
+    # thank_you()
 
 
 main()
