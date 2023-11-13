@@ -37,16 +37,17 @@ for these higher expenses.')
 
 def dream():
     """
-    Screen where user think about their dreams
+    Screen where user is asked to think about their dreams
     """
-    print('\nDream\n')
-    print('First, let´s start with the fun stuff.\n'
-          'Imagine you won the lottery today!\n'
-          '\nWhat would you do? Where would you go?\n'
-          'What would your life look like?\n'
-          '\nTake a few minutes and think about this.\n')
+    type_row_slow(big_heading('Dream'))
+    time.sleep(0.5)
 
-    input('Press ENTER to continue...\n')
+    type_text_slow('First, let´s start with the fun stuff.\nImagine you won \
+the lottery today!\n\nWhat would you do? Where would you go?\nWhat would your \
+life look like?\n\nTake a few minutes and think about this.\n')
+        
+    type_text_slow('\n\nPress ENTER to continue...\n')
+    input()
 
 
 def goal(user):
@@ -691,7 +692,7 @@ def main():
     #         "Initial savings": 10000}
 
     welcome()
-    # dream()
+    dream()
     # goal(user)
     # get_data(user, "Cost of goal")
     # introduction()
