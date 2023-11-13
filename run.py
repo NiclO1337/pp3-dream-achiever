@@ -9,58 +9,43 @@ def welcome():
     """
     Start application on a welcome screen with a message
     """
-    print('1')
-    print('2')
-    print('3')
-    print('4')
-    print('5')
-    print('6')
-    print('7')
-    print('8')
-    print('9')
-    print('10')
-    print('11')
-    print('12')
-    print('13')
-    print('14')
-    print('15')
-    print('16')
-    print('17')
-    print('18')
-    print('19')
-    print('20')
-    print('21')
-    print('22')
-    print('23')
-    print('24')
-    print(pyfiglet.figlet_format('Dream Achiever',
+    print(pyfiglet.figlet_format('Dream',
+                                 font="big_money-sw",
+                                 justify="center"))
+
+
+    time.sleep(1)
+    
+    print(pyfiglet.figlet_format('Achiever',
                                  font="big_money-se",
                                  justify="center"))
 
-    welcome = 'Welcome to the DREAM ACHIEVER budget calculator!\n\
-This tool will help you reach your dreams and goals.'
+    time.sleep(1)
+
+    welcome = '             Welcome to the DREAM ACHIEVER budget calculator!\n\
+           This tool will help you reach your dreams and goals.'
 
     type_text_slow(welcome)
-    print()
-    print()
-    print()
-    print()
-    print('\nWelcome to the DREAM ACHIEVER budget calculator!\n'
-          'This tool will help you reach your dreams and goals.\n')
-    print('Budgeting Guidelines for Income:')
-    print('Many people wonder how much of their income they should spend on '
-          'their home, vehicle, groceries, clothes, etc. At the end of this '
-          'calculator we will compare your expenses to the recommended '
-          'guidlines and think about possible changes you can make.\n'
-          'Start working with this budget calculator by developing your \
-budget with your net income. You have this money left after '
-          'government deductions from your paycheque but before voluntary '
-          'deductions like RRSPs, pensions, or other savings. If you have '
-          'expenses like high debt payments, childcare, school expenses, or '
-          'giving, you’ll need to lower your spending in your budgeting '
-          'process in other areas to allow for these higher expenses.')
+#     print()
+#     print()
+#     print()
+#     print()
+#     print('\nWelcome to the DREAM ACHIEVER budget calculator!\n'
+#           'This tool will help you reach your dreams and goals.\n')
+#     print('Budgeting Guidelines for Income:')
+#     print('Many people wonder how much of their income they should spend on '
+#           'their home, vehicle, groceries, clothes, etc. At the end of this '
+#           'calculator we will compare your expenses to the recommended '
+#           'guidlines and think about possible changes you can make.\n'
+#           'Start working with this budget calculator by developing your \
+# budget with your net income. You have this money left after '
+#           'government deductions from your paycheque but before voluntary '
+#           'deductions like RRSPs, pensions, or other savings. If you have '
+#           'expenses like high debt payments, childcare, school expenses, or '
+#           'giving, you’ll need to lower your spending in your budgeting '
+#           'process in other areas to allow for these higher expenses.')
 
-    input('\nPress ENTER to continue...\n')
+#     input('\nPress ENTER to continue...\n')
 
 
 def dream():
