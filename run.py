@@ -54,16 +54,16 @@ def goal(user):
     """
     Function to ask user to input a specific financial goal
     """
-    print('\nGoal\n')
-    print('Okey, so this calculator will NOT help you win the lottery.\n'
-          'However, we will begin a journey towards actualizing your dream.\n'
-          'Take a part of your dream, one goal, the one thing that would '
-          'bring you the best quality of life improvement right now. '
-          'Could be for example getting away on a vacation, just for relaxing '
-          'or have an exciting adventure. Or moving to a new place. '
-          'Or buying an expensive watch. One thing that is important to you.')
-    print('\nYou do not need to write any details here, '
-          'can be just a keyword.')
+    type_row_slow(big_heading('Goal'))
+    time.sleep(0.5)
+
+    type_row_slow('Okey, so this calculator will NOT help you win the \
+lottery.\nHowever, we will begin a journey towards actualizing your dream.\n\
+Take a part of your dream, one goal, the one thing that would bring you the\n\
+best quality of life improvement right now. Could be for example getting away \
+\non a vacation, just for relaxing or have an exciting adventure. Or moving to \
+a \nnew place. Or buying an expensive watch. One thing that is important to you.\
+\n\nYou do not need to write any details here, can be just a keyword.\n\n')
 
     while True:
 
@@ -691,9 +691,9 @@ def main():
     #         "Fun savings": 2000,
     #         "Initial savings": 10000}
 
-    welcome()
-    dream()
-    # goal(user)
+    # welcome()
+    # dream()
+    goal(user)
     # get_data(user, "Cost of goal")
     # introduction()
     # collect_data(user)
