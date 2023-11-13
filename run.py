@@ -14,12 +14,12 @@ def welcome():
     type_row_slow(big_heading('Achiever'))
     time.sleep(1)
 
-    type_text_slow('                Welcome to the DREAM ACHIEVER budget \
-calculator!\n              This tool will help you reach your dreams and \
-goals.')
+    type_text_slow('                Welcome to the DREAM ACHIEVER budget\
+calculator!                \n              This tool will help you reach \
+your dreams and goals.              ')
     time.sleep(1)
 
-    type_row_slow('\n\n\nBudgeting Guidelines for Income:\n\n\
+    type_row_fast('\n\n\nBudgeting Guidelines for Income:\n\n\
 Many people wonder how much of their income they should spend on their home, \
 \nvehicle, groceries, clothes, etc. At the end of this calculator we will \
 compare \nyour expenses to the recommended guidlines and think about possible \
@@ -43,8 +43,12 @@ def dream():
     time.sleep(0.5)
 
     type_text_slow('First, let´s start with the fun stuff.\nImagine you won \
-the lottery today!\n\nWhat would you do? Where would you go?\nWhat would your \
-life look like?\n\nTake a few minutes and think about this.\n')
+the lottery today!\n\n')
+    time.sleep(1)
+    type_text_slow('What would you do? Where would you go?\nWhat would your \
+life look like?\n\n')
+    time.sleep(1)
+    type_text_slow('Take a few minutes and think about this.\n')
 
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
@@ -57,7 +61,7 @@ def goal(user):
     type_row_slow(big_heading('Goal'))
     time.sleep(0.5)
 
-    type_row_slow('Okey, so this calculator will NOT help you win the \
+    type_row_fast('Okey, so this calculator will NOT help you win the \
 lottery.\nHowever, we will begin a journey towards actualizing your dream.\n\
 Take a part of your dream, one goal, the one thing that would bring you the\n\
 best quality of life improvement right now. Could be for example getting away \
@@ -77,10 +81,9 @@ def introduction():
     """
     Displays information about the calculator
     """
-    type_row_slow(heading('Budget calculator'))
-    time.sleep(0.5)
+    type_row_fast(heading('\nBudget calculator'))
 
-    type_row_slow('\nIt’s important to write everything out when planning your\
+    type_row_fast('\nIt’s important to write everything out when planning your\
  financial goals, \nlike paying off your debt against your monthly income and \
 fixed expenses. \nThis allows you to understand better where you are in your \
 finances, as\nwell as help to plan out how you’re going to get where you want \
@@ -115,7 +118,7 @@ def get_text(data):
     depending on the category of data input
     """
     if data == "Cost of goal":
-        type_row_slow('\n\nEstimate the cost of your specified goal.\n\nYou do\
+        type_row_fast('\n\nEstimate the cost of your specified goal.\n\nYou do\
  not have to specify which currency your cost is in, but it is \nimportant \
 to always stick to the same currency throughout the calculator. \nFor example,\
  if you live in Norway but have a salery in GBP and like to \norder german \
@@ -123,83 +126,83 @@ sausages online and pay in EUR then convert everything to \nwhichever \
 currency is easiest or you.\n\n')
 
     elif data == "Income":
-        type_row_slow(heading("\nMain income"))
-        type_row_slow('\n\nEnter the amount from your main source of income \
+        type_row_fast(heading("\nMain income"))
+        type_row_fast('\n\nEnter the amount from your main source of income \
 here.\n\nFor the calculator to work properly, you need to enter your \nmonthly\
  income. Same goes for any extra income and for all costs. \nEstimate the \
 average monthly on each category.\n\n')
 
     elif data == "Extra income":
-        type_row_slow(heading('\nExtra income'))
-        type_row_slow('\n\nFor example, this could be income from commissions,\
+        type_row_fast(heading('\nExtra income'))
+        type_row_fast('\n\nFor example, this could be income from commissions,\
  overtime, \nbonuses, rent (recieved), child support, benefits etc.\n\n')
 
     elif data == "Housing":
-        type_row_slow(heading('\nHousing costs'))
-        type_row_slow('\n\nThis would include mortgage payments, property \
+        type_row_fast(heading('\nHousing costs'))
+        type_row_fast('\n\nThis would include mortgage payments, property \
 taxes, strata fees, \nrent, homeowner insurance, and hydro or electricity.\
 \n\n')
 
     elif data == "Utilities":
-        type_row_slow(heading('\nUtilities'))
-        type_row_slow('\n\nExamples of utility costs are cell phone, gas, and \
+        type_row_fast(heading('\nUtilities'))
+        type_row_fast('\n\nExamples of utility costs are cell phone, gas, and \
 internet\nbills. Nowadays, people also include their streaming services,\n\
 for example Netflix, under utilities in lieu of what people\n\
 used to pay commonly for cable services.\n\n')
 
     elif data == "Food":
-        type_row_slow(heading('\nFood and hygiene products'))
-        type_row_slow('\n\nGroceries, personal care products, and things for \
+        type_row_fast(heading('\nFood and hygiene products'))
+        type_row_fast('\n\nGroceries, personal care products, and things for \
 baby needs\nare expenses you’d include here. If you like to eat out a lot,\n\
 you might include those expenses here. But if eating out is\nmore something \
 you do for fun, you can include it under later \n\
 category Personal & Discretionary\n\n')
 
     elif data == "Transportation":
-        type_row_slow(heading('\nTransportation costs'))
-        type_row_slow('\n\nThe money you spend on public transit, taxis, fuel,\
+        type_row_fast(heading('\nTransportation costs'))
+        type_row_fast('\n\nThe money you spend on public transit, taxis, fuel,\
 \nvehicle insurance, maintenance, and parking are included\nin this category. \
 This might change depending on whether\nor not you’re working from home, but \
 some should still\nbe allotted to understand your budget as a whole.\n\n')
 
     elif data == "Clothing":
-        type_row_slow(heading('\nClothing'))
-        type_row_slow('\n\nShoes and clothes for all members of the family.\
+        type_row_fast(heading('\nClothing'))
+        type_row_fast('\n\nShoes and clothes for all members of the family.\
 \n\n')
 
     elif data == "Medical":
-        type_row_slow(heading('\nMedical'))
-        type_row_slow('\n\nThis includes premiums, specialists,\n\
+        type_row_fast(heading('\nMedical'))
+        type_row_fast('\n\nThis includes premiums, specialists,\n\
 and over-the-counter medication.\n\n')
 
     elif data == "Personal & Discretionary":
-        type_row_slow(heading('\nPersonal & Discretionary'))
-        type_row_slow('\n\nMoney spent on entertainment, recreation, \
+        type_row_fast(heading('\nPersonal & Discretionary'))
+        type_row_fast('\n\nMoney spent on entertainment, recreation, \
 education,\ntobacco & alcohol, eating out, gaming, hair cuts, hobbies,\n\
 and planned charitable giving are some examples.\n\n')
 
     elif data == "Debt Payments":
-        type_row_slow(heading('\nDebt Payments'))
-        type_row_slow('\n\nHere you can enter the monthly payments on various \
+        type_row_fast(heading('\nDebt Payments'))
+        type_row_fast('\n\nHere you can enter the monthly payments on various \
 debts.\nCould be for example credit card debt or loan for a car.\n\n')
 
     elif data == "Boring savings":
-        type_row_slow(heading('\nBoring savings'))
-        type_row_slow('\n\nIf you already have saved up money in an emergency \
+        type_row_fast(heading('\nBoring savings'))
+        type_row_fast('\n\nIf you already have saved up money in an emergency \
 fund,\nwell done! If not, it is advised to dedicate savings towards\nthis. \
 It is also a good idea to have some savings set aside\nfor retirement. This \
 category could also include savings for\ngrandchildren or any other types of \
 long term savings.\n\n')        
 
     elif data == "Fun savings":
-        type_row_slow(heading('\nFun savings'))
-        type_row_slow('\n\nThis is savings that is purely for fun things. \n\
+        type_row_fast(heading('\nFun savings'))
+        type_row_fast('\n\nThis is savings that is purely for fun things. \n\
 For the purpose of this calculator, these savings\nwill be used to reach your \
 specified goal.\n\n')
 
     elif data == "Initial savings":
-        type_row_slow(heading('\nInitial savings'))
-        type_row_slow('\n\nDo you already have any amount of savings that \n\
+        type_row_fast(heading('\nInitial savings'))
+        type_row_fast('\n\nDo you already have any amount of savings that \n\
 you want to dedicate towards reaching your goal.\n\
 If you do not, that is okey, just enter 0\n\n')
 
@@ -657,6 +660,17 @@ def type_row_slow(message):
         if character == "\n":
             time.sleep(0.3)
 
+            
+def type_row_fast(message):
+    """
+    Function to write text slowly to terminal
+    """
+    for character in message:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        if character == "\n":
+            time.sleep(0.02)
+
 
 def big_heading(text):
     """
@@ -705,7 +719,7 @@ def main():
     # dream()
     # goal(user)
     # get_data(user, "Cost of goal")
-    # introduction()
+    introduction()
     collect_data(user)
     # run_calculations(user)
     # thank_you()
