@@ -8,30 +8,16 @@ import os
 def welcome():
     """
     Start application on a welcome screen with a message
-    """
-    dream_heading = pyfiglet.figlet_format('Dream',
-                                           font="big_money-se",
-                                           justify="center")
-
-    type_row_slow(dream_heading)    
-
+    """ 
+    type_row_slow(big_heading('Dream'))
     time.sleep(0.5)
-
-    achiever_heading = pyfiglet.figlet_format('Achiever',
-                                 font="big_money-se",
-                                 justify="center")
-
-    type_row_slow(achiever_heading)
-
-    type_row_slow(big_heading('testing...'))
-    
+    type_row_slow(big_heading('Achiever'))    
     time.sleep(1)
 
     welcome = '             Welcome to the DREAM ACHIEVER budget calculator!\n\
            This tool will help you reach your dreams and goals.'
 
     type_text_slow(welcome)
-
     time.sleep(1)
 
 
