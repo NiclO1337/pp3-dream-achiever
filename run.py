@@ -8,28 +8,28 @@ import os
 def welcome():
     """
     Start application on a welcome screen with a message
-    """ 
+    """
     type_row_slow(big_heading('Dream'))
     time.sleep(0.5)
-    type_row_slow(big_heading('Achiever'))    
+    type_row_slow(big_heading('Achiever'))
     time.sleep(1)
 
-    type_text_slow('             Welcome to the DREAM ACHIEVER budget \
-calculator!\n           This tool will help you reach your dreams and goals.')
+    type_text_slow('                Welcome to the DREAM ACHIEVER budget \
+calculator!\n              This tool will help you reach your dreams and \
+goals.')
     time.sleep(1)
 
     type_row_slow('\n\n\nBudgeting Guidelines for Income:\n\n\
 Many people wonder how much of their income they should spend on their home, \
 \nvehicle, groceries, clothes, etc. At the end of this calculator we will \
 compare \nyour expenses to the recommended guidlines and think about possible \
-changes you \ncan make.\nStart working with this budget calculator by \
+changes you \ncan make.\n\nStart working with this budget calculator by \
 developing your budget with your \nnet income. You have this money left \
 after government deductions from your pay-\ncheque but before voluntary \
 deductions like RRSPs, pensions, or other savings. \nIf you have expenses \
 like high debt payments, childcare, school expenses, or \ngiving, you’ll need \
-to lower your spending in your budgeting process in other \nareas to allow for \
-these higher expenses.')
-
+to lower your spending in your budgeting process in other \nareas to allow \
+for these higher expenses.')
 
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
@@ -645,7 +645,7 @@ def type_text_slow(message):
         sys.stdout.flush()
         time.sleep(0.05)
 
-    
+
 def type_row_slow(message):
     """
     Function to write text slowly to terminal
