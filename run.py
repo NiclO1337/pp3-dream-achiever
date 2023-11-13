@@ -14,15 +14,10 @@ def welcome():
     type_row_slow(big_heading('Achiever'))    
     time.sleep(1)
 
-    welcome = '             Welcome to the DREAM ACHIEVER budget calculator!\n\
-           This tool will help you reach your dreams and goals.'
-
-    type_text_slow(welcome)
+    type_text_slow('             Welcome to the DREAM ACHIEVER budget \
+calculator!\n           This tool will help you reach your dreams and goals.')
     time.sleep(1)
 
-
-    print('\nWelcome to the DREAM ACHIEVER budget calculator!\n'
-          'This tool will help you reach your dreams and goals.\n')
     print('Budgeting Guidelines for Income:')
     print('Many people wonder how much of their income they should spend on '
           'their home, vehicle, groceries, clothes, etc. At the end of this '
