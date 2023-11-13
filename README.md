@@ -107,8 +107,7 @@ TODO: Add info about site purpose and target user
 
 ### Wireframes
 
-<p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1699387577/PP3_Wireframe_dxzz7q.png
-" alt="Image of wireframes" width="800"/></p>
+<p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1699387577/PP3_Wireframe_dxzz7q.png" alt="Image of wireframes" width="800"/></p>
 
 
 ### Flowchart
@@ -222,7 +221,7 @@ Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
 
 - Pyfiglet [tutorial](https://www.youtube.com/watch?v=rk5moDXR5Nk)
 
-- 
+- Typewriter style [tutorial](https://www.youtube.com/watch?v=2h8e0tXHfk0)
 
 - 
 
