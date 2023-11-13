@@ -279,16 +279,17 @@ def compare_income_cost(user, income):
 
     # Print different messages based on the value of the budget surplus
     if budget_surplus < 0:
-        print('\n\nLooks like your budget exceeds your income with '
-              f'{budget_surplus}, we will have to deduct this from '
-              'your fun savings for now.\n')
+        type_text_slow(f'\n\nLooks like your budget exceeds your income with \
+{budget_surplus},\nwe will have to deduct this from your fun savings for now.')
+
     elif budget_surplus > 0:
-        print(f'\n\nGreat, you have a budget surplus of {budget_surplus}, '
-              'we will use this money towards reaching your goal.\n')
+        type_text_slow(f'\n\nGreat, you have a budget surplus of \
+{budget_surplus},\nwe will use this money towards reaching your goal.')
+
     else:
-        print('\n\nLooks like somebody did their homework and came prepared, '
-              f'well done! Your income ({income}) and expenses ({expenses}) '
-              'are the same amount.\n')
+        type_text_slow(f'\n\nLooks like somebody did their homework and came \
+prepared, well done!\nYour income ({income}) and expenses ({expenses}) \
+are the same amount.\n')
 
     return budget_surplus
 
@@ -310,7 +311,8 @@ def calculate_goal(user, surplus):
 
     # Check if user can already afford their goal
     if initial_savings >= goal_cost:
-        print('Good news, you already have enough savings to reach your goal!')
+        type_text_slow('\n\nGood news, you already have enough savings to \
+reach your goal!')
     else:
         # Function to display time to reach goal in nr of years if applicable
         years = 0
@@ -351,28 +353,34 @@ def calculate_goal(user, surplus):
             months_text = ""
             and_text = ""
 
-        print(f'Your goal is: "{list(user.values())[0]}" and your current '
-              f'savings towards your goal is {goal_funds} per month.')
+        time.sleep(0.8)
+        type_text_slow(f'\n\nYour goal is: "{list(user.values())[0]}"\nand \
+your current savings towards your goal is {goal_funds} per month.')
 
+        time.sleep(0.8)
         if goal_funds <= 0:
-            print('At this point, you will not be able to reach your goal.')
+            type_text_slow('\n\nAt this point, you will not be able to reach \
+your goal.')
 
         elif reach_goal > 240:
-            print('At this rate it will take you over 20 years to reach your '
-                  f'goal. Specifically {years}{years_text}{and_text}'
-                  f'{months}{months_text}.')
+            type_text_slow(f'\n\nAt this rate it will take you over 20 years \
+to reach your goal. Specifically {years}{years_text}{and_text}\
+{months}{months_text}.')
 
         else:
-            print(f'It will take you {years}{years_text}'
-                  f'{and_text}{months}{months_text} to reach your goal. '
-                  'If you want to reach this goal faster you can to either '
-                  'cut some of your other expenses, try to increase your '
-                  'income or find some new extra income.')
+            type_text_slow(f'\n\nIt will take you {years}{years_text}\
+{and_text}{months}{months_text} to reach your goal.\n')
+            time.sleep(0.8)
+            type_text_slow('If you want to reach this goal faster you can to \
+either cut\nsome of your other expenses, try to increase your income or\n\
+find some new extra income.')
 
-    print('\nLet´s look through your expenses and '
-          'think about ways to reduce them.\n')
-
-    input('Press ENTER to continue...\n')
+    time.sleep(1)
+    type_text_slow('\n\nLet´s look through your expenses and \
+think about ways to reduce them.\n')
+    
+    type_text_slow('\n\nPress ENTER to continue...\n')
+    input()
 
 
 def get_cost_text(category):
@@ -513,6 +521,9 @@ def run_calculations(user):
     Then compares each category of costs with the general recommendation.
     """
     # Add income's together to use in other calculations
+    type_row_slow('\n\n')
+    type_text_slow('Calculating...                                        ')
+    
     income = user.get("Income") + user.get("Extra income")
 
     budget_surplus = compare_income_cost(user, income)
