@@ -9,23 +9,31 @@ def welcome():
     """
     Start application on a welcome screen with a message
     """
-    print(pyfiglet.figlet_format('Dream',
-                                 font="big_money-sw",
-                                 justify="center"))
+    dream_heading = pyfiglet.figlet_format('Dream',
+                                           font="big_money-se",
+                                           justify="center")
 
+    type_row_slow(dream_heading)    
 
-    time.sleep(1)
-    
-    print(pyfiglet.figlet_format('Achiever',
+    time.sleep(0.5)
+
+    achiever_heading = pyfiglet.figlet_format('Achiever',
                                  font="big_money-se",
-                                 justify="center"))
+                                 justify="center")
 
+    type_row_slow(achiever_heading)
+    
     time.sleep(1)
 
     welcome = '             Welcome to the DREAM ACHIEVER budget calculator!\n\
            This tool will help you reach your dreams and goals.'
 
     type_text_slow(welcome)
+
+    time.sleep(1)
+
+
+    
 #     print()
 #     print()
 #     print()
@@ -657,6 +665,17 @@ def type_text_slow(message):
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.05)
+
+    
+def type_row_slow(message):
+    """
+    Function to write text slowly to terminal
+    """
+    for character in message:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        if character == "\n":
+            time.sleep(0.3)
 
 
 def main():
