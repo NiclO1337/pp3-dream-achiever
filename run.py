@@ -503,15 +503,16 @@ def check_costs(user, income, category):
     else:
         comparason = "also"
 
-    print('\nGeneral guidelines to spend in this category is '
-          f'{guideline_percent}% of your total income.')
+    type_row_fast(f'\nGeneral guidelines to spend in this category is \
+{guideline_percent}% of your total income.')
     if income == 0:
-        print('Unable to calculate you % since your income is set to 0.')
+        type_row_fast('Unable to calculate you % since your income is: 0.')
     else:
-        print('Your budget for this is currently '
-              f'{comparason} {percent_of_income}%.')
+        type_row_fast(f'Your budget for this is currently \
+{comparason} {percent_of_income}%.')
 
-    input('\nPress ENTER to continue...')
+    type_text_slow('\n\nPress ENTER to continue...\n')
+    input()
 
 
 def run_calculations(user):
@@ -711,27 +712,27 @@ def main():
     user = {}
 
     user = {"Goal": "Trip to the Bahamas",
-            "Cost of goal": 50000,
-            "Income": 23000,
-            "Extra income": 10000,
-            "Housing": 14000,
-            "Utilities": 1500,
-            "Food": 5000,
-            "Transportation": 150,
-            "Clothing": 200,
-            "Medical": 150,
-            "Personal & Discretionary": 7000,
-            "Debt Payments": 0,
-            "Boring savings": 4000,
-            "Fun savings": 2000,
-            "Initial savings": 10000}
+            "Cost of goal": 2000,
+            "Income": 90,
+            "Extra income": 10,
+            "Housing": 36,
+            "Utilities": 4,
+            "Food": 15,
+            "Transportation": 5,
+            "Clothing": 5,
+            "Medical": 5,
+            "Personal & Discretionary": 5,
+            "Debt Payments": 5,
+            "Boring savings": 5,
+            "Fun savings": 5,
+            "Initial savings": 500}
 
     # welcome()
     # dream()
     # goal(user)
     # get_data(user, "Cost of goal")
     # intro_budget_calc()
-    collect_data(user)
+    # collect_data(user)
     run_calculations(user)
     # thank_you()
 
