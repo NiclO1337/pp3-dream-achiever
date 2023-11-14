@@ -236,7 +236,7 @@ def validate_text(input):
         return False
 
     if len(input) > 60:
-        print('Invalid text: must be less 60 characters or less')
+        print('Invalid text: must be less 60 characters or less.')
         return False
 
     return True
@@ -263,6 +263,10 @@ def validate_numbers(input):
     if int(input) < 0:
         print(f'\nInvalid data: Program can not '
               'calculate with negative numbers.\n')
+        return False
+
+    if len(input) > 20:
+        print(f'\nInvalid data: number must be 20 characters or less.')
         return False
 
     return True
