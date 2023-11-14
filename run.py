@@ -74,7 +74,9 @@ you.\n\nYou do not need to write any details here, can be just a keyword.\n\n')
         goal = input('Goal:\n')
         if validate_text(goal):
             user.update({"Goal": goal})
-            return user
+            break
+
+    get_data(user, "Cost of goal")
 
 
 def intro_budget_calc():
@@ -211,28 +213,13 @@ def collect_data(user):
     """
     Collect data from user for each needed category
     """
-    categories = ["Income", "Extra income", "Housing", "Utilities", "Food", 
-                  "Transportation", "Clothing", "Medical", 
-                  "Personal & Discretionary", "Debt Payments", 
+    categories = ["Income", "Extra income", "Housing", "Utilities", "Food",
+                  "Transportation", "Clothing", "Medical",
+                  "Personal & Discretionary", "Debt Payments",
                   "Boring savings", "Fun savings", "Initial savings"]
 
     for category in categories:
         get_data(user, category)
-
-    
-    # get_data(user, "Income")
-    # get_data(user, "Extra income")
-    # get_data(user, "Housing")
-    # get_data(user, "Utilities")
-    # get_data(user, "Food")
-    # get_data(user, "Transportation")
-    # get_data(user, "Clothing")
-    # get_data(user, "Medical")
-    # get_data(user, "Personal & Discretionary")
-    # get_data(user, "Debt Payments")
-    # get_data(user, "Boring savings")
-    # get_data(user, "Fun savings")
-    # get_data(user, "Initial savings")
 
 
 def validate_text(input):
@@ -743,9 +730,8 @@ def main():
 
     # welcome()
     # dream()
-    # goal(user)
-    # get_data(user, "Cost of goal")
-    # intro_budget_calc()
+    goal(user)
+    intro_budget_calc()
     collect_data(user)
     run_calculations(user)
     thank_you()
