@@ -9,9 +9,9 @@ def welcome():
     """
     Start application on a welcome screen with a message
     """
-    type_row_slow(big_heading('Dream'))
+    type_row_slow(big_heading_center('Dream'))
     time.sleep(0.5)
-    type_row_slow(big_heading('Achiever'))
+    type_row_slow(big_heading_center('Achiever'))
     time.sleep(1)
 
     type_text_slow('                Welcome to the DREAM ACHIEVER budget\
@@ -211,18 +211,18 @@ def collect_data(user):
     """
     Collect data from user
     """
-    # get_data(user, "Income")
-    # get_data(user, "Extra income")
-    # get_data(user, "Housing")
-    # get_data(user, "Utilities")
-    # get_data(user, "Food")
-    # get_data(user, "Transportation")
-    # get_data(user, "Clothing")
-    # get_data(user, "Medical")
-    # get_data(user, "Personal & Discretionary")
-    # get_data(user, "Debt Payments")
-    # get_data(user, "Boring savings")
-    # get_data(user, "Fun savings")
+    get_data(user, "Income")
+    get_data(user, "Extra income")
+    get_data(user, "Housing")
+    get_data(user, "Utilities")
+    get_data(user, "Food")
+    get_data(user, "Transportation")
+    get_data(user, "Clothing")
+    get_data(user, "Medical")
+    get_data(user, "Personal & Discretionary")
+    get_data(user, "Debt Payments")
+    get_data(user, "Boring savings")
+    get_data(user, "Fun savings")
     get_data(user, "Initial savings")
 
 
@@ -694,13 +694,22 @@ def type_row_fast(message):
             time.sleep(0.02)
 
 
-def big_heading(text):
+def big_heading_center(text):
     """
     Function to create a big heading
     """
     heading = pyfiglet.figlet_format(text,
                                      font="big_money-se",
                                      justify="center")
+
+    return heading
+
+
+def big_heading(text):
+    """
+    Function to create a big heading
+    """
+    heading = pyfiglet.figlet_format(text, font="big_money-se")
 
     return heading
 
