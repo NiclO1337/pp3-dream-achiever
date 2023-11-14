@@ -3,6 +3,7 @@ import pyfiglet
 import sys
 import time
 import os
+import signal
 
 
 def welcome():
@@ -717,6 +718,17 @@ def heading(text):
     heading = pyfiglet.figlet_format(text, font="digital")
 
     return heading
+
+
+def handler(signum, frame):
+    """
+    Custom message when user presses Ctrl-c instead of error.
+    """
+    print('Ctrl-c was pressed, terminating program.')
+    sys.exit()
+
+ 
+signal.signal(signal.SIGINT, handler)
 
 
 def main():
