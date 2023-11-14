@@ -203,14 +203,10 @@ Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
 
 - Budgeting Basics from UNFCU: [The 50-30-20 Rule](https://www.unfcu.org/guides/the-50-30-20-rule/)
 
+
 ### Media
 
-#### Favicon
-
-
-#### Main page
-
-
+Bild av Pixabay: [Background image](https://www.pexels.com/sv-se/foto/himmel-moln-molnig-vader-417045/)
 
 
 ### Code
@@ -222,7 +218,3 @@ Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
 - Pyfiglet [tutorial](https://www.youtube.com/watch?v=rk5moDXR5Nk)
 
 - Typewriter style [tutorial](https://www.youtube.com/watch?v=2h8e0tXHfk0)
-
-- 
-
-- 
