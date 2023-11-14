@@ -235,6 +235,10 @@ def validate_text(input):
         print('Invalid text: must enter a text.')
         return False
 
+    if len(input) > 60:
+        print('Invalid text: must be less 60 characters or less')
+        return False
+
     return True
 
 
@@ -264,7 +268,7 @@ def validate_numbers(input):
     return True
 
 
-def compare_income_cost(user, income):
+def calc_budget_surplus(user, income):
     """
     Function to compare income with cost to see
     if there is a budget surplus avalible
@@ -522,7 +526,7 @@ def run_calculations(user):
     
     income = user.get("Income") + user.get("Extra income")
 
-    budget_surplus = compare_income_cost(user, income)
+    budget_surplus = calc_budget_surplus(user, income)
     calculate_goal(user, budget_surplus)
 
     check_costs(user, income, "Housing")
@@ -565,14 +569,14 @@ def another_recommendation():
     """
     Give another helpful tip if user chooses to learn it
     """
-#     type_row_slow(big_heading('50-30-20'))
-#     type_row_fast('The 50-30-20 rule splits expenses into just three \
-# categories. It also offers\nrecommendations on how much money to use for \
-# each. With some basic information,\nyou can get on the road to financial \
-# well-being.')
+    type_row_slow(big_heading('50-30-20'))
+    type_row_fast('The 50-30-20 rule splits expenses into just three \
+categories. It also offers\nrecommendations on how much money to use for \
+each. With some basic information,\nyou can get on the road to financial \
+well-being.')
 
-#     type_text_slow('\n\nPress ENTER to continue...\n')
-#     input()
+    type_text_slow('\n\nPress ENTER to continue...\n')
+    input()
 
     type_row_fast(heading('\nNeeds: 50%'))
     type_row_fast('\n\nAbout half of your budget should go toward needs. \
@@ -733,14 +737,14 @@ def main():
             "Fun savings": 5,
             "Initial savings": 500}
 
-    # welcome()
-    # dream()
-    # goal(user)
-    # get_data(user, "Cost of goal")
-    # intro_budget_calc()
-    # collect_data(user)
-    # run_calculations(user)
-    # thank_you()
+    welcome()
+    dream()
+    goal(user)
+    get_data(user, "Cost of goal")
+    intro_budget_calc()
+    collect_data(user)
+    run_calculations(user)
+    thank_you()
     start_over()
 
 
