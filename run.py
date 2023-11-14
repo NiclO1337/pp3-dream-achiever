@@ -17,7 +17,7 @@ def welcome():
     type_text_slow('                Welcome to the DREAM ACHIEVER budget \
 calculator!                \n              This tool will help you reach \
 your dreams and goals.              ')
-    time.sleep(1)
+    time.sleep(0.6)
 
     type_row_fast('\n\n\nBudgeting Guidelines for Income:\n\n\
 Many people wonder how much of their income they should spend on their home, \
@@ -522,7 +522,7 @@ def run_calculations(user):
     """
     # Add income's together to use in other calculations
     type_row_slow('\n\n')
-    type_text_slow('Calculating...                                        ')
+    type_text_slow('Calculating.........................')
 
     income = user.get("Income") + user.get("Extra income")
 
@@ -541,7 +541,7 @@ def thank_you():
     """
     Thank the user for using the calculator and give another helpful tip
     """
-    type_row_fast(big_heading('Thank'))
+    type_row_fast(big_heading('\nThank'))
     type_text_slow('you for using our budget calculator!\nWe hope this helped \
 you to think about your expenses and also clarify your\ndreams and goals. \
 This is the first step needed towards achieving them.\n')
@@ -565,7 +565,7 @@ def another_recommendation():
     """
     Give another helpful tip if user chooses to learn it
     """
-    type_row_fast(big_heading_center('50-30-20'))
+    type_row_fast(big_heading_center('\n50-30-20'))
     type_row_fast('The 50-30-20 rule splits expenses into just three \
 categories. It also offers\nrecommendations on how much money to use for \
 each. With some basic information,\nyou can get on the road to financial \
@@ -607,7 +607,7 @@ def start_over():
     """
     Give user the option to start calculator over again
     """
-    type_row_fast(big_heading('Dream'))
+    type_row_fast(big_heading('\nDream'))
     type_row_fast('Would you like to start over with another calculation?\n\n')
 
     responses = ["Yes", "yes", "YES", "Y", "y", "No", "no", "NO", "N", "n"]
@@ -625,7 +625,7 @@ def good_bye():
     """
     Say good bye to user
     """
-    type_row_fast(big_heading('Good bye'))
+    type_row_fast(big_heading('\nGood bye'))
     type_row_fast('Hope you had a pleasant experience and good luck\nreaching \
 all of your dreams and goals!\n\nIf you changed your mind and want to do \
 another calculation\nclick on "Run program" button above.\n\nHave a nice day!')
