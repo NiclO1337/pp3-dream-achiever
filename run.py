@@ -22,8 +22,8 @@ your dreams and goals.              ')
     type_row_fast('\n\n\nBudgeting Guidelines for Income:\n\n\
 Many people wonder how much of their income they should spend on their home, \
 \nvehicle, groceries, clothes, etc. At the end of this calculator we will \
-compare \nyour expenses to the recommended guidelines and think about possible \
-changes you \ncan make.\n\nStart working with this budget calculator by \
+compare \nyour expenses to the recommended guidelines and think about possible\
+ changes you\ncan make.\n\nStart working with this budget calculator by \
 developing your budget with your \nnet income. You have this money left \
 after government deductions from your pay-\ncheque but before voluntary \
 deductions like RRSPs, pensions, or other savings. \nIf you have expenses \
@@ -192,7 +192,7 @@ debts.\nCould be for example credit card debt or loan for a car.\n\n')
 fund,\nwell done! If not, it is advised to dedicate savings towards\nthis. \
 It is also a good idea to have some savings set aside\nfor retirement. This \
 category could also include savings for\ngrandchildren or any other types of \
-long term savings.\n\n')        
+long term savings.\n\n')
 
     elif data == "Fun savings":
         type_row_fast(heading('\nFun savings'))
@@ -382,7 +382,7 @@ find some new extra income.')
     time.sleep(1)
     type_text_slow('\n\nLet´s look through your expenses and \
 think about ways to reduce them.\n')
-    
+
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
 
@@ -399,8 +399,8 @@ def get_cost_text(category):
         type_row_fast('\n\nOther than moving to a cheaper place, there are \
 many small things you can do to\nreduce your living costs. For example it is \
 a good idea to regularly check what\nthe best avalible interest rate on your \
-mortgage. Comparing offers from different\ncompanies on for example insurance \
-and electricity can save a lot of money.')
+mortgage. Also compare offers from\ndifferent companies on for example \
+insurance and electricity.')
 
         guideline_percent = 35
 
@@ -523,7 +523,7 @@ def run_calculations(user):
     # Add income's together to use in other calculations
     type_row_slow('\n\n')
     type_text_slow('Calculating...                                        ')
-    
+
     income = user.get("Income") + user.get("Extra income")
 
     budget_surplus = calc_budget_surplus(user, income)
@@ -584,7 +584,7 @@ payments,\nminimum payments on loans, healthcare, and essential groceries.')
 
     type_row_fast('\n\nPress ENTER to continue...\n')
     input()
-    
+
     type_row_fast(heading('\nWants: 30%'))
     type_row_fast('\n\nYou subscribe to a streaming service to watch your \
 favorite show, not\nbecause you need the subscription to live. Wants are \
@@ -681,7 +681,7 @@ def type_row_slow(message):
         if character == "\n":
             time.sleep(0.3)
 
-            
+
 def type_row_fast(message):
     """
     Function to write text slowly to terminal
@@ -697,7 +697,8 @@ def big_heading_center(text):
     """
     Function to create a big heading
     """
-    heading = pyfiglet.figlet_format(text,font="big_money-se",justify="center")
+    heading = pyfiglet.figlet_format(text, font="big_money-se",
+                                     justify="center")
 
     return heading
 
