@@ -14,7 +14,7 @@ def welcome():
     type_row_slow(big_heading_center('Achiever'))
     time.sleep(1)
 
-    type_text_slow('                Welcome to the DREAM ACHIEVER budget\
+    type_text_slow('                Welcome to the DREAM ACHIEVER budget \
 calculator!                \n              This tool will help you reach \
 your dreams and goals.              ')
     time.sleep(1)
@@ -22,7 +22,7 @@ your dreams and goals.              ')
     type_row_fast('\n\n\nBudgeting Guidelines for Income:\n\n\
 Many people wonder how much of their income they should spend on their home, \
 \nvehicle, groceries, clothes, etc. At the end of this calculator we will \
-compare \nyour expenses to the recommended guidlines and think about possible \
+compare \nyour expenses to the recommended guidelines and think about possible \
 changes you \ncan make.\n\nStart working with this budget calculator by \
 developing your budget with your \nnet income. You have this money left \
 after government deductions from your pay-\ncheque but before voluntary \
@@ -203,8 +203,8 @@ specified goal.\n\n')
     elif data == "Initial savings":
         type_row_fast(heading('\nInitial savings'))
         type_row_fast('\n\nDo you already have any amount of savings that \n\
-you want to dedicate towards reaching your goal.\n\
-If you do not, that is okey, just enter 0\n\n')
+you want to dedicate towards reaching your goal?\n\
+If you do not, that is fine, just enter 0.\n\n')
 
 
 def collect_data(user):
@@ -423,8 +423,8 @@ in the store.')
 
     elif category == "Transportation":
         type_row_fast(heading('\nTransportation'))
-        type_row_fast('\n\nTransportation needs are very different for \
-example based on family\ncircumstances or where you live and work. In some \
+        type_row_fast('\n\nTransportation needs varies a lot depending on \
+for example family\ncircumstances or where you live and work. In some \
 situations public \ntransportation will be a cheaper option. Walking and \
 riding bicycle´s\nare cheap alternatives while also having the added benefit \
 getting \nmore exercise and it is environmentally friendly.')
@@ -510,7 +510,7 @@ def check_costs(user, income, category):
         type_row_fast(f'\nYour budget for this is currently \
 {comparason} {percent_of_income}%.')
 
-    type_text_slow('\n\nPress ENTER to continue...\n')
+    type_row_fast('\n\nPress ENTER to continue...\n')
     input()
 
 
@@ -545,14 +545,13 @@ def thank_you():
     Thank the user for using the calculator and give another helpful tip
     """
     type_row_slow(big_heading('Thank  '))
-    type_text_slow('                 you for using our budget calculator!\
-\nWe hope this helped you to think about your \
-expenses and also clarify your\ndreams and goals. This is the first step \
-needed towards achieving them.\n')
+    type_text_slow('you for using our budget calculator!\nWe hope this helped \
+you to think about your expenses and also clarify your\ndreams and goals. \
+This is the first step needed towards achieving them.\n')
+
     time.sleep(0.8)
     type_row_fast('\n\nWould you like to learn about another helpful tip you \
 can use when\nplanning your budget? It is called the 50-30-20 rule.\n')
-
 
     responses = ["Yes", "yes", "YES", "Y", "y", "No", "no", "NO", "N", "n"]
     question = 'Answer with "Yes" or "No"'
@@ -569,21 +568,21 @@ def another_recommendation():
     """
     Give another helpful tip if user chooses to learn it
     """
-    type_row_slow(big_heading('50-30-20'))
+    type_row_fast(big_heading_center('50-30-20'))
     type_row_fast('The 50-30-20 rule splits expenses into just three \
 categories. It also offers\nrecommendations on how much money to use for \
 each. With some basic information,\nyou can get on the road to financial \
 well-being.')
 
-    type_text_slow('\n\nPress ENTER to continue...\n')
+    type_row_fast('\n\nPress ENTER to continue...\n')
     input()
 
     type_row_fast(heading('\nNeeds: 50%'))
-    type_row_fast('\n\nAbout half of your budget should go toward needs. \
-These are expenses\nthat must be met no matter what, for example rent/\
-mortgage payments,\nminimum payments on loans, healthcare, and groceries.')
+    type_row_fast('\n\nAbout half of your budget should go toward needs. These\
+ are expenses\nthat must be met no matter what, for example rent/mortgage \
+payments,\nminimum payments on loans, healthcare, and essential groceries.')
 
-    type_text_slow('\n\nPress ENTER to continue...\n')
+    type_row_fast('\n\nPress ENTER to continue...\n')
     input()
     
     type_row_fast(heading('\nWants: 30%'))
@@ -592,7 +591,7 @@ favorite show, not\nbecause you need the subscription to live. Wants are \
 things you enjoy\nthat you spend money on by choice. This could be \
 subscriptions,\nsupplies for hobbies, restaurant meals and vacations.')
 
-    type_text_slow('\n\nPress ENTER to continue...\n')
+    type_row_fast('\n\nPress ENTER to continue...\n')
     input()
     type_row_fast(heading('\nSavings: 20%'))
 
@@ -601,7 +600,7 @@ future. You may put money\nin an emergency fund, or save toward a down \
 payment on a home. Paying down debt\nbeyond the minimum payment amount \
 belongs in this category, too.')
 
-    type_text_slow('\n\nPress ENTER to continue...\n')
+    type_row_fast('\n\nPress ENTER to continue...\n')
     input()
 
     start_over()
@@ -698,9 +697,7 @@ def big_heading_center(text):
     """
     Function to create a big heading
     """
-    heading = pyfiglet.figlet_format(text,
-                                     font="big_money-se",
-                                     justify="center")
+    heading = pyfiglet.figlet_format(text,font="big_money-se",justify="center")
 
     return heading
 
@@ -730,22 +727,6 @@ def main():
     """
     user = {}
 
-    user = {"Goal": "Trip to the Bahamas",
-            "Cost of goal": 2000,
-            "Income": 90,
-            "Extra income": 10,
-            "Housing": 36,
-            "Utilities": 4,
-            "Food": 15,
-            "Transportation": 5,
-            "Clothing": 5,
-            "Medical": 5,
-            "Personal & Discretionary": 5,
-            "Debt Payments": 5,
-            "Boring savings": 5,
-            "Fun savings": 5,
-            "Initial savings": 500}
-
     welcome()
     dream()
     goal(user)
@@ -754,7 +735,6 @@ def main():
     collect_data(user)
     run_calculations(user)
     thank_you()
-    start_over()
 
 
 main()
