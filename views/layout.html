@@ -11,13 +11,14 @@
     <title>Python Terminal by Code Institute</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial;
             background-color: rgb(100, 131, 163);
             background-image: url('https://res.cloudinary.com/dmntcacug/image/upload/v1699960611/pexels-pixabay-417045_g2z5bm.webp');
             background-position: top;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -28,6 +29,7 @@
             border: 6px solid black;
             border-radius: 4px;
             padding-right: 23px;
+            color: rgb(175, 216, 255);
         }
 
         /**
@@ -78,7 +80,7 @@
         .xterm .composition-view {
             /* TODO: Composition position got messed up somewhere */
             background: #000;
-            color: rgb(145, 202, 255);
+            color: #FFF;
             display: none;
             position: absolute;
             white-space: nowrap;
@@ -176,7 +178,7 @@
             height: 40px;
             background-color: rgb(17, 77, 138);
             border: 1px solid rgb(2, 42, 83);
-            color: rgb(145, 202, 255);
+            color: rgb(175, 216, 255);
             text-transform: uppercase;
             margin: 10px;
             border-radius: 8px;
