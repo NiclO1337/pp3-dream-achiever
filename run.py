@@ -493,6 +493,8 @@ def check_costs(user, income, category):
         percent_of_income = 0
     else:
         percent_of_income = round((user.get(category) / income * 100), 2)
+        if percent_of_income > 10:
+            percent_of_income = round(percent_of_income)
 
     # Change text depending on if budget is below, above or same as guideline
     comparason = ""
@@ -724,7 +726,7 @@ def handler(signum, frame):
     """
     Custom message when user presses Ctrl-c instead of error.
     """
-    print('Ctrl-c was pressed, terminating program.')
+    type_text_slow('Ctrl-c was pressed, terminating program.')
     sys.exit()
 
  
