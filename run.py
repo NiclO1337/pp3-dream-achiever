@@ -368,7 +368,7 @@ your goal.')
 
         elif reach_goal > 240:
             type_text_slow(f'\n\nAt this rate it will take you over 20 years \
-to reach your goal. Specifically {years}{years_text}{and_text}\
+to reach your goal. \nSpecifically {years}{years_text}{and_text}\
 {months}{months_text}.')
 
         else:
@@ -529,22 +529,19 @@ def run_calculations(user):
     budget_surplus = calc_budget_surplus(user, income)
     calculate_goal(user, budget_surplus)
 
-    check_costs(user, income, "Housing")
-    check_costs(user, income, "Utilities")
-    check_costs(user, income, "Food")
-    check_costs(user, income, "Transportation")
-    check_costs(user, income, "Clothing")
-    check_costs(user, income, "Medical")
-    check_costs(user, income, "Personal & Discretionary")
-    check_costs(user, income, "Debt Payments")
-    check_costs(user, income, "Boring savings")
+    categories = ["Housing", "Utilities", "Food", "Transportation",
+                  "Clothing", "Medical", "Personal & Discretionary",
+                  "Debt Payments", "Boring savings"]
+
+    for category in categories:
+        check_costs(user, income, category)
 
 
 def thank_you():
     """
     Thank the user for using the calculator and give another helpful tip
     """
-    type_row_slow(big_heading('Thank  '))
+    type_row_fast(big_heading('Thank'))
     type_text_slow('you for using our budget calculator!\nWe hope this helped \
 you to think about your expenses and also clarify your\ndreams and goals. \
 This is the first step needed towards achieving them.\n')
@@ -728,8 +725,8 @@ def main():
     """
     user = {}
 
-    # welcome()
-    # dream()
+    welcome()
+    dream()
     goal(user)
     intro_budget_calc()
     collect_data(user)
