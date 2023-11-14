@@ -209,21 +209,30 @@ If you do not, that is fine, just enter 0.\n\n')
 
 def collect_data(user):
     """
-    Collect data from user
+    Collect data from user for each needed category
     """
-    get_data(user, "Income")
-    get_data(user, "Extra income")
-    get_data(user, "Housing")
-    get_data(user, "Utilities")
-    get_data(user, "Food")
-    get_data(user, "Transportation")
-    get_data(user, "Clothing")
-    get_data(user, "Medical")
-    get_data(user, "Personal & Discretionary")
-    get_data(user, "Debt Payments")
-    get_data(user, "Boring savings")
-    get_data(user, "Fun savings")
-    get_data(user, "Initial savings")
+    categories = ["Income", "Extra income", "Housing", "Utilities", "Food", 
+                  "Transportation", "Clothing", "Medical", 
+                  "Personal & Discretionary", "Debt Payments", 
+                  "Boring savings", "Fun savings", "Initial savings"]
+
+    for category in categories:
+        get_data(user, category)
+
+    
+    # get_data(user, "Income")
+    # get_data(user, "Extra income")
+    # get_data(user, "Housing")
+    # get_data(user, "Utilities")
+    # get_data(user, "Food")
+    # get_data(user, "Transportation")
+    # get_data(user, "Clothing")
+    # get_data(user, "Medical")
+    # get_data(user, "Personal & Discretionary")
+    # get_data(user, "Debt Payments")
+    # get_data(user, "Boring savings")
+    # get_data(user, "Fun savings")
+    # get_data(user, "Initial savings")
 
 
 def validate_text(input):
@@ -732,11 +741,11 @@ def main():
     """
     user = {}
 
-    welcome()
-    dream()
-    goal(user)
-    get_data(user, "Cost of goal")
-    intro_budget_calc()
+    # welcome()
+    # dream()
+    # goal(user)
+    # get_data(user, "Cost of goal")
+    # intro_budget_calc()
     collect_data(user)
     run_calculations(user)
     thank_you()
