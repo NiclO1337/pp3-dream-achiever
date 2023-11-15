@@ -101,7 +101,7 @@ current task.\n\nAre you ready for the final and most challenging test?\n\n')
     type_text_slow('\nA very important thing to know about the CLI, if Ctrl+C \
 is pressed then the\nprogram stops immediately and you can not continue. \
 If you press Ctrl-C you\nhave to click on the "RUN PROGRAM" button above the \
-CLI terminal to start\nover from the beginning.\n\nPress Ctrl-C now by \
+CLI terminal to start\nover from the beginning.\n\nYou press "Ctrl-C" by \
 holding down the CTRL key and pressing the " C " key\nat the same time.\n\n')
 
     responses = ["Ofdgjlidfg3EE"]
