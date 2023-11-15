@@ -215,7 +215,7 @@ Bild av Pixabay: [Background image](https://www.pexels.com/sv-se/foto/himmel-mol
 
 - Code institute for providing the template with the deployment terminal.
 
-- Pyfiglet [tutorial](https://www.youtube.com/watch?v=rk5moDXR5Nk)
+- Pyfiglet [tutorial](https://www.youtube.com/watch?v=U1aUteSg2a4)
 
 - Typewriter style [tutorial](https://www.youtube.com/watch?v=2h8e0tXHfk0)
 
