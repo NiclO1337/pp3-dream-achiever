@@ -11,14 +11,14 @@ def welcome():
     Start application on a welcome screen with a message
     """
     type_row_slow(big_heading_center('Dream'))
-    time.sleep(0.5)
+    time.sleep(0.8)
     type_row_slow(big_heading_center('Achiever'))
-    time.sleep(1)
+    time.sleep(0.8)
 
     type_text_slow('                Welcome to the DREAM ACHIEVER budget \
 calculator!                \n              This tool will help you reach \
 your dreams and goals.              ')
-    time.sleep(0.6)
+    time.sleep(0.8)
 
     type_row_fast('\n\n\nBudgeting Guidelines for Income:\n\n\
 Many people wonder how much of their income they should spend on their home, \
@@ -687,7 +687,7 @@ def type_text_slow(message):
     for character in message:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.03)
 
 
 def type_row_slow(message):
@@ -699,7 +699,7 @@ def type_row_slow(message):
         sys.stdout.write(character)
         sys.stdout.flush()
         if character == "\n":
-            time.sleep(0.3)
+            time.sleep(0.2)
 
 
 def type_row_fast(message):
@@ -747,7 +747,8 @@ def handler(signum, frame):
     """
     Custom message when user presses Ctrl-c instead of error.
     """
-    type_text_slow('\nCtrl-c was pressed, terminating program.\n')
+    type_text_slow('\nCtrl-c was pressed, terminating program...\n')
+    time.sleep(0.8)
     type_row_fast(big_heading('Good bye'))
     sys.exit()
 
