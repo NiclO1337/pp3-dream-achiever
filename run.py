@@ -849,14 +849,13 @@ def handler(signum, frame):
 
 def clear_screen():
     """
-    Function to clear the screen from text on different operating systems
+    Function to clear the screen from text on different operating systems,
+    copied from this link:
+    https://www.codingninjas.com/studio/library/how-to-clear-a-screen-in-python
     """
-    # For Windows
-    if os.name == 'nt':
-        _ = os.system('cls')
-
-    # For macOS and Linux
-    else:
+    if os.name == 'nt': # For Windows
+        _ = os.system('cls')    
+    else: # For macOS and Linux
         _ = os.system('clear')
 
 
