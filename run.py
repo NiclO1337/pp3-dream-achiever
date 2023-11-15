@@ -64,8 +64,8 @@ the graphical interface.')
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
 
-    type_row_slow('You have already learned how to enter a number, now let´s \
-try a text.\nThe input text here is case sensitive, meaning "Hello" and \
+    type_text_slow('\nYou have already learned how to enter a number, now \
+let´s try a text.\nThe input text here is case sensitive, meaning "Hello" and \
 "hello" are\nnot the same word to the computer. First try and write "hello" \
 to see\nwhat happens and then correctly write "Hello" with a capital H.\n\n')
 
@@ -77,29 +77,28 @@ to see\nwhat happens and then correctly write "Hello" with a capital H.\n\n')
 
     type_text_slow('\nHello friend!\n\n')
     time.sleep(0.8)
-    type_row_fast('\nPressing ENTER multiple times can make program skip \
+    type_text_slow('\nPressing ENTER multiple times can make program skip \
 through important parts\nquickly. If you accidentally press ENTER multiple \
 times and many things happen,\nscroll up to check so that you did not miss \
-any important information.\nWhile this next text generates, press ENTER a \
-few times quickly.\n\n')
+any important information.')
 
-    input('Press ENTER when ready...\n')
+    input('\n\nPress ENTER few times quickly!\n')
     
     type_text_slow('Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-Proin sit amet tortor lorem.\n\n')
+\n\n')
     
     responses = ["OK"]
     question = 'Write "OK" into the termial and press ENTER'
 
     ask_question(responses, question)
 
-    type_text_slow('\nThis happens because the program saves every ENTER press \
-and then executes\nthem all one by one after it is done with it´s current \
-task.\n\nAre you ready for the final and most challenging test?\n\n')
+    type_text_slow('\n\nThis happens because the program saves every ENTER \
+press and then executes\nthem all one by one after it is done with it´s \
+current task.\n\nAre you ready for the final and most challenging test?\n\n')
 
-    input('Press ENTER when ready...\n')
+    input('Press ENTER (once only) when ready...\n')
 
-    type_text_slow('A very important thing to know about the CLI, if Ctrl+C \
+    type_text_slow('\nA very important thing to know about the CLI, if Ctrl+C \
 is pressed then the\nprogram stops immediately and you can not continue. \
 If you press Ctrl-C you\nhave to click on the "RUN PROGRAM" button above the \
 CLI terminal to start\nover from the beginning.\n\nPress Ctrl-C now by \
@@ -842,9 +841,9 @@ def handler(signum, frame):
     """
     Custom message when user presses Ctrl-c instead of error.
     """
-    # type_text_slow('\nCtrl-c was pressed, terminating program...\n')
-    # time.sleep(0.8)
-    # type_row_fast(big_heading('Good bye'))
+    type_text_slow('\nCtrl-c was pressed, terminating program...\n')
+    time.sleep(0.8)
+    type_row_fast(big_heading('Good bye'))
     sys.exit()
 
 
