@@ -46,7 +46,9 @@ def cli_tutorial():
     """
     Tutorial for users who are not experienced with CLI interface
     """
-    print('CLI tutorial')
+    
+
+
     input()
 
 def intro_budget_guidelines():
@@ -784,6 +786,19 @@ def handler(signum, frame):
     time.sleep(0.8)
     type_row_fast(big_heading('Good bye'))
     sys.exit()
+
+
+def clear_screen():
+    """
+    Function to clear the screen from text on different operating systems
+    """
+    # For Windows
+    if os.name == 'nt':
+        _ = os.system('cls')
+
+    # For macOS and Linux
+    else:
+        _ = os.system('clear')
 
 
 def main():

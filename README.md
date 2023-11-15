@@ -219,4 +219,6 @@ Bild av Pixabay: [Background image](https://www.pexels.com/sv-se/foto/himmel-mol
 
 - Typewriter style [tutorial](https://www.youtube.com/watch?v=2h8e0tXHfk0)
 
-- Signal handling [Ctrl-c](https://code-maven.com/catch-control-c-in-python)
+- Signal handling [Ctrl-C](https://code-maven.com/catch-control-c-in-python)
+
+- Clear screen guide by [Coding ninjas](https://www.codingninjas.com/studio/library/how-to-clear-a-screen-in-python)
