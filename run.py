@@ -114,17 +114,17 @@ def intro_budget_guidelines():
     """
     Introduction with information about budget guidelines
     """
-    type_row_fast('\n\n\nBudgeting Guidelines for Income:\n\n\
-Many people wonder how much of their income they should spend on their home, \
-\nvehicle, groceries, clothes, etc. At the end of this calculator we will \
-compare \nyour expenses to the recommended guidelines and think about possible\
- changes you\ncan make.\n\nStart working with this budget calculator by \
-developing your budget with your \nnet income. You have this money left \
-after government deductions from your pay-\ncheque but before voluntary \
-deductions like RRSPs, pensions, or other savings. \nIf you have expenses \
-like high debt payments, childcare, school expenses, or \ngiving, you’ll need \
-to lower your spending in your budgeting process in other \nareas to allow \
-for these higher expenses.')
+    type_row_fast(heading('\nBudgeting Guidelines'))
+    type_row_fast('\n\nMany people wonder how much of their income they \
+should spend on their home, \nvehicle, groceries, clothes, etc. At the end \
+of this calculator we will compare \nyour expenses to the recommended \
+guidelines and think about possible changes you\ncan make.\n\nStart working \
+with this budget calculator by developing your budget with your \nnet income. \
+You have this money left after government deductions from your pay-\ncheque \
+but before voluntary deductions like RRSPs, pensions, or other savings. \nIf \
+you have expenses like high debt payments, childcare, school expenses, or \n\
+giving, you’ll need to lower your spending in your budgeting process in other \
+\nareas to allow for these higher expenses.')
 
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
