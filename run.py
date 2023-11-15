@@ -370,12 +370,12 @@ reach your goal!')
 your current savings towards your goal is {goal_funds} per month.')
 
         time.sleep(0.8)
-        
+
         # Message if there is no avalible savings towards goal
         if goal_funds <= 0:
             type_text_slow('\n\nAt this point, you will not be able to reach \
 your goal.')
-            
+
         # Message if there it takes more than 20 years to reach goal
         elif reach_goal > 240:
             type_text_slow(f'\n\nAt this rate it will take you over 20 years \
@@ -536,14 +536,14 @@ def run_calculations(user):
     and check how long it will take to reach the specified goal.
     Then iterate through the categories to print text on each
     category and compare budgets with the general recommendation.
-    """    
+    """
     type_row_slow('\n\n')
     type_text_slow('Calculating.........................')
-    
+
     # Add income's together to use in other calculations
     income = user.get("Income") + user.get("Extra income")
 
-    budget_surplus = calc_budget_surplus(user, income)    
+    budget_surplus = calc_budget_surplus(user, income)
     calculate_goal(user, budget_surplus)
 
     categories = ["Housing", "Utilities", "Food", "Transportation",
@@ -681,7 +681,7 @@ def validate_response(response, responses):
 
 def type_text_slow(message):
     """
-    Function to write text slowly to terminal, 
+    Function to write text slowly to terminal,
     character by character on a timer
     """
     for character in message:
@@ -692,7 +692,7 @@ def type_text_slow(message):
 
 def type_row_slow(message):
     """
-    Function to write text slowly to terminal, 
+    Function to write text slowly to terminal,
     row by row on a timer
     """
     for character in message:
@@ -750,15 +750,16 @@ def handler(signum, frame):
     type_text_slow('Ctrl-c was pressed, terminating program.')
     sys.exit()
 
- 
-signal.signal(signal.SIGINT, handler)
-
 
 def main():
     """
-    Main function to call define user other function in the correct order
+    Main function to call functions in the correct order
     """
+    # define user as empty dictionary
     user = {}
+
+    # used to catch ctrl-c click
+    signal.signal(signal.SIGINT, handler)
 
     welcome()
     dream()
