@@ -747,7 +747,8 @@ def handler(signum, frame):
     """
     Custom message when user presses Ctrl-c instead of error.
     """
-    type_text_slow('Ctrl-c was pressed, terminating program.')
+    type_text_slow('\nCtrl-c was pressed, terminating program.\n')
+    type_row_fast(big_heading('Good bye'))
     sys.exit()
 
 
