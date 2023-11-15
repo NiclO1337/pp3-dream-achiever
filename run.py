@@ -21,13 +21,19 @@ your dreams and goals.              ')
     time.sleep(0.8)
 
     type_row_fast('\n\n\nThis website uses a CLI (command-line interface) \
-program.\nAre you familiar with this CLI or would you like a tutorial?\n\n\
-')
-
+program.\nAre you familiar with CLI or would you like a tutorial?\n\n\
+(1) Enter tutorial\n(2) Continue with budget calculator\n\n\
+This black box is the CLI terminal, you can write inputs in the bottom left \n\
+corner. Press the number " 1 " key and then press the ENTER key if you want \n\
+to do the tutorial. If not then press " 2 " then ENTER.\n\nIf nothing happends\
+ when you press keys, try clicking inside the CLI terminal.\nIf the white \
+box in the bottom left corner has a white border, the terminal is\nnot active.\
+ Clicking inside the terminal will fill the box and become active.\
+\n\n')
 
     # Run function ask question with the question and valid responses
     responses = ["1", "2"]
-    question = 'Answer with "1" or "2"'
+    question = 'Enter "1" or "2" here'
 
     response = ask_question(responses, question)
 
@@ -35,7 +41,6 @@ program.\nAre you familiar with this CLI or would you like a tutorial?\n\n\
     if response in responses[0]:
         cli_tutorial()
 
-    
 
 def cli_tutorial():
     """
