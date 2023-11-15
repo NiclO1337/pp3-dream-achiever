@@ -234,6 +234,7 @@ def validate_text(input):
         print('Invalid text: must enter a text.')
         return False
 
+    # Check if input has more than 60 characters
     if len(input) > 60:
         print('Invalid text: must be less 60 characters or less.')
         return False
@@ -264,6 +265,7 @@ def validate_numbers(input):
               'calculate with negative numbers.\n')
         return False
 
+    # Check if input has more than 60 characters
     if len(input) > 20:
         print(f'\nInvalid data: number must be 20 characters or less.')
         return False
@@ -276,7 +278,7 @@ def calc_budget_surplus(user, income):
     Function to compare income with cost to see
     if there is a budget surplus avalible
     """
-    # Get values from user and slice list to get the costs
+    # Get values from user and slice list to get the costs and sum them up
     costs = list(user.values())[4:-1]
     expenses = 0
     for cost in costs:
@@ -306,13 +308,15 @@ def calculate_goal(user, surplus):
     Compare users goal to the fun savings -+ budget surplus
     and check how long it will take to reach this goal
     """
-
+    # Get required values for calculation
     goal_cost = list(user.values())[1]
     fun_savings = list(user.values())[-2]
     initial_savings = list(user.values())[-1]
+
+    # Check avalible monthly savings that can be used towards reaching goal
     goal_funds = fun_savings + surplus
     if goal_funds <= 0:
-        reach_goal = 0
+        reach_goal = 0  # number of months to reach goal
     else:
         reach_goal = (goal_cost - initial_savings) / goal_funds
 
@@ -330,6 +334,7 @@ reach your goal!')
             years = reach_goal / 12
             years = math.floor(years)
             months = math.ceil(reach_goal) - (years * 12)
+            # prevent from displaying for example "2 years and 12 months"
             if months == 12:
                 years += 1
                 months = 0
@@ -348,13 +353,13 @@ reach your goal!')
 
         if months > 1:
             months_text = " months"
-        # do not display year/years at all if less than 1 year
+        # do not display year/years/and at all if less than 1 year
         if years == 0:
             years = ""
             years_text = ""
             and_text = ""
 
-        # do not display months or the word and if months = 0
+        # do not display and/months or the word and if less than 1 month
         if months == 0:
             months = ""
             months_text = ""
@@ -365,15 +370,19 @@ reach your goal!')
 your current savings towards your goal is {goal_funds} per month.')
 
         time.sleep(0.8)
+        
+        # Message if there is no avalible savings towards goal
         if goal_funds <= 0:
             type_text_slow('\n\nAt this point, you will not be able to reach \
 your goal.')
-
+            
+        # Message if there it takes more than 20 years to reach goal
         elif reach_goal > 240:
             type_text_slow(f'\n\nAt this rate it will take you over 20 years \
 to reach your goal. \nSpecifically {years}{years_text}{and_text}\
 {months}{months_text}.')
 
+        # Message if there is avalible savings and goal will be reached
         else:
             type_text_slow(f'\n\nIt will take you {years}{years_text}\
 {and_text}{months}{months_text} to reach your goal.\n')
@@ -432,7 +441,7 @@ situations public \ntransportation will be a cheaper option. Walking and \
 riding bicycle´s\nare cheap alternatives while also having the added benefit \
 getting \nmore exercise and it is environmentally friendly.')
 
-        guideline_percent = 17.5
+        guideline_percent = 17
 
     elif category == "Clothing":
         type_row_fast(heading('\nClothing'))
@@ -495,6 +504,7 @@ def check_costs(user, income, category):
         percent_of_income = 0
     else:
         percent_of_income = round((user.get(category) / income * 100), 2)
+        # Only display decimals if % is below 10
         if percent_of_income > 10:
             percent_of_income = round(percent_of_income)
 
@@ -510,6 +520,7 @@ def check_costs(user, income, category):
     type_row_fast(f'\n\nGeneral guidelines to spend in this category is \
 {guideline_percent}% of your total income.')
     if income == 0:
+        # Message IF user filled in income as 0
         type_row_fast('\nUnable to calculate you % since your income is: 0.')
     else:
         type_row_fast(f'\nYour budget for this is currently \
@@ -523,15 +534,16 @@ def run_calculations(user):
     """
     Run all calculations to check if there is a budget surplus
     and check how long it will take to reach the specified goal.
-    Then compares each category of costs with the general recommendation.
-    """
-    # Add income's together to use in other calculations
+    Then iterate through the categories to print text on each
+    category and compare budgets with the general recommendation.
+    """    
     type_row_slow('\n\n')
     type_text_slow('Calculating.........................')
-
+    
+    # Add income's together to use in other calculations
     income = user.get("Income") + user.get("Extra income")
 
-    budget_surplus = calc_budget_surplus(user, income)
+    budget_surplus = calc_budget_surplus(user, income)    
     calculate_goal(user, budget_surplus)
 
     categories = ["Housing", "Utilities", "Food", "Transportation",
@@ -555,11 +567,13 @@ This is the first step needed towards achieving them.\n')
     type_row_fast('\n\nWould you like to learn about another helpful tip you \
 can use when\nplanning your budget? It is called the 50-30-20 rule.\n')
 
+    # Run function ask question with the question and valid responses
     responses = ["Yes", "yes", "YES", "Y", "y", "No", "no", "NO", "N", "n"]
     question = 'Answer with "Yes" or "No"'
 
     response = ask_question(responses, question)
 
+    # If user chooses a variation of Yes, display recommendation, else continue
     if response in responses[0:5]:
         another_recommendation()
     else:
@@ -615,11 +629,13 @@ def start_over():
     type_row_fast(big_heading('\nDream'))
     type_row_fast('Would you like to start over with another calculation?\n\n')
 
+    # Run function ask question with the question and valid responses
     responses = ["Yes", "yes", "YES", "Y", "y", "No", "no", "NO", "N", "n"]
     question = 'Answer with "Yes" or "No"'
 
     response = ask_question(responses, question)
 
+    # If user chooses a variation of Yes, start over, else continue
     if response in responses[0:5]:
         main()
     else:
@@ -654,7 +670,7 @@ def ask_question(responses, question):
 
 def validate_response(response, responses):
     """
-    Validate the the response and give feedback to user if wrong
+    Validate the response and give feedback to user if wrong
     """
     if response not in responses:
         print('Sorry, I do not understand what you mean.')
@@ -665,7 +681,8 @@ def validate_response(response, responses):
 
 def type_text_slow(message):
     """
-    Function to write text slowly to terminal
+    Function to write text slowly to terminal, 
+    character by character on a timer
     """
     for character in message:
         sys.stdout.write(character)
@@ -675,7 +692,8 @@ def type_text_slow(message):
 
 def type_row_slow(message):
     """
-    Function to write text slowly to terminal
+    Function to write text slowly to terminal, 
+    row by row on a timer
     """
     for character in message:
         sys.stdout.write(character)
@@ -686,7 +704,8 @@ def type_row_slow(message):
 
 def type_row_fast(message):
     """
-    Function to write text slowly to terminal
+    Function to write text slowly to terminal,
+    row by row on a timer
     """
     for character in message:
         sys.stdout.write(character)
@@ -697,7 +716,7 @@ def type_row_fast(message):
 
 def big_heading_center(text):
     """
-    Function to create a big heading
+    Function to create a big centered heading
     """
     heading = pyfiglet.figlet_format(text, font="big_money-se",
                                      justify="center")
@@ -737,7 +756,7 @@ signal.signal(signal.SIGINT, handler)
 
 def main():
     """
-    Main function to call other function in the correct order
+    Main function to call define user other function in the correct order
     """
     user = {}
 
