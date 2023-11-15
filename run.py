@@ -23,14 +23,26 @@ your dreams and goals.              ')
     type_row_fast('\n\n\nThis website uses a CLI (command-line interface) \
 program.\nAre you familiar with this CLI or would you like a tutorial?\n\n\
 ')
+
+
+    # Run function ask question with the question and valid responses
+    responses = ["1", "2"]
+    question = 'Answer with "1" or "2"'
+
+    response = ask_question(responses, question)
+
+    # If user chooses a variation of Yes, start over, else continue
+    if response in responses[0]:
+        cli_tutorial()
+
     
-    input()
 
 def cli_tutorial():
     """
     Tutorial for users who are not experienced with CLI interface
     """
-    
+    print('CLI tutorial')
+    input()
 
 def intro_budget_guidelines():
     """
@@ -50,7 +62,6 @@ for these higher expenses.')
 
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
-
     
 
 def dream():
