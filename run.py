@@ -57,8 +57,8 @@ life look like?\n\n')
 
 def goal(user):
     """
-    Function to ask user to input a specific financial goal
-    and estimate the cost of this goal
+    Function to ask user to input a specific financial
+    goal and estimate the cost of this goal
     """
     type_row_slow(big_heading('Goal'))
     time.sleep(0.5)
@@ -113,7 +113,7 @@ def get_data(user, category):
         data_input = input(f'{category}:\n')
         if validate_numbers(data_input):
             user.update({category: int(data_input)})
-            return user
+            break
 
 
 def get_text(category):
@@ -213,7 +213,8 @@ If you do not, that is fine, just enter 0.\n\n')
 
 def collect_data(user):
     """
-    Collect data from user for each needed category
+    Iterate through a list of categories to run a
+    function to collect data from user in each category
     """
     categories = ["Income", "Extra income", "Housing", "Utilities", "Food",
                   "Transportation", "Clothing", "Medical",
@@ -740,10 +741,10 @@ def main():
     """
     user = {}
 
-    # welcome()
-    # dream()
+    welcome()
+    dream()
     goal(user)
-    # intro_budget_calc()
+    intro_budget_calc()
     collect_data(user)
     run_calculations(user)
     thank_you()
