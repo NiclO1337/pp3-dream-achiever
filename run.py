@@ -775,8 +775,7 @@ def validate_response(response, responses):
 
 def type_text_slow(message):
     """
-    Function to write text slowly to terminal,
-    character by character on a timer
+    Function to write text slowly to terminal, character by character on timer
     Source:
     "Python - Typewriter Style Animated Text Tutorial"
     https://www.youtube.com/watch?v=2h8e0tXHfk0
@@ -789,8 +788,7 @@ def type_text_slow(message):
 
 def type_row_slow(message):
     """
-    Function to write text slowly to terminal,
-    row by row on a timer
+    Function to write text slowly to terminal, row by row on a timer
     Source:
     "Python - Typewriter Style Animated Text Tutorial"
     https://www.youtube.com/watch?v=2h8e0tXHfk0
@@ -804,8 +802,7 @@ def type_row_slow(message):
 
 def type_row_fast(message):
     """
-    Function to write text slowly to terminal,
-    row by row on a timer
+    Function to write text fast to terminal, row by row on a timer
     Source:
     "Python - Typewriter Style Animated Text Tutorial"
     https://www.youtube.com/watch?v=2h8e0tXHfk0
