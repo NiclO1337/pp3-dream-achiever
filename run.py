@@ -25,7 +25,7 @@ program.\nAre you familiar with CLI or would you like a tutorial?\n\n\
 (1) Enter tutorial\n(2) Continue with budget calculator\n\n\
 This black box is the CLI terminal, you can write inputs in the bottom left \n\
 corner. Press the number " 1 " key and then press the ENTER key if you want \n\
-to do the tutorial. If not then press " 2 " then ENTER.\n\nIf nothing happends\
+to do the tutorial. If not then press " 2 " then ENTER.\n\nIf nothing happens\
  when you press keys, try clicking inside the CLI terminal.\nIf the white \
 box in the bottom left corner has a white border, the terminal is\nnot active.\
  Clicking inside the terminal will fill the box and become active.\
@@ -46,8 +46,50 @@ def cli_tutorial():
     """
     Tutorial for users who are not experienced with CLI interface
     """
+#     clear_screen()
+    
+#     type_text_slow('\nWelcome to the CLI\n\n')
+#     type_row_slow(heading('tutorial'))
+#     time.sleep(0.8)
+#     type_row_slow('\n\nCLI is a command line program that accepts text input to \
+# execute operating\nsystem functions. In the 1960s, using only computer \
+# terminals, this was\nthe only way to interact with computers.\n\nIn the 1970s \
+# and 1980s, command line input was commonly used by\nUnix systems and PC \
+# systems like MS-DOS and Apple DOS.\n\nToday, with graphical user interfaces \
+# (GUI), most users never use command-line\ninterfaces (CLI). However, CLI is \
+# still used by software developers and system\nadministrators to configure \
+# computers, install software, and access features\nthat are not available in \
+# the graphical interface.')
+    
+#     type_text_slow('\n\nPress ENTER to continue...\n')
+#     input()
+
+    type_row_slow('You have already learned how to enter a number, now let´s \
+try a text.\nThe input text here is case sensitive, meaning "Hello" and \
+"hello" are\nnot the same word to the computer. First try and write "hello" \
+to see\nwhat happens and then correctly write "Hello" with a capital H.\n\n')
+
+    # Run function ask question with the question and valid responses
+    responses = ["Hello"]
+    question = 'Write "Hello" into the termial and press ENTER'
+
+    ask_question(responses, question)
+
+    type_text_slow('\nHello friend!\n\n')
+    time.sleep(0.5)
+    type_row_fast('\nPressing ENTER multiple times can make program skip \
+through important parts quickly. If you accidentally press ENTER multiple \
+times and many things happen, scroll up to check so that you did not miss \
+any important information. While this next text generates, click ENTER 5 \
+times quickly.\n\n')
+
+    input('Are you ready?\n')
     
 
+
+
+
+    
 
     input()
 
@@ -782,9 +824,9 @@ def handler(signum, frame):
     """
     Custom message when user presses Ctrl-c instead of error.
     """
-    type_text_slow('\nCtrl-c was pressed, terminating program...\n')
-    time.sleep(0.8)
-    type_row_fast(big_heading('Good bye'))
+    # type_text_slow('\nCtrl-c was pressed, terminating program...\n')
+    # time.sleep(0.8)
+    # type_row_fast(big_heading('Good bye'))
     sys.exit()
 
 
@@ -811,14 +853,16 @@ def main():
     # used to catch ctrl-c click
     signal.signal(signal.SIGINT, handler)
 
-    welcome()
-    intro_budget_guidelines()
-    dream()
-    goal(user)
-    intro_budget_calc()
-    collect_data(user)
-    run_calculations(user)
-    thank_you()
+    # welcome()
+    # intro_budget_guidelines()
+    # dream()
+    # goal(user)
+    # intro_budget_calc()
+    # collect_data(user)
+    # run_calculations(user)
+    # thank_you()
+
+    cli_tutorial()
 
 
 main()
