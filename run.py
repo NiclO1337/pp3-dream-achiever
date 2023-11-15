@@ -20,6 +20,22 @@ calculator!                \n              This tool will help you reach \
 your dreams and goals.              ')
     time.sleep(0.8)
 
+    type_row_fast('\n\n\nThis website uses a CLI (command-line interface) \
+program.\nAre you familiar with this CLI or would you like a tutorial?\n\n\
+')
+    
+    input()
+
+def cli_tutorial():
+    """
+    Tutorial for users who are not experienced with CLI interface
+    """
+    
+
+def intro_budget_guidelines():
+    """
+    Introduction with information about budget guidelines
+    """
     type_row_fast('\n\n\nBudgeting Guidelines for Income:\n\n\
 Many people wonder how much of their income they should spend on their home, \
 \nvehicle, groceries, clothes, etc. At the end of this calculator we will \
@@ -35,6 +51,7 @@ for these higher expenses.')
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
 
+    
 
 def dream():
     """
@@ -764,6 +781,7 @@ def main():
     signal.signal(signal.SIGINT, handler)
 
     welcome()
+    intro_budget_guidelines()
     dream()
     goal(user)
     intro_budget_calc()
