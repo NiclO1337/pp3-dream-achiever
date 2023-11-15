@@ -777,6 +777,9 @@ def type_text_slow(message):
     """
     Function to write text slowly to terminal,
     character by character on a timer
+    Source:
+    "Python - Typewriter Style Animated Text Tutorial"
+    https://www.youtube.com/watch?v=2h8e0tXHfk0
     """
     for character in message:
         sys.stdout.write(character)
@@ -788,6 +791,9 @@ def type_row_slow(message):
     """
     Function to write text slowly to terminal,
     row by row on a timer
+    Source:
+    "Python - Typewriter Style Animated Text Tutorial"
+    https://www.youtube.com/watch?v=2h8e0tXHfk0
     """
     for character in message:
         sys.stdout.write(character)
@@ -800,6 +806,9 @@ def type_row_fast(message):
     """
     Function to write text slowly to terminal,
     row by row on a timer
+    Source:
+    "Python - Typewriter Style Animated Text Tutorial"
+    https://www.youtube.com/watch?v=2h8e0tXHfk0
     """
     for character in message:
         sys.stdout.write(character)
@@ -811,6 +820,9 @@ def type_row_fast(message):
 def big_heading_center(text):
     """
     Function to create a big centered heading
+    Source:
+    Tutorial: "Python - Converting text to Big ASCII Text using Pyfiglet"
+    https://www.youtube.com/watch?v=U1aUteSg2a4
     """
     heading = pyfiglet.figlet_format(text, font="big_money-se",
                                      justify="center")
@@ -821,6 +833,9 @@ def big_heading_center(text):
 def big_heading(text):
     """
     Function to create a big heading
+    Source:
+    Tutorial: "Python - Converting text to Big ASCII Text using Pyfiglet"
+    https://www.youtube.com/watch?v=U1aUteSg2a4
     """
     heading = pyfiglet.figlet_format(text, font="big_money-se")
 
@@ -830,6 +845,9 @@ def big_heading(text):
 def heading(text):
     """
     Function to create a heading
+    Source:
+    Tutorial: "Python - Converting text to Big ASCII Text using Pyfiglet"
+    https://www.youtube.com/watch?v=U1aUteSg2a4
     """
     text = text.upper()
     heading = pyfiglet.figlet_format(text, font="digital")
@@ -840,6 +858,8 @@ def heading(text):
 def handler(signum, frame):
     """
     Custom message when user presses Ctrl-c instead of error.
+    Source:
+    https://code-maven.com/catch-control-c-in-python
     """
     type_text_slow('\nCtrl-c was pressed, terminating program...\n')
     time.sleep(0.8)
