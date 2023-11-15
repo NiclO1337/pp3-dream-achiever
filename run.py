@@ -47,12 +47,12 @@ def cli_tutorial():
     Tutorial for users who are not experienced with CLI interface
     """
     clear_screen()
-    
+
     type_text_slow('\nWelcome to the CLI\n\n')
     type_row_slow(heading('tutorial'))
     time.sleep(0.8)
-    type_row_slow('\n\nCLI is a command line program that accepts text input to \
-execute operating\nsystem functions. In the 1960s, using only computer \
+    type_row_slow('\n\nCLI is a command line program that accepts text input \
+to execute operating\nsystem functions. In the 1960s, using only computer \
 terminals, this was\nthe only way to interact with computers.\n\nIn the 1970s \
 and 1980s, command line input was commonly used by\nUnix systems and PC \
 systems like MS-DOS and Apple DOS.\n\nToday, with graphical user interfaces \
@@ -60,7 +60,7 @@ systems like MS-DOS and Apple DOS.\n\nToday, with graphical user interfaces \
 still used by software developers and system\nadministrators to configure \
 computers, install software, and access features\nthat are not available in \
 the graphical interface.')
-    
+
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
 
@@ -83,10 +83,10 @@ times and many things happen,\nscroll up to check so that you did not miss \
 any important information.')
 
     input('\n\nPress ENTER few times quickly!\n')
-    
+
     type_text_slow('Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 \n\n')
-    
+
     responses = ["OK"]
     question = 'Write "OK" into the termial and press ENTER'
 
@@ -109,7 +109,7 @@ holding down the CTRL key and pressing the " C " key\nat the same time.\n\n')
 
     ask_question(responses, question)
 
-    
+
 def intro_budget_guidelines():
     """
     Introduction with information about budget guidelines
@@ -128,7 +128,7 @@ for these higher expenses.')
 
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
-    
+
 
 def dream():
     """
