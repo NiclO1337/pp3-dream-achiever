@@ -149,7 +149,7 @@ life look like?\n\n')
     input()
 
 
-def goal(user):
+def goal(user_one):
     """
     Function to ask user to input a specific financial
     goal and estimate the cost of this goal
@@ -169,10 +169,10 @@ you.\n\nYou do not need to write any details here, can be just a keyword.\n\n')
 
         goal = input('Goal:\n')
         if validate_text(goal):
-            user.update({"Goal": goal})
+            user_one.goal = goal
             break
 
-    get_data(user, "Cost of goal")
+    get_data(user_one, "Cost of goal")
 
 
 def intro_budget_calc():
@@ -195,7 +195,7 @@ personal & discretionary, \ndebt payments, boring savings and fun savings.\
     input()
 
 
-def get_data(user, category):
+def get_data(user_one, category):
     """
     Ask user to input data for income and expenses in each
     category and display a text explaining that category.
@@ -206,7 +206,7 @@ def get_data(user, category):
 
         data_input = input(f'{category}:\n')
         if validate_numbers(data_input):
-            user.update({category: int(data_input)})
+            setattr(user_one, category, int(data_input))
             break
 
 
@@ -898,20 +898,23 @@ def main():
     signal.signal(signal.SIGINT, handler)
 
     user_one.income = 100
-    user_one.extra_income = 10
-    print(user_one)
-    
+    user_one.extra_income = 10    
     print(user_one.total_income())
     
 
     # welcome()
     # intro_budget_guidelines()
     # dream()
-    # goal(user)
+    goal(user_one)
     # intro_budget_calc()
     # collect_data(user)
     # run_calculations(user)
     # thank_you()
+
+    print(user_one.goal)
+    
+    print(user_one.__dir__())
+    print(user_one.'Cost of Goal')
 
 
 main()
