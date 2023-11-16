@@ -534,7 +534,7 @@ in the store.')
         type_row_fast('\n\nTransportation needs varies a lot depending on \
 for example family\ncircumstances or where you live and work. In some \
 situations public \ntransportation will be a cheaper option. Walking and \
-riding bicycle´s\nare cheap alternatives while also having the added benefit \
+riding bicycles\nare cheap alternatives while also having the added benefit \
 getting \nmore exercise and it is environmentally friendly.')
 
         guideline_percent = 17
@@ -918,35 +918,14 @@ def main():
     # used to catch ctrl-c click
     signal.signal(signal.SIGINT, handler)
 
-    user_one.goal = "trip"
-    user_one.cost_of_goal = 750
-    user_one.income = 100
-    user_one.extra_income = 10
-    user_one.housing = 40
-    user_one.utilities = 4
-    user_one.food = 16
-    user_one.transportation = 5
-    user_one.clothing = 5
-    user_one.medical = 5
-    user_one.personal_and_discretionary = 10
-    user_one.debt_payments = 5
-    user_one.boring_savings = 5
-    user_one.fun_savings = 5
-    user_one.initial_savings = 200
-
-    # welcome()
-    # intro_budget_guidelines()
-    # dream()
-    # goal(user_one)
-    # intro_budget_calc()
-    # collect_data(user_one)
+    welcome()
+    intro_budget_guidelines()
+    dream()
+    goal(user_one)
+    intro_budget_calc()
+    collect_data(user_one)
     run_calculations(user_one)
     thank_you()
-
-    print(user_one.goal)
-    print(user_one.__dir__())
-    print(user_one.__dict__.values())
-    print(user_one.total_income())
 
 
 main()
