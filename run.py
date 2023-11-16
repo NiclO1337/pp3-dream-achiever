@@ -203,7 +203,7 @@ def get_data(user, category):
     get_text(category)
     
     # Use the category name to create a proper attribute name
-    user_attribute = category.lower().replace(" ", "_")
+    user_attribute = category.lower().replace(" ", "_").replace("&", "and")
 
     while True:
 
@@ -908,13 +908,26 @@ def main():
     goal(user_one)
     # intro_budget_calc()
     collect_data(user_one)
-    # run_calculations(user)
+    # run_calculations(user_one)
     # thank_you()
+
+    # user_one.goal = "trip"
+    # user_one.cost_of_goal = "750"
+    # user_one.income = "trip"
+    # user_one.extra_income = "trip"
+    # user_one.housing = "trip"
+    # user_one.utilities = "trip"
+    # user_one.food = "trip"
+    # user_one.transportation = "trip"
+    # user_one.clothing = "trip"
+    # user_one.medical = "trip"
+    # user_one.personal_and_discretionary = "trip"
+    
 
 
     print(user_one.goal)    
     print(user_one.__dir__())
-    print(user_one.cost_of_goal)
+    print(user_one.__dict__.values())
     print(user_one.total_income())
 
 
