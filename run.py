@@ -93,9 +93,9 @@ any important information.')
 
     ask_question(responses, question)
 
-    type_text_slow('\n\nThis happens because the program saves every ENTER \
-press and then executes\nthem all one by one after it is done with it´s \
-current task.\n\nAre you ready for the final and most challenging test?\n\n')
+    type_text_slow("\n\nThis happens because the program saves every ENTER \
+press and then executes\nthem all one by one after it is done with it's \
+current task.\n\nAre you ready for the final and most challenging test?\n\n")
 
     input('Press ENTER (once only) when ready...\n')
 
