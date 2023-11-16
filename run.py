@@ -201,12 +201,14 @@ def get_data(user_one, category):
     category and display a text explaining that category.
     """
     get_text(category)
+    user_attribute = category.replace(" ", "_")
+    user_attribute = user_attribute.lower()
 
     while True:
 
         data_input = input(f'{category}:\n')
         if validate_numbers(data_input):
-            setattr(user_one, category, int(data_input))
+            setattr(user_one, user_attribute, int(data_input))
             break
 
 
@@ -914,7 +916,7 @@ def main():
     print(user_one.goal)
     
     print(user_one.__dir__())
-    print(user_one.'Cost of Goal')
+    print(user_one.cost_of_goal)
 
 
 main()
