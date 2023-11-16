@@ -376,10 +376,11 @@ def calc_budget_surplus(user, income):
     Function to compare income with cost to see
     if there is a budget surplus avalible
     """
-    
+    # Call total cost function from class User
     expenses = user.total_costs()
 
-    budget_surplus = income - expenses
+    # Call budget surplus function from class User
+    budget_surplus = user.budget_surplus()
 
     # Print different messages based on the value of the budget surplus
     if budget_surplus < 0:
@@ -901,6 +902,11 @@ class User:
             expenses += cost
         return expenses
 
+    def budget_surplus(self):
+        # Compare income to costs and return the budget surplus
+        surplus = self.total_income() - self.total_costs()
+        return surplus
+
 
 def main():
     """
@@ -928,12 +934,12 @@ def main():
     user_one.fun_savings = 5
     user_one.initial_savings = 200
 
-    welcome()
-    intro_budget_guidelines()
-    dream()
-    goal(user_one)
-    intro_budget_calc()
-    collect_data(user_one)
+    # welcome()
+    # intro_budget_guidelines()
+    # dream()
+    # goal(user_one)
+    # intro_budget_calc()
+    # collect_data(user_one)
     run_calculations(user_one)
     thank_you()
 
