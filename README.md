@@ -203,6 +203,8 @@ Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
 
 - Budgeting Basics from UNFCU: [The 50-30-20 Rule](https://www.unfcu.org/guides/the-50-30-20-rule/)
 
+- What is [CLI](https://www.w3schools.com/whatis/whatis_cli.asp)
+
 
 ### Media
 
