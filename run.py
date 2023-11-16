@@ -596,11 +596,14 @@ def check_costs(user, income, category):
     # Get text associated with each category and get the guideline percentage
     guideline_percent = get_cost_text(category)
 
+
+    user_attribute = category.lower().replace(" ", "_").replace("&", "and")
+
     # Convert user budget to percentage with 2 decimals
     if income == 0:
         percent_of_income = 0
     else:
-        percent_of_income = round((user.get(category) / income * 100), 2)
+        percent_of_income = round((user.__getattribute__(user_attribute) / income * 100), 2)
         # Only display decimals if % is below 10
         if percent_of_income > 10:
             percent_of_income = round(percent_of_income)
@@ -634,14 +637,14 @@ def run_calculations(user):
     Then iterate through the categories to print text on each
     category and compare budgets with the general recommendation.
     """
-    type_row_slow('\n\n')
-    type_text_slow('Calculating.........................')
+    # type_row_slow('\n\n')
+    # type_text_slow('Calculating.........................')
 
     # Add income's together to use in other calculations
     income = user.total_income()
 
-    budget_surplus = calc_budget_surplus(user, income)
-    calculate_goal(user, budget_surplus)
+    # budget_surplus = calc_budget_surplus(user, income)
+    # calculate_goal(user, budget_surplus)
 
     categories = ["Housing", "Utilities", "Food", "Transportation",
                   "Clothing", "Medical", "Personal & Discretionary",
