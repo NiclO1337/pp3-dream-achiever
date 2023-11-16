@@ -201,7 +201,7 @@ def get_data(user, category):
     category and display a text explaining that category.
     """
     get_text(category)
-    
+
     # Use the category name to create a proper attribute name
     user_attribute = category.lower().replace(" ", "_").replace("&", "and")
 
@@ -595,7 +595,7 @@ def check_costs(user, income, category):
     """
     # Get text associated with each category and get the guideline percentage
     guideline_percent = get_cost_text(category)
-    
+
     # Use the category name to get the attribute name
     user_attribute = category.lower().replace(" ", "_").replace("&", "and")
 
@@ -603,7 +603,8 @@ def check_costs(user, income, category):
     if income == 0:
         percent_of_income = 0
     else:
-        percent_of_income = round((user.__getattribute__(user_attribute) / income * 100), 2)
+        percent_of_income = round((user.__getattribute__(user_attribute)
+                                   / income * 100), 2)
         # Only display decimals if % is below 10
         if percent_of_income > 10:
             percent_of_income = round(percent_of_income)
@@ -637,14 +638,14 @@ def run_calculations(user):
     Then iterate through the categories to print text on each
     category and compare budgets with the general recommendation.
     """
-    # type_row_slow('\n\n')
-    # type_text_slow('Calculating.........................')
+    type_row_slow('\n\n')
+    type_text_slow('Calculating.........................')
 
     # Add income's together to use in other calculations
     income = user.total_income()
 
-    # budget_surplus = calc_budget_surplus(user, income)
-    # calculate_goal(user, budget_surplus)
+    budget_surplus = calc_budget_surplus(user, income)
+    calculate_goal(user, budget_surplus)
 
     categories = ["Housing", "Utilities", "Food", "Transportation",
                   "Clothing", "Medical", "Personal & Discretionary",
@@ -876,9 +877,9 @@ def clear_screen():
     copied from this link:
     https://www.codingninjas.com/studio/library/how-to-clear-a-screen-in-python
     """
-    if os.name == 'nt': # For Windows
-        _ = os.system('cls')    
-    else: # For macOS and Linux
+    if os.name == 'nt':  # For Windows
+        _ = os.system('cls')
+    else:  # For macOS and Linux
         _ = os.system('clear')
 
 
@@ -904,7 +905,6 @@ def main():
     # used to catch ctrl-c click
     signal.signal(signal.SIGINT, handler)
 
-
     user_one.goal = "trip"
     user_one.cost_of_goal = 750
     user_one.income = 100
@@ -920,22 +920,17 @@ def main():
     user_one.boring_savings = 5
     user_one.fun_savings = 5
     user_one.initial_savings = 200
-    
- 
-    # welcome()
-    # intro_budget_guidelines()
-    # dream()
-    # goal(user_one)
-    # intro_budget_calc()
-    # collect_data(user_one)
+
+    welcome()
+    intro_budget_guidelines()
+    dream()
+    goal(user_one)
+    intro_budget_calc()
+    collect_data(user_one)
     run_calculations(user_one)
-    # thank_you()
+    thank_you()
 
-
-    
-
-
-    print(user_one.goal)    
+    print(user_one.goal)
     print(user_one.__dir__())
     print(user_one.__dict__.values())
     print(user_one.total_income())
