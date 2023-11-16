@@ -893,21 +893,24 @@ def main():
     Main function to call functions in the correct order
     """
     # define user as empty dictionary
-    user = {}
-
-    
+    # user = {}   
 
     # used to catch ctrl-c click
     signal.signal(signal.SIGINT, handler)
 
-    welcome()
-    intro_budget_guidelines()
-    dream()
-    goal(user)
-    intro_budget_calc()
-    collect_data(user)
-    run_calculations(user)
-    thank_you()
+    user = User(100, 10)
+    print(user)
+    
+    print(user.total_income())
+
+    # welcome()
+    # intro_budget_guidelines()
+    # dream()
+    # goal(user)
+    # intro_budget_calc()
+    # collect_data(user)
+    # run_calculations(user)
+    # thank_you()
 
 
 main()
