@@ -149,7 +149,7 @@ life look like?\n\n')
     input()
 
 
-def goal(user_one):
+def goal(user):
     """
     Function to ask user to input a specific financial
     goal and estimate the cost of this goal
@@ -169,10 +169,10 @@ you.\n\nYou do not need to write any details here, can be just a keyword.\n\n')
 
         goal = input('Goal:\n')
         if validate_text(goal):
-            user_one.goal = goal
+            user.goal = goal
             break
 
-    get_data(user_one, "Cost of goal")
+    get_data(user, "Cost of goal")
 
 
 def intro_budget_calc():
@@ -195,7 +195,7 @@ personal & discretionary, \ndebt payments, boring savings and fun savings.\
     input()
 
 
-def get_data(user_one, category):
+def get_data(user, category):
     """
     Ask user to input data for income and expenses in each
     category and display a text explaining that category.
@@ -209,7 +209,7 @@ def get_data(user_one, category):
 
         data_input = input(f'{category}:\n')
         if validate_numbers(data_input):
-            setattr(user_one, user_attribute, int(data_input))
+            setattr(user, user_attribute, int(data_input))
             break
 
 
@@ -887,14 +887,8 @@ class User:
         pass
 
     def total_income(self):
-        return self.income + self.extra_income
-
-    def total_income2(self):
-        return self.__dict__
-
-    def total_income3(self):
-        return list(self.__dict__.values())[0] + \
-               list(self.__dict__.values())[1]
+        return list(self.__dict__.values())[2] + \
+               list(self.__dict__.values())[3]
 
 
 def main():
@@ -907,27 +901,21 @@ def main():
     # used to catch ctrl-c click
     signal.signal(signal.SIGINT, handler)
 
-    user_one.income = 100
-    user_one.extra_income = 10    
-    print(user_one.total_income())
-    print(user_one.total_income2())
-    print(user_one.total_income3())
-    
-    
-
+ 
     # welcome()
     # intro_budget_guidelines()
     # dream()
-    # goal(user_one)
+    goal(user_one)
     # intro_budget_calc()
-    # collect_data(user)
+    collect_data(user_one)
     # run_calculations(user)
     # thank_you()
 
 
-    # print(user_one.goal)    
-    # print(user_one.__dir__())
-    # print(user_one.cost_of_goal)
+    print(user_one.goal)    
+    print(user_one.__dir__())
+    print(user_one.cost_of_goal)
+    print(user_one.total_income())
 
 
 main()
