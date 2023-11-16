@@ -876,12 +876,26 @@ def clear_screen():
         _ = os.system('clear')
 
 
+class User:
+    """
+    Creates an instance of a User
+    """
+    def __init__(self, income, extra_income):
+        self.income = income
+        self.extra_income = extra_income
+
+    def total_income(self):
+        return self.income + self.extra_income
+
+
 def main():
     """
     Main function to call functions in the correct order
     """
     # define user as empty dictionary
     user = {}
+
+    
 
     # used to catch ctrl-c click
     signal.signal(signal.SIGINT, handler)
