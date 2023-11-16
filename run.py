@@ -891,9 +891,11 @@ class User:
 
     def total_income2(self):
         return self.__dict__
-    
+
     def total_income3(self):
-        return self.__dict__.values()[0] + self.__dict__.values()[1]
+        return list(self.__dict__.values())[0] + \
+               list(self.__dict__.values())[1]
+
 
 def main():
     """
