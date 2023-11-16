@@ -376,7 +376,7 @@ def calc_budget_surplus(user, income):
     if there is a budget surplus avalible
     """
     # Get values from user and slice list to get the costs and sum them up
-    costs = list(user.values())[4:-1]
+    costs = list(user.__dict__.values())[4:-1]
     expenses = 0
     for cost in costs:
         expenses += cost
@@ -406,9 +406,9 @@ def calculate_goal(user, surplus):
     and check how long it will take to reach this goal
     """
     # Get required values for calculation
-    goal_cost = list(user.values())[1]
-    fun_savings = list(user.values())[-2]
-    initial_savings = list(user.values())[-1]
+    goal_cost = list(user.__dict__.values())[1]
+    fun_savings = list(user.__dict__.values())[-2]
+    initial_savings = list(user.__dict__.values())[-1]
 
     # Check avalible monthly savings that can be used towards reaching goal
     goal_funds = fun_savings + surplus
@@ -463,8 +463,8 @@ reach your goal!')
             and_text = ""
 
         time.sleep(0.8)
-        type_text_slow(f'\n\nYour goal is: "{list(user.values())[0]}"\nand \
-your current savings towards your goal is {goal_funds} per month.')
+        type_text_slow(f'\n\nYour goal is: "{list(user.__dict__.values())[0]}"\
+\nand your current savings towards your goal is {goal_funds} per month.')
 
         time.sleep(0.8)
 
@@ -638,7 +638,7 @@ def run_calculations(user):
     type_text_slow('Calculating.........................')
 
     # Add income's together to use in other calculations
-    income = user.get("Income") + user.get("Extra income")
+    income = user.total_income()
 
     budget_surplus = calc_budget_surplus(user, income)
     calculate_goal(user, budget_surplus)
@@ -901,27 +901,34 @@ def main():
     # used to catch ctrl-c click
     signal.signal(signal.SIGINT, handler)
 
+
+    user_one.goal = "trip"
+    user_one.cost_of_goal = 750
+    user_one.income = 100
+    user_one.extra_income = 10
+    user_one.housing = 40
+    user_one.utilities = 4
+    user_one.food = 16
+    user_one.transportation = 5
+    user_one.clothing = 5
+    user_one.medical = 5
+    user_one.personal_and_discretionary = 10
+    user_one.debt_payments = 5
+    user_one.boring_savings = 5
+    user_one.fun_savings = 5
+    user_one.initial_savings = 200
+    
  
     # welcome()
     # intro_budget_guidelines()
     # dream()
-    goal(user_one)
+    # goal(user_one)
     # intro_budget_calc()
-    collect_data(user_one)
-    # run_calculations(user_one)
+    # collect_data(user_one)
+    run_calculations(user_one)
     # thank_you()
 
-    # user_one.goal = "trip"
-    # user_one.cost_of_goal = "750"
-    # user_one.income = "trip"
-    # user_one.extra_income = "trip"
-    # user_one.housing = "trip"
-    # user_one.utilities = "trip"
-    # user_one.food = "trip"
-    # user_one.transportation = "trip"
-    # user_one.clothing = "trip"
-    # user_one.medical = "trip"
-    # user_one.personal_and_discretionary = "trip"
+
     
 
 
