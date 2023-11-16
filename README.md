@@ -1,9 +1,9 @@
 # Dream Achiever
 
-![Amiresponsive image]( TODO: Add link )
+![Amiresponsive image](https://res.cloudinary.com/dmntcacug/image/upload/v1700167217/Amiresponsive_nl4tfn.png)
 
 
-Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
+Link to live website: [Dream Achiever](https://dream-achiever-3a6af54c4f68.herokuapp.com/) 
 
 <hr>
 
@@ -45,9 +45,11 @@ TODO: Update table of content
 
 ## User Experience (UX)
 
-TODO: Add info about site purpose and target user
+This website is a financial tool made to help people reach their goals and achieve their dreams. It does so by providing a simple budget calculator that is very easy to use. The user enters data about income and expenses into easy user-friendly categories and then the program calculates how long it will take to reach their goal. 
 
+It helps people to think about budget as something fun instead of boring or restricting. It is about prioritizing what is the most important and make a realistic plan to achieve it.
 
+After the calculator is done and results are presented, helpful tips are shown on how to cut costs and some insights on how to think about each category. It also compares the users budget to the general guidelines from the Credit Counselling Society. The user also has an option to learn about another easy to use budgeting tool.
 
 
 ### User stories
@@ -114,6 +116,7 @@ TODO: Add text about feature
 
 ### Languages
 - Python
+- HTML
 
 ### Frameworks & Tools
 
@@ -125,6 +128,7 @@ TODO: Add text about feature
 - w3schools
 - Stack Overflow
 - Pyfiglet
+- Favicon.io
 
 ## Data model
 
