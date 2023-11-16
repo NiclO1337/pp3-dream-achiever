@@ -201,8 +201,9 @@ def get_data(user_one, category):
     category and display a text explaining that category.
     """
     get_text(category)
-    user_attribute = category.replace(" ", "_")
-    user_attribute = user_attribute.lower()
+    
+    # Use the category name to create a proper attribute name
+    user_attribute = category.lower().replace(" ", "_")
 
     while True:
 
@@ -893,7 +894,7 @@ def main():
     """
     Main function to call functions in the correct order
     """
-    # define user as empty dictionary
+    # define user as an empty instance of the class of User
     user_one = User()
 
     # used to catch ctrl-c click
