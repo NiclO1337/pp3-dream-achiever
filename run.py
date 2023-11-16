@@ -880,9 +880,8 @@ class User:
     """
     Creates an instance of a User
     """
-    def __init__(self, income, extra_income):
-        self.income = income
-        self.extra_income = extra_income
+    def __init__(self):
+        pass
 
     def total_income(self):
         return self.income + self.extra_income
@@ -893,15 +892,17 @@ def main():
     Main function to call functions in the correct order
     """
     # define user as empty dictionary
-    # user = {}   
+    user_one = User()
 
     # used to catch ctrl-c click
     signal.signal(signal.SIGINT, handler)
 
-    user = User(100, 10)
-    print(user)
+    user_one.income = 100
+    user_one.extra_income = 10
+    print(user_one)
     
-    print(user.total_income())
+    print(user_one.total_income())
+    
 
     # welcome()
     # intro_budget_guidelines()
