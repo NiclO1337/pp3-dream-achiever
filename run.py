@@ -889,12 +889,17 @@ class User:
     def total_income(self):
         return self.income + self.extra_income
 
+    def total_income2(self):
+        return self.__dict__
+    
+    def total_income3(self):
+        return self.__dict__.values()[0] + self.__dict__.values()[1]
 
 def main():
     """
     Main function to call functions in the correct order
     """
-    # define user as an empty instance of the class of User
+    # define new user as an empty instance of the class User
     user_one = User()
 
     # used to catch ctrl-c click
@@ -903,21 +908,24 @@ def main():
     user_one.income = 100
     user_one.extra_income = 10    
     print(user_one.total_income())
+    print(user_one.total_income2())
+    print(user_one.total_income3())
+    
     
 
     # welcome()
     # intro_budget_guidelines()
     # dream()
-    goal(user_one)
+    # goal(user_one)
     # intro_budget_calc()
     # collect_data(user)
     # run_calculations(user)
     # thank_you()
 
-    print(user_one.goal)
-    
-    print(user_one.__dir__())
-    print(user_one.cost_of_goal)
+
+    # print(user_one.goal)    
+    # print(user_one.__dir__())
+    # print(user_one.cost_of_goal)
 
 
 main()
