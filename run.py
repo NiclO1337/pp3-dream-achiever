@@ -595,8 +595,8 @@ def check_costs(user, income, category):
     """
     # Get text associated with each category and get the guideline percentage
     guideline_percent = get_cost_text(category)
-
-
+    
+    # Use the category name to get the attribute name
     user_attribute = category.lower().replace(" ", "_").replace("&", "and")
 
     # Convert user budget to percentage with 2 decimals
