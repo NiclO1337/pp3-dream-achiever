@@ -64,8 +64,9 @@ the graphical interface.')
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
 
-    type_text_slow('\nYou have already learned how to enter a number, now \
-let´s try a text.\nThe input text here is case sensitive, meaning "Hello" and \
+    type_text_slow("\nYou have already learned how to enter a number, now \
+let's try a text.\nThe input text here is case sensitive, ")
+    type_text_slow('meaning "Hello" and \
 "hello" are\nnot the same word to the computer. First try and write "hello" \
 to see\nwhat happens and then correctly write "Hello" with a capital H.\n\n')
 
@@ -137,8 +138,8 @@ def dream():
     type_row_slow(big_heading('Dream'))
     time.sleep(0.5)
 
-    type_text_slow('First, let´s start with the fun stuff.\nImagine you won \
-the lottery today!\n\n')
+    type_text_slow("First, let's start with the fun stuff.\nImagine you won \
+the lottery today!\n\n")
     time.sleep(1)
     type_text_slow('What would you do? Where would you go?\nWhat would your \
 life look like?\n\n')
@@ -375,11 +376,8 @@ def calc_budget_surplus(user, income):
     Function to compare income with cost to see
     if there is a budget surplus avalible
     """
-    # Get values from user and slice list to get the costs and sum them up
-    costs = list(user.__dict__.values())[4:-1]
-    expenses = 0
-    for cost in costs:
-        expenses += cost
+    
+    expenses = user.total_costs()
 
     budget_surplus = income - expenses
 
@@ -489,8 +487,8 @@ either cut\nsome of your other expenses, try to increase your income or\n\
 find some new extra income.')
 
     time.sleep(1)
-    type_text_slow('\n\nLet´s look through your expenses and \
-think about ways to reduce them.\n')
+    type_text_slow("\n\nLet's look through your expenses and \
+think about ways to reduce them.\n")
 
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
@@ -638,8 +636,8 @@ def run_calculations(user):
     Then iterate through the categories to print text on each
     category and compare budgets with the general recommendation.
     """
-    type_row_slow('\n\n')
-    type_text_slow('Calculating.........................')
+    # type_row_slow('\n\n')
+    # type_text_slow('Calculating.........................')
 
     # Add income's together to use in other calculations
     income = user.total_income()
@@ -891,8 +889,17 @@ class User:
         pass
 
     def total_income(self):
+        # Sum up income and extra income into total income
         return list(self.__dict__.values())[2] + \
                list(self.__dict__.values())[3]
+
+    def total_costs(self):
+        # Get values from user and slice list to get the costs and sum them up
+        costs = list(self.__dict__.values())[4:-1]
+        expenses = 0
+        for cost in costs:
+            expenses += cost
+        return expenses
 
 
 def main():
