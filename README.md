@@ -86,6 +86,14 @@ The welcome screen is the first thing the user sees when entering the website. T
 
 <details><summary>Screenshot of the feature</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700232792/feature-welcome_iwggf4.jpg" alt="Picture of the welcome screen" width="700"/></p> </details>
 
+
+### Controlled speed
+
+A combination of fast and slow text generation is used to create a pleasant user experience.
+
+<details><summary>Screenshot of the slow writing feature</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700234544/feature-controlled-speed_ovvuin.jpg" alt="Picture of the slow writing feature" width="600"/></p> </details>
+
+
 ### CLI tutorial
 
 Not everyone is familiar with CLI terminal interface, therefor a tutorial was added so that the user can learn how to use the application as well as some general do's and dont's. Also helpful information about budgeting and how to use the calculator is given to the user at appropriate times throughout the application.
@@ -106,6 +114,9 @@ TODO: Add text about feature
 <details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO: ADD link to image of feature" alt="TODO: ADD name of feature" width="600"/></p> </details>
 
 
+### Input and error checking
+
+
 
 ### Fast re-use calculator feature
 
@@ -114,7 +125,7 @@ TODO: Add text about feature
 
 
 
-### Input and error checking
+
 
 
 
