@@ -51,7 +51,7 @@ def cli_tutorial():
 
     type_text_slow('\nWelcome to the CLI\n\n')
     type_row_slow(heading('tutorial'))
-    
+
     type_row_slow('\n\nCLI is a command line program that accepts text input \
 to execute operating\nsystem functions. In the 1960s, using only computer \
 terminals was\nthe only way to interact with computers.\n\nIn the 1970s \

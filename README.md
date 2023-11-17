@@ -3,7 +3,7 @@
 ![Amiresponsive image](https://res.cloudinary.com/dmntcacug/image/upload/v1700167217/Amiresponsive_nl4tfn.png)
 
 
-Link to live website: [Dream Achiever](https://dream-achiever-3a6af54c4f68.herokuapp.com/) 
+Link to live website: [Dream Achiever](https://dream-achiever-3a6af54c4f68.herokuapp.com/) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
 <hr>
 
@@ -49,24 +49,22 @@ This website is a financial tool made to help people reach their goals and achie
 
 It helps people to think about budget as something fun instead of boring or restricting. It is about prioritizing what is the most important and make a realistic plan to achieve it.
 
-After the calculator is done and results are presented, helpful tips are shown on how to cut costs and some insights on how to think about each category. It also compares the users budget to the general guidelines from the Credit Counselling Society. The user also has an option to learn about another easy to use budgeting tool.
+After the calculator is done and results are presented, helpful tips are shown on how to cut costs and some insights on how to think about each category. It also compares the users budget to the general guidelines from the Credit Counselling Society. The user also has an option to learn about another easy to use budgeting tool before leaving.
 
 
 ### User stories
 
 #### Website goals
 - Help people clarify their goals and think about ways to achive them
+- Provide a useful tool that is easy to use.
 - Give users financial advice to help reach their goal
-- 
-- 
-- 
 
 #### User goals
 - Think about goals and dreams
 - Get helpful tips on how to achive those goals and dreams
-- 
-- 
-
+- Know how to use the application
+- Calculate budget and see how long it takes to reach a specific goal
+- Try different budgets or calculate for different goals
 
 
 ## Design
@@ -109,7 +107,6 @@ TODO: Add text about feature
 - Add option to select different currencies to be displayed
 - Add option to select weekly or monthly income
 - Add data into a spreadsheet and send a budget template with data in email to the user
-- 
 
 
 ## Technologies used
@@ -132,6 +129,7 @@ TODO: Add text about feature
 
 ## Data model
 
+Program uses a User class to store the users financial data and help run calculations.
 
 ## Testing
 
