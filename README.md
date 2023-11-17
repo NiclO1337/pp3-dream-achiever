@@ -82,24 +82,39 @@ After the calculator is done and results are presented, helpful tips are shown o
 
 ### Welcome screen
 
-TODO: Add text about feature
+The welcome screen is the first thing the user sees when entering the website. The Pyfiglet font Big Money sets the right tone and the words "Dream Achiever" together with the background image puts the user in a positive frame of mind right away.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO: ADD link to image of feature" alt="TODO: ADD name of feature" width="700"/></p> </details>
+<details><summary>Screenshot of the feature</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700232792/feature-welcome_iwggf4.jpg" alt="Picture of the welcome screen" width="700"/></p> </details>
 
+### CLI tutorial
+
+Not everyone is familiar with CLI terminal interface, therefor a tutorial was added so that the user can learn how to use the application as well as some general do's and dont's. Also helpful information about budgeting and how to use the calculator is given to the user at appropriate times throughout the application.
+
+<details><summary>Screenshot of the feature</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700233258/feature-cli-tutorial_vqzfza.jpg" alt="Picture of option for CLI tutorial" width="600"/></p> </details>
 
 ### Dreams and goals
 
 Starting this budget calculator with thinking about dreams and fun life goals is the best way to make something as boring as a budget calculator into a positive and uplifting user experience.
 
-<details><summary>Screenshot of the dreams and goals feature</summary> <p align="left"><img src="TODO: ADD link to image of feature" alt="Picture of dreams and goals of feature" width="700"/></p> </details>
+<details><summary>Screenshot of the dream screen</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700233860/feature-dream_rn0jd8.jpg" alt="Picture of dream screen" width="600"/></p> </details>
 
 
-### Feature 3
+### Budget calculator
 
 TODO: Add text about feature
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO: ADD link to image of feature" alt="TODO: ADD name of feature" width="700"/></p> </details>
+<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO: ADD link to image of feature" alt="TODO: ADD name of feature" width="600"/></p> </details>
 
+
+
+### Fast re-use calculator feature
+
+
+### Financial analysis
+
+
+
+### Input and error checking
 
 
 
@@ -114,6 +129,7 @@ TODO: Add text about feature
 ### Languages
 - Python
 - HTML
+- CSS
 
 ### Frameworks & Tools
 
