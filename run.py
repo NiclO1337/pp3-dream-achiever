@@ -646,12 +646,16 @@ def run_calculations(user):
     budget_surplus = calc_budget_surplus(user, income)
     calculate_goal(user, budget_surplus)
 
+    
+
     categories = ["Housing", "Utilities", "Food", "Transportation",
                   "Clothing", "Medical", "Personal & Discretionary",
                   "Debt Payments", "Boring savings"]
 
     for category in categories:
         check_costs(user, income, category)
+
+    thank_you()
 
 
 def thank_you():
@@ -925,7 +929,6 @@ def main():
     intro_budget_calc()
     collect_data(user_one)
     run_calculations(user_one)
-    thank_you()
 
 
 main()
