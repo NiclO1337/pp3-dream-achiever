@@ -28,8 +28,7 @@ corner. Press the number " 1 " key and then press the ENTER key if you want \n\
 to do the tutorial. If not then press " 2 " then ENTER.\n\nIf nothing happens\
  when you press keys, try clicking inside the CLI terminal.\nIf the white \
 box in the bottom left corner has a white border, the terminal is\nnot active.\
- Clicking inside the terminal will fill the box and become active.\
-\n\n')
+ Clicking inside the terminal will fill the box and become active.\n\n')
 
     # Run function ask question with the question and valid responses
     responses = ["1", "2"]
@@ -614,7 +613,7 @@ def check_costs(user, income, category):
 {guideline_percent}% of your total income.')
     if income == 0:
         # Message IF user filled in income as 0
-        type_row_fast('\nUnable to calculate you % since your income is: 0.')
+        type_row_fast('\nUnable to calculate your % since your income is: 0.')
     else:
         type_row_fast(f'\nYour budget for this is currently \
 {comparason} {percent_of_income}%.')
@@ -640,7 +639,7 @@ def run_calculations(user):
     budget_surplus = calc_budget_surplus(user, income)
     calculate_goal(user, budget_surplus)
 
-    time.sleep(1) 
+    time.sleep(1)
 
     # Give the user option to change budget, change goal or continue
     type_row_fast('\n\n\nWould you like to continue with cost analysis or do \
@@ -658,12 +657,12 @@ Change goal\n(2) Change budget\n(3) Continue\n\n')
         goal(user), collect_data(user), run_calculations(user)
     elif response in responses[1]:
         collect_data(user), run_calculations(user)
-    
+
     type_text_slow("\n\nGreat, let's look through your expenses one by one\n\
-and think about ways to reduce them.\n")  
+and think about ways to reduce them.\n")
 
     type_text_slow('\n\nPress ENTER to continue...\n')
-    input()    
+    input()
 
     categories = ["Housing", "Utilities", "Food", "Transportation",
                   "Clothing", "Medical", "Personal & Discretionary",
@@ -939,13 +938,13 @@ def main():
     # used to catch ctrl-c click
     signal.signal(signal.SIGINT, handler)
 
-    # welcome()
-    # intro_budget_guidelines()
-    # dream()
+    welcome()
+    intro_budget_guidelines()
+    dream()
     goal(user_one)
-    # intro_budget_calc()
+    intro_budget_calc()
     collect_data(user_one)
     run_calculations(user_one)
-   
+
 
 main()
