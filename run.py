@@ -487,13 +487,6 @@ to reach your goal. \nSpecifically {years}{years_text}{and_text}\
 either cut\nsome of your other expenses, try to increase your income or\n\
 find some new extra income.')
 
-    time.sleep(1)
-    type_text_slow("\n\nLet's look through your expenses and \
-think about ways to reduce them.\n")
-
-    type_text_slow('\n\nPress ENTER to continue...\n')
-    input()
-
 
 def get_cost_text(category):
     """
@@ -637,16 +630,40 @@ def run_calculations(user):
     Then iterate through the categories to print text on each
     category and compare budgets with the general recommendation.
     """
-    # type_row_slow('\n\n')
-    # type_text_slow('Calculating.........................')
+    type_row_slow('\n\n')
+    type_text_slow('Calculating.........................')
 
     # Add income's together to use in other calculations
     income = user.total_income()
 
+    # Run functions to check budget surplus and calculate goal
     budget_surplus = calc_budget_surplus(user, income)
     calculate_goal(user, budget_surplus)
 
+    time.sleep(1) 
+
+    # Give the user option to change budget, change goal or continue
+    type_row_fast('\n\n\nWould you like to continue with cost analysis or do \
+you want to\nchange you goal or budget and run another calculation? \n\n(1) \
+Change goal\n(2) Change budget\n(3) Continue\n\n')
+
+    # Run function ask question to ask if user wants to change budget or goal
+    responses = ["1", "2", "3"]
+    question = 'Enter "1", "2" or "3" here'
+
+    response = ask_question(responses, question)
+
+    # Run different functions based on user choice
+    if response in responses[0]:
+        goal(user), collect_data(user), run_calculations(user)
+    elif response in responses[1]:
+        collect_data(user), run_calculations(user)
     
+    type_text_slow("\n\nGreat, let's look through your expenses one by one\n\
+and think about ways to reduce them.\n")  
+
+    type_text_slow('\n\nPress ENTER to continue...\n')
+    input()    
 
     categories = ["Housing", "Utilities", "Food", "Transportation",
                   "Clothing", "Medical", "Personal & Discretionary",
@@ -925,12 +942,10 @@ def main():
     # welcome()
     # intro_budget_guidelines()
     # dream()
-    # goal(user_one)
+    goal(user_one)
     # intro_budget_calc()
-    # collect_data(user_one)
-    # run_calculations(user_one)
-
-    thank_you(user_one)
-    
+    collect_data(user_one)
+    run_calculations(user_one)
+   
 
 main()
