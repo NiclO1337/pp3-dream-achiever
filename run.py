@@ -51,10 +51,10 @@ def cli_tutorial():
 
     type_text_slow('\nWelcome to the CLI\n\n')
     type_row_slow(heading('tutorial'))
-    time.sleep(0.8)
+    
     type_row_slow('\n\nCLI is a command line program that accepts text input \
 to execute operating\nsystem functions. In the 1960s, using only computer \
-terminals, this was\nthe only way to interact with computers.\n\nIn the 1970s \
+terminals was\nthe only way to interact with computers.\n\nIn the 1970s \
 and 1980s, command line input was commonly used by\nUnix systems and PC \
 systems like MS-DOS and Apple DOS.\n\nToday, with graphical user interfaces \
 (GUI), most users never use command-line\ninterfaces (CLI). However, CLI is \
@@ -69,12 +69,12 @@ the graphical interface.')
     type_text_slow("\nYou have already learned how to enter a number, now \
 let's try a text.\nThe input text here is case sensitive, ")
     type_text_slow('meaning "Hello" and \
-"hello" are\nnot the same word to the computer. First try and write "hello" \
-to see\nwhat happens and then correctly write "Hello" with a capital H.\n\n')
+"hello" are\nnot the same word to the computer. First, try and write "hello" \
+to see\nwhat happens, and then correctly write "Hello" with a capital H.\n\n')
 
     # Run function ask question with the question and valid responses
     responses = ["Hello"]
-    question = 'Write "Hello" into the termial and press ENTER'
+    question = 'Write "Hello" into the terminal and press ENTER'
 
     ask_question(responses, question)
 
@@ -82,24 +82,24 @@ to see\nwhat happens and then correctly write "Hello" with a capital H.\n\n')
     time.sleep(0.8)
 
     # Teach user about how multiple ENTER presses affect application
-    type_text_slow('\nPressing ENTER multiple times can make program skip \
+    type_text_slow('\nPressing ENTER multiple times can make the program skip \
 through important parts\nquickly. If you accidentally press ENTER multiple \
-times and many things happen,\nscroll up to check so that you did not miss \
+times and many things happen,\nscroll up to check so that you do not miss \
 any important information.')
 
-    input('\n\nPress ENTER few times quickly!\n')
+    input('\n\nPress ENTER a few times quickly!\n')
 
     type_text_slow('Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 \n\n')
 
     # Ask user to enter OK to continue with the tutorial
     responses = ["OK"]
-    question = 'Write "OK" into the termial and press ENTER'
+    question = 'Write "OK" into the terminal and press ENTER'
 
     ask_question(responses, question)
 
     type_text_slow("\n\nThis happens because the program saves every ENTER \
-press and then executes\nthem all one by one after it is done with it's \
+press and then executes\nthem all one by one after it is done with the \
 current task.\n\nAre you ready for the final and most challenging test?\n\n")
 
     input('Press ENTER (once only) when ready...\n')
@@ -263,8 +263,8 @@ used to pay commonly for cable services.\n\n')
         type_row_fast('\n\nGroceries, personal care products, and things for \
 baby needs\nare expenses you’d include here. If you like to eat out a lot,\n\
 you might include those expenses here. But if eating out is\nmore something \
-you do for fun, you can include it under later \n\
-category Personal & Discretionary\n\n')
+you do for fun, you can include it under \n\
+category "Personal & Discretionary" later.\n\n')
 
     elif category == "Transportation":
         type_row_fast(heading('\nTransportation costs'))
