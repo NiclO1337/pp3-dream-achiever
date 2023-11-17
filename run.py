@@ -653,19 +653,21 @@ def run_calculations(user):
     # Give the user option to change budget, change goal or continue
     type_row_fast('\n\n\nWould you like to continue with cost analysis or do \
 you want to\nchange you goal or budget and run another calculation? \n\n(1) \
-Change goal\n(2) Change budget\n(3) Continue\n\n')
+Change goal\n(2) Change budget\n(3) Change goal and budget\n(4) Continue\n\n')
 
     # Run function ask question to ask if user wants to change budget or goal
-    responses = ["1", "2", "3"]
-    question = 'Enter "1", "2" or "3" here'
+    responses = ["1", "2", "3", "4"]
+    question = 'Enter "1", "2", "3" or "4" here'
 
     response = ask_question(responses, question)
 
     # Run different functions based on user choice
     if response in responses[0]:
-        goal(user), collect_data(user), run_calculations(user)
+        goal(user), run_calculations(user)
     elif response in responses[1]:
         collect_data(user), run_calculations(user)
+    elif response in responses[2]:
+        goal(user), collect_data(user), run_calculations(user)
 
     # Continue if user chooses nr 3
     type_text_slow("\n\nGreat, let's look through your expenses one by one\n\
