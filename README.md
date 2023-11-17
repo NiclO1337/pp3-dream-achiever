@@ -105,26 +105,36 @@ Not everyone is familiar with CLI terminal interface, therefor a tutorial was ad
 Starting this budget calculator with thinking about dreams and fun life goals is the best way to make something as boring as a budget calculator into a positive and uplifting user experience.
 
 <details><summary>Screenshot of the dream screen</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700233860/feature-dream_rn0jd8.jpg" alt="Picture of dream screen" width="600"/></p> </details>
-
+<details><summary>Screenshot of the goal screen</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700234996/feature-goal_nw1bac.jpg" alt="Picture of the goal screen" width="600"/></p> </details>
 
 ### Budget calculator
 
-TODO: Add text about feature
+The user is prompted to enter a specific goal and their financial data into various categories. The program then uses this data to make calculations about how long it will take the user to reach the goal.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO: ADD link to image of feature" alt="TODO: ADD name of feature" width="600"/></p> </details>
-
-
-### Input and error checking
+<details><summary>Screenshot of the results screen</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700236022/feature-results_rmpym1.jpg" alt="Picture of the results screen" width="600"/></p> </details>
 
 
+### Input validation and error handling
+
+To prevent errors, each input is validated through different critera. Program will only accept the valid form of input to prevent various errors that might occur and cause the program to fail.
+
+Program will also preemtivly check for ZeroDivisionError and adjust calculation and text output accordingly.
+
+<details><summary>Screenshot of an example of input validation</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700235534/feature-input-validation_bdkfex.jpg" alt="Picture of example of input validation" width="600"/></p> </details>
 
 ### Fast re-use calculator feature
 
+In order to make this a truly useful tool, the fast re-use feature was implemented. Right after the results the user can choose to try another calculation immediately. This makes the application much faster to use and re-use. This makes it a lot more user friendly.
+
+<details><summary>Screenshot of the fast re-use feature</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700236020/feature-fast-reuse_a1jyjk.jpg" alt="Picture of the fast re-use feature" width="600"/></p> </details>
 
 ### Financial analysis
 
+After the user has finished using the calculator, testing different budgets or calculated different goals they can choose to proceed with the financial analysis. Program will guide the user through all categories and give helpful insights for each one. And at the end, give the user the option for a special bonus tip.
 
+<details><summary>Screenshot of the financial analysis</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700237262/feature-financial-analysis_umxm7n.jpg" alt="Picture of the financial analysis" width="600"/></p> </details>
 
+<details><summary>Screenshot of the 50-30-20 rule</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700237262/feature-50-30-20_fjrxxp.jpg" alt="Picture of the 50-30-20 rule" width="600"/></p> </details>
 
 
 
