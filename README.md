@@ -137,8 +137,6 @@ After the user has finished using the calculator, testing different budgets or c
 <details><summary>Screenshot of the 50-30-20 rule</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700237262/feature-50-30-20_fjrxxp.jpg" alt="Picture of the 50-30-20 rule" width="600"/></p> </details>
 
 
-
-
 ## Future features
 - Add option to select different currencies to be displayed
 - Add option to select weekly or monthly income
@@ -156,6 +154,7 @@ After the user has finished using the calculator, testing different budgets or c
 
 - Git
 - GitHub
+- Heroku
 - Balsamiq
 - Lucidchart
 - VS Code
@@ -173,29 +172,43 @@ Program uses a User class to store the users financial data and help run calcula
 Testing made in separate file [TESTING.md](TESTING.md)
 
 ## Deployment
-Deployed to Heroku
+
+#### Deployment to Heroku
+
+1. Log in (or sign up) to Heroku. ( https://www.heroku.com/ )
+2. From the dashboard, create a "new app" and follow the instructions.
+3. When created go to the settings tab.
+    - Add a Config Var with PORT as the key and 8000 as value.
+    - Add 2 buildpacks, python and nodejs (in that order).
+4. Go to the deployment tab.
+    - Select GitHub as deployment method.
+    - Connect app to the correct repository.
+5. Choose to deploy either manully or enable automatic deploys.
 
 
+#### Changes to the code
+If changes has been made in local development, the requirements.txt might need to be updated.
+- It is done by entering the following command in the terminal: 'pip3 freeze > requirements.txt'
+- Updated file must then be commited and pushed to GitHub.
 
 ### Local development
 
 #### Forking the project for local development
 
-- Log in (or sign up) to Github.
-- Go to the repository for this project, [ TODO: ADD NAME ]( TODO: ADD LINK )
-- Click the Fork button in the top right corner.
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, [Dream Achiever](https://github.com/NiclO1337/pp3-dream-achiever).
+3. Click the Fork button in the top right corner.
 
 #### Cloning the project for local development
 
-- Log in (or sign up) to Github.
-- Go to the repository for this project, [ TODO: ADD NAME ]( TODO: ADD LINK )
-- Click on the code button, select whether you would like to clone with HTTPS, SSH, or GitHub CLI, and copy the link shown.
-Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, [Dream Achiever](https://github.com/NiclO1337/pp3-dream-achiever).
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH, or GitHub CLI, and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 Type 'git clone' into the terminal and then paste the link you copied in step 3. 
-- Press enter.
+5. Press enter.
 
-
-Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
+<br>Link to live website: [Dream Achiever](https://dream-achiever-3a6af54c4f68.herokuapp.com/) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
 
 ## Credits
