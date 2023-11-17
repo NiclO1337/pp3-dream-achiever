@@ -1,10 +1,10 @@
 
 # Dream Achiever
 
-![Amiresponsive image]( TODO: Add link )
+![Amiresponsive image](https://res.cloudinary.com/dmntcacug/image/upload/v1700167217/Amiresponsive_nl4tfn.png)
 
 
-Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
+Link to live website: [Dream Achiever](https://dream-achiever-3a6af54c4f68.herokuapp.com/) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
 <hr>
 
@@ -13,14 +13,11 @@ Link to live website: [ TODO: ADD NAME ]( TODO: ADD LINK )
 TODO: Update table of content
 
 * [Testing](#testing)
-    * [Automatic testing](#)
-        * [Validator testing](#validator-testing)
-        * [Lighthouse testing](#lighthouse-testing)
+    * [Automatic testing](#automatic-testing)
     * [Manual testing](#manual-testing)
         * [User goals](#user-goals)
         * [Features](#features)
         * [Browser](#browser)
-        * [Devices](#devices)
     * [Bugs](#bugs)
         * [Solved bugs](#solved-bugs)
         * [Unfixed bugs](#unfixed-bugs)
@@ -31,42 +28,7 @@ TODO: Update table of content
 
 ### Automatic testing
 
-### Validator Testing
-
-TODO:
-- HTML
-Validated through https://validator.w3.org/#validate_by_input and passed
-<br>![Passed without errors](https://res.cloudinary.com/dmntcacug/image/upload/v1693510294/html-validator-pass_lwfaja.jpg)
-
-TODO:
-- CSS
-Validated through https://jigsaw.w3.org/css-validator/validator and passed
-<br>![Passed without errors](https://res.cloudinary.com/dmntcacug/image/upload/v1693422108/css-validator-pass_xthpbi.jpg)
-
-TODO:
-- Python
-Validated through PEP8 validator
-
-### Lighthouse testing
-
-Used lighthouse to test performance, accessibility, best practices, and search engine optimization of the website. 
-
-#### Main page
-
-Initial test result
-<p align="left"><img src="TODO: Add image of lighthouse testing" alt="Initial test result main page" width="250"/></p>
-
-Result after optimization
-<p align="left"><img src="TODO: Add image of lighthouse testing" alt="Initial test result main page" width="250"/></p>
-
-
-
-#### Improvements
-- 
-
-
-#### Left to improve
-- 
+Python code validated through [PEP8 validator](https://pep8ci.herokuapp.com/) - All clear, no errors found
 
 
 ## Manual testing
@@ -99,33 +61,21 @@ Website has been tested on Google Chrome, Microsoft Edge, Firefox, and Samsung I
 | **Other features** |
 |  |  |  |  |  |
 
-### Devices
-Manually tested on mobile device (Xiaomi 12), tablet (Samsung Galaxy tab S4) laptop, and desktop computer.
-
-| Devices | Expected outcome / responsive | Achived |
-| --- | --- | --- | 
-| Mobile (Xiaomi 12) | Looks as intended on this small screen size |  |
-| Tablet (Galaxy tab S4) | Looks as intended on this screen size |  |
-| Laptop (1366x768px) | Looks as intended on medium size screen |  |
-| Desktop (1920x1080px) | Looks as intended on big size screen |  |
-
-The desktop computer also tested with Chrome developer tools from 280 px wide screen up to 1920 px.
-Several media queries were created to make each feature responsive on different screen sizes. All testing was made on up-to-date browsers. 
-
 
 
 ## Bugs
 
 ### Solved bugs
 
-- 
-- 
-- 
-
-
-
+A large number of bugs was accidentally created during development and had to be fixed.
+Fixes included:
+- looking through code line by line
+- using print() statements to see what was acctually going on
+- review commit history
+- search google for possible solutions
+- a lot of trial and error
 
 
 ### Unfixed bugs
 
-- 
+- None
