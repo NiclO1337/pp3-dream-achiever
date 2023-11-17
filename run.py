@@ -9,6 +9,7 @@ import signal
 def welcome():
     """
     Start application on a welcome screen with a message
+    and give option to the user to do a CLI tutorial
     """
     type_row_slow(big_heading_center('Dream'))
     time.sleep(0.8)
@@ -45,6 +46,7 @@ def cli_tutorial():
     """
     Tutorial for users who are not experienced with CLI interface
     """
+    # Clear screen from the welcome message
     clear_screen()
 
     type_text_slow('\nWelcome to the CLI\n\n')
@@ -63,6 +65,7 @@ the graphical interface.')
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
 
+    # Teach user how to enter text
     type_text_slow("\nYou have already learned how to enter a number, now \
 let's try a text.\nThe input text here is case sensitive, ")
     type_text_slow('meaning "Hello" and \
@@ -77,6 +80,8 @@ to see\nwhat happens and then correctly write "Hello" with a capital H.\n\n')
 
     type_text_slow('\nHello friend!\n\n')
     time.sleep(0.8)
+
+    # Teach user about how multiple ENTER presses affect application
     type_text_slow('\nPressing ENTER multiple times can make program skip \
 through important parts\nquickly. If you accidentally press ENTER multiple \
 times and many things happen,\nscroll up to check so that you did not miss \
@@ -87,6 +92,7 @@ any important information.')
     type_text_slow('Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 \n\n')
 
+    # Ask user to enter OK to continue with the tutorial
     responses = ["OK"]
     question = 'Write "OK" into the termial and press ENTER'
 
@@ -98,6 +104,7 @@ current task.\n\nAre you ready for the final and most challenging test?\n\n")
 
     input('Press ENTER (once only) when ready...\n')
 
+    # Teach user about the importance of Ctrl-C
     type_text_slow('\nA very important thing to know about the CLI, if Ctrl+C \
 is pressed then the\nprogram stops immediately and you can not continue. \
 If you press Ctrl-C you\nhave to click on the "RUN PROGRAM" button above the \
@@ -152,7 +159,7 @@ life look like?\n\n')
 def goal(user):
     """
     Function to ask user to input a specific financial
-    goal and estimate the cost of this goal
+    goal and estimate the cost of that goal
     """
     type_row_slow(big_heading('Goal'))
     time.sleep(0.5)
@@ -202,7 +209,7 @@ def get_data(user, category):
     """
     get_text(category)
 
-    # Use the category name to create a proper attribute name
+    # Use the category name to create a proper attribute name for the class
     user_attribute = category.lower().replace(" ", "_").replace("&", "and")
 
     while True:
@@ -362,7 +369,7 @@ def validate_numbers(input):
               'calculate with negative numbers.\n')
         return False
 
-    # Check if input has more than 60 characters
+    # Check if input has more than 20 characters
     if len(input) > 20:
         print(f'\nInvalid data: number must be 20 characters or less.')
         return False
@@ -454,7 +461,7 @@ reach your goal!')
             years_text = ""
             and_text = ""
 
-        # do not display and/months or the word and if less than 1 month
+        # do not display months or the word and if less than 1 month
         if months == 0:
             months = ""
             months_text = ""
@@ -489,8 +496,8 @@ find some new extra income.')
 
 def get_cost_text(category):
     """
-    Function to print different messages
-    depending on the category of cost
+    Function to print different messages depending on the category of
+    cost and return the guideline % of income for the specified category
     """
     guideline_percent = 0
 
@@ -582,7 +589,7 @@ workplace pension you have already.')
 def check_costs(user, income, category):
     """
     Function to compare costs to the recommended values
-    and write budget recommendation to user
+    and write helpfil tips on how to cut costs
     """
     # Get text associated with each category and get the guideline percentage
     guideline_percent = get_cost_text(category)
@@ -609,6 +616,7 @@ def check_costs(user, income, category):
     else:
         comparason = "also"
 
+    # Write message to user with comparason to general guidelines
     type_row_fast(f'\n\nGeneral guidelines to spend in this category is \
 {guideline_percent}% of your total income.')
     if income == 0:
@@ -626,6 +634,7 @@ def run_calculations(user):
     """
     Run all calculations to check if there is a budget surplus
     and check how long it will take to reach the specified goal.
+    Give user the option to change goal/budget or continue.
     Then iterate through the categories to print text on each
     category and compare budgets with the general recommendation.
     """
@@ -658,12 +667,14 @@ Change goal\n(2) Change budget\n(3) Continue\n\n')
     elif response in responses[1]:
         collect_data(user), run_calculations(user)
 
+    # Continue if user chooses nr 3
     type_text_slow("\n\nGreat, let's look through your expenses one by one\n\
 and think about ways to reduce them.\n")
 
     type_text_slow('\n\nPress ENTER to continue...\n')
     input()
 
+    # Iterate through categories of costs and present analysis
     categories = ["Housing", "Utilities", "Food", "Transportation",
                   "Clothing", "Medical", "Personal & Discretionary",
                   "Debt Payments", "Boring savings"]
@@ -676,7 +687,8 @@ and think about ways to reduce them.\n")
 
 def thank_you(user):
     """
-    Thank the user for using the calculator and give another helpful tip
+    Thank the user for using the calculator and give the
+    option for another helpful budgeting tip
     """
     type_row_fast(big_heading('\nThank'))
     type_text_slow('you for using our budget calculator!\nWe hope this helped \
@@ -764,7 +776,7 @@ def start_over(user):
 
 def good_bye():
     """
-    Say good bye to user
+    Say good bye to user and exit the application
     """
     type_row_fast(big_heading('\nGood bye'))
     type_row_fast('Hope you had a pleasant experience and good luck\nreaching \
@@ -790,7 +802,8 @@ def ask_question(responses, question):
 
 def validate_response(response, responses):
     """
-    Validate the response and give feedback to user if wrong
+    Validate the response from ask question function
+    and give feedback to user if wrong.
     """
     if response not in responses:
         print('Sorry, I do not understand what you mean.')
@@ -880,7 +893,7 @@ def heading(text):
 
 def handler(signum, frame):
     """
-    Custom message when user presses Ctrl-c instead of error.
+    Custom message when user presses Ctrl-c instead of error and exit program.
     Source:
     https://code-maven.com/catch-control-c-in-python
     """
@@ -904,7 +917,7 @@ def clear_screen():
 
 class User:
     """
-    Creates an instance of a User
+    Creates an instance of a user
     """
     def __init__(self):
         pass
