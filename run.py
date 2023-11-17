@@ -394,7 +394,7 @@ def calc_budget_surplus(user, income):
     else:
         type_text_slow(f'\n\nLooks like somebody did their homework and came \
 prepared, well done!\nYour income ({income}) and expenses ({expenses}) \
-are the same amount.\n')
+are the same amount.')
 
     return budget_surplus
 
@@ -655,10 +655,10 @@ def run_calculations(user):
     for category in categories:
         check_costs(user, income, category)
 
-    thank_you()
+    thank_you(user)
 
 
-def thank_you():
+def thank_you(user):
     """
     Thank the user for using the calculator and give another helpful tip
     """
@@ -679,12 +679,12 @@ can use when\nplanning your budget? It is called the 50-30-20 rule.\n')
 
     # If user chooses a variation of Yes, display recommendation, else continue
     if response in responses[0:5]:
-        another_recommendation()
+        another_recommendation(user)
     else:
-        start_over()
+        start_over(user)
 
 
-def another_recommendation():
+def another_recommendation(user):
     """
     Give another helpful tip if user chooses to learn it
     """
@@ -723,10 +723,10 @@ belongs in this category, too.')
     type_row_fast('\n\nPress ENTER to continue...\n')
     input()
 
-    start_over()
+    start_over(user)
 
 
-def start_over():
+def start_over(user):
     """
     Give user the option to start calculator over again
     """
@@ -741,7 +741,7 @@ def start_over():
 
     # If user chooses a variation of Yes, start over, else continue
     if response in responses[0:5]:
-        main()
+        goal(user), collect_data(user), run_calculations(user)
     else:
         good_bye()
 
@@ -922,13 +922,15 @@ def main():
     # used to catch ctrl-c click
     signal.signal(signal.SIGINT, handler)
 
-    welcome()
-    intro_budget_guidelines()
-    dream()
-    goal(user_one)
-    intro_budget_calc()
-    collect_data(user_one)
-    run_calculations(user_one)
+    # welcome()
+    # intro_budget_guidelines()
+    # dream()
+    # goal(user_one)
+    # intro_budget_calc()
+    # collect_data(user_one)
+    # run_calculations(user_one)
 
+    thank_you(user_one)
+    
 
 main()
