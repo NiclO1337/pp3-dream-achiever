@@ -16,26 +16,29 @@ TODO: Update table of content
         * [Website goals](#website-goals)
         * [User goals](#user-goals)
 * [Design](#design)
-    * [Colours](#colours)
-    * [Typography](#typography)
-    * [Images](#images)
     * [Wireframes](#wireframes)
-    * [Accessiblity](#accessiblity)
+    * [Flowchart](#flowchart)
 * [Features](#features)
-    * [The welcome image](#the-welcome-image)
-    * [The navigation bar](#the-navigation-bar)
-    * [Links](#links)
-    * [The main content](#the-main-content)
-    * [The recipe section](#the-recipe-section)    
-    * [The Gallery page](#the-gallery-page)
-    * [The About us page](#the-about-us-page)
-    * [The Footer](#the-footer)
+    * [Welcome screen](#welcome-screen)
+    * [Controlled speed](#controlled-speed)
+    * [CLI tutorial](#cli-tutorial)
+    * [Dreams and goals](#dreams-and-goals)
+    * [Budget calculator](#budget-calculator)    
+    * [Input validation and error handling](#input-validation-and-error-handling)
+    * [Fast re-use](#fast-re-use)
+    * [Financial analysis](#financial-analysis)
 * [Future features](#future-features)
 * [Technologies used](#technologies-used)
     * [Languages](#languages)
     * [Frameworks & Tools](#frameworks--tools)
+* [Data model](#data-model)
 * [Testing](#testing)
 * [Deployment](#deployment)
+    * [Heroku](#deployment-to-heroku)
+    * [Changes](#changes-to-the-code)
+    * [Local development](#local-development)
+        * [Forking](#forking-the-project)
+        * [Cloning](#cloning-the-project)
 * [Credits](#credits)
     * [Content](#content)
     * [Media](#media)
@@ -68,13 +71,12 @@ After the calculator is done and results are presented, helpful tips are shown o
 
 
 ## Design
+#### Wireframes
+<details><summary>Screenshot of the initial wireframes</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1699387577/PP3_Wireframe_dxzz7q.png" alt="Picture of the wireframes" width="600"/></p> </details>
 
-### Wireframes
+#### Flowchart
 
-<p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1699387577/PP3_Wireframe_dxzz7q.png" alt="Image of wireframes" width="800"/></p>
-
-
-### Flowchart
+Shows the first sketch of the basic logic used by the application and project goals. It show the users path through the application. More complicated features were added later to give user more options on how to navigate.
 
 <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1699359420/Flowchart_-_PP3_hyhjx7.png" alt="Flowchart image" width="800"/></p>
 
@@ -122,7 +124,7 @@ Program will also preemtivly check for ZeroDivisionError and adjust calculation 
 
 <details><summary>Screenshot of an example of input validation</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700235534/feature-input-validation_bdkfex.jpg" alt="Picture of example of input validation" width="600"/></p> </details>
 
-### Fast re-use calculator feature
+### Fast re-use
 
 In order to make this a truly useful tool, the fast re-use feature was implemented. Right after the results the user can choose to try another calculation immediately. This makes the application much faster to use and re-use. This makes it a lot more user friendly.
 
@@ -193,13 +195,13 @@ If changes has been made in local development, the requirements.txt might need t
 
 ### Local development
 
-#### Forking the project for local development
+#### Forking the project
 
 1. Log in (or sign up) to Github.
 2. Go to the repository for this project, [Dream Achiever](https://github.com/NiclO1337/pp3-dream-achiever).
 3. Click the Fork button in the top right corner.
 
-#### Cloning the project for local development
+#### Cloning the project
 
 1. Log in (or sign up) to Github.
 2. Go to the repository for this project, [Dream Achiever](https://github.com/NiclO1337/pp3-dream-achiever).
