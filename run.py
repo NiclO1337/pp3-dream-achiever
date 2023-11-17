@@ -918,6 +918,10 @@ def clear_screen():
 class User:
     """
     Creates an instance of a user
+
+    (Would have made more sense to start application with the class
+    and build everything around it, instead of implementing it afterwards
+    and forcing it to work with the existing code.)
     """
     def __init__(self):
         pass
