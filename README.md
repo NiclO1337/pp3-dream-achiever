@@ -168,6 +168,16 @@ After the user has finished using the calculator, testing different budgets or c
 ## Data model
 
 Program uses a User class to store the users financial data and help run calculations.
+<br>Class is populated with properties through iterating a lists of categories.
+
+### Control structures
+- **Sequential**
+<br>The default flow control stucture of the application is sequential
+- **Selection**
+<br>Implementing different choices and complex if-elif-else statements changes the outcome of the application based on the users input.
+- **Repetition**
+<br>For and while loops are used to collect data For each category from user While validating the input.
+
 
 ## Testing
 
