@@ -139,6 +139,16 @@ After the user has finished using the calculator, testing different budgets or c
 <details><summary>Screenshot of the 50-30-20 rule</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700237262/feature-50-30-20_fjrxxp.jpg" alt="Picture of the 50-30-20 rule" width="600"/></p> </details>
 
 
+### Security
+
+Validating every user input protects against malicious attacks.
+
+User data is not stored, therefor the user can feel completely safe entering their sensitive information into this application.
+
+<details><summary>Screenshot of the security feature</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700310997/feature-security_tbofb7.jpg" alt="Picture of the security feature" width="600"/></p> </details>
+
+
+
 ## Future features
 - Add option to select different currencies to be displayed
 - Add option to select weekly or monthly income
@@ -164,6 +174,14 @@ After the user has finished using the calculator, testing different budgets or c
 - Stack Overflow
 - Pyfiglet
 - Favicon.io
+
+### Libraries used
+ - **Math**,  imported to be able to use standard math functions such as rounding numbers.
+ - **Pyfiglet**, used to style headings for a better visual user experience
+ - **Sys**, needed to typing characters out slowly to the terminal
+ - **Time**, delaying application actions for a smoother user experience
+ - **Os**, enables the option to clear the screen when needed 
+ - **Signal**, used to be able to catch the Ctrl-C error
 
 ## Data model
 
