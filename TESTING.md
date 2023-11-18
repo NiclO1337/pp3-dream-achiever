@@ -24,7 +24,6 @@ TODO: Update table of content
         * [Unfixed bugs](#unfixed-bugs)
 
 
-
 ## Testing
 
 ### Automatic testing
@@ -55,7 +54,7 @@ Python code validated through [PEP8 validator](https://pep8ci.herokuapp.com/) - 
 | Enter tutorial | Start the tutorial | Enter the option "1" into terminal and press ENTER | Tutorial starts | Pass |
 | Tutorial step 1 | Continue tutorial | Press ENTER as instructed | Tutorial continues | Pass |
 | Tutorial step 2 | Continue tutorial | Enter the required text "hello" and "Hello" into the terminal | Tutorial continues to the next lesson | Pass |
-| Tutorial step 3 | Continue tutorial | Press enter a few times quickly, then enter "OK" as instructed | Tutorial continues and explains the previous lesson | Pass |
+| Tutorial step 3 | Continue tutorial | Press enter a few times quickly, then enter "OK" when instructed | Tutorial continues and explains the previous lesson | Pass |
 | Tutorial step 4 | End application | Read information and then press "Ctrl-C" | Message is displayed saying that Ctrl-C was pressed and then application stops running | Pass |
 | **Dreams and goals** |
 | Goals | Be able to enter goal | Write a goal when prompted and press ENTER | Application confirms input was valid by printing it to the terminal and proceeding to the next screen | Pass |

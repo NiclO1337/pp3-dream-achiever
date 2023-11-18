@@ -50,9 +50,9 @@ TODO: Update table of content
 
 This website is a financial tool made to help people reach their goals and achieve their dreams. It does so by providing a simple budget calculator that is very easy to use. The user enters data about income and expenses into easy user-friendly categories and then the program calculates how long it will take to reach their goal. 
 
-It helps people to think about budget as something fun instead of boring or restricting. It is about prioritizing what is the most important and make a realistic plan to achieve it.
+It helps people to think about budgeting as something fun instead of boring or restricting. It is about prioritizing what is the most important and making a realistic plan to achieve it.
 
-After the calculator is done and results are presented, helpful tips are shown on how to cut costs and some insights on how to think about each category. It also compares the users budget to the general guidelines from the Credit Counselling Society. The user also has an option to learn about another easy to use budgeting tool before leaving.
+After the calculator is done and results are presented, helpful tips are shown on how to cut costs and some insights on how to think about each category. It also compares the user's budget to the general guidelines from the Credit Counselling Society. The user also has an option to learn about another easy-to-use budgeting tool before leaving.
 
 
 ### User stories
@@ -98,7 +98,7 @@ A combination of fast and slow text generation is used to create a pleasant user
 
 ### CLI tutorial
 
-Not everyone is familiar with CLI terminal interface, therefor a tutorial was added so that the user can learn how to use the application as well as some general do's and dont's. Also helpful information about budgeting and how to use the calculator is given to the user at appropriate times throughout the application.
+Because not everyone is familiar with the CLI terminal, a tutorial was implemented to teach the user how to use the application as well as some general do's and dont's. Helpful information about budgeting and how to use the calculator is given to the user at appropriate times throughout the application.
 
 <details><summary>Screenshot of the feature</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700233258/feature-cli-tutorial_vqzfza.jpg" alt="Picture of option for CLI tutorial" width="600"/></p> </details>
 
@@ -126,7 +126,7 @@ Program will also preemtivly check for ZeroDivisionError and adjust calculation 
 
 ### Fast re-use
 
-In order to make this a truly useful tool, the fast re-use feature was implemented. Right after the results the user can choose to try another calculation immediately. This makes the application much faster to use and re-use. This makes it a lot more user friendly.
+In order to make this a truly useful tool, the fast re-use feature was implemented. Right after the results the user can choose to try another calculation immediately. This makes the application much faster to use and re-use, and makes it a lot more user friendly.
 
 <details><summary>Screenshot of the fast re-use feature</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700236020/feature-fast-reuse_a1jyjk.jpg" alt="Picture of the fast re-use feature" width="600"/></p> </details>
 
@@ -141,9 +141,9 @@ After the user has finished using the calculator, testing different budgets or c
 
 ### Security
 
-Validating every user input protects against malicious attacks.
+Validating every user input creates a defensive design that runs correctly and keeps running no matter what action the user takes.
 
-User data is not stored, therefor the user can feel completely safe entering their sensitive information into this application.
+User data is not saved, so everyone can feel completely safe entering their sensitive information into this application.
 
 <details><summary>Screenshot of the security feature</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700310997/feature-security_tbofb7.jpg" alt="Picture of the security feature" width="600"/></p> </details>
 
@@ -185,16 +185,16 @@ User data is not stored, therefor the user can feel completely safe entering the
 
 ## Data model
 
-Program uses a User class to store the users financial data and help run calculations.
-<br>Class is populated with properties through iterating a lists of categories.
+Program uses a User class to store the users financial data and help run calculations.<br> 
+Class is populated with properties through iterating a lists of categories.
 
 ### Control structures
-- **Sequential**
-<br>The default flow control stucture of the application is sequential
-- **Selection**
-<br>Implementing different choices and complex if-elif-else statements changes the outcome of the application based on the users input.
-- **Repetition**
-<br>For and while loops are used to collect data For each category from user While validating the input.
+- **Sequential**<br>
+The default flow control stucture of the application is sequential.
+- **Selection**<br>
+Implementing different choices and complex if-elif-else statements changes the outcome of the application based on the users input.
+- **Repetition**<br>
+For and while loops are used to collect data For each category from user While validating the input.
 
 
 ## Testing
