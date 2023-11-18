@@ -64,7 +64,7 @@ After the calculator is done and results are presented, helpful tips are shown o
 
 #### User goals
 - Think about goals and dreams
-- Get helpful tips on how to achive those goals and dreams
+- Learn how to achive those goals and dreams
 - Know how to use the application
 - Calculate budget and see how long it takes to reach a specific goal
 - Try different budgets or calculate for different goals
