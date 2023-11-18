@@ -921,17 +921,17 @@ class User:
     """
     Creates an instance of a user
 
-    (Would have made more sense to start application with the class
+    (Would have made more sense to start the project with the class
     and build everything around it, instead of implementing it afterwards
-    and forcing it to work with the existing code.)
+    and forcing it to work with the existing code. It could have been more
+    useful and integral to the application then it is now.)
     """
     def __init__(self):
         pass
 
     def total_income(self):
         # Sum up income and extra income into total income
-        return list(self.__dict__.values())[2] + \
-               list(self.__dict__.values())[3]
+        return self.income + self.extra_income
 
     def total_costs(self):
         # Get values from user and slice list to get the costs and sum them up
