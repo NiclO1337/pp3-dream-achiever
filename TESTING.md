@@ -18,6 +18,7 @@ TODO: Update table of content
         * [User goals](#user-goals)
         * [Features](#features)
         * [Browser](#browser)
+        * [Devices](#devices)
     * [Bugs](#bugs)
         * [Solved bugs](#solved-bugs)
         * [Unfixed bugs](#unfixed-bugs)
@@ -82,7 +83,7 @@ Python code validated through [PEP8 validator](https://pep8ci.herokuapp.com/) - 
 | **Other features** |
 | Financial analysis | Show analysis with entered budget | Enter data in budget calculator and choose to continue with cost analysis | Cost analysis based on budget input is displayed and compared with general guidelines | Pass |
 | Bonus tip: Yes | Able to choose to see a bonus tip | Write "Yes" and press enter when prompted | Bonus tip is displayed | Pass |
-| Bonus tip: Yes | Able to skip bonus tip | Write "No" and press enter when prompted | Bonus tip is not displayed | Pass |
+| Bonus tip: No | Able to skip bonus tip | Write "No" and press enter when prompted | Bonus tip is not displayed | Pass |
 | Start over: Yes | Able to start over with new calculation | Write "Yes" and press enter when prompted | Calculator is restarted and new goal and budget needs to be entered | Pass |
 | Start over: No | Able to choose to end application instead of starting over | Write "No" and press enter when prompted | A final message is displayed and application ends | Pass |
 
@@ -92,10 +93,22 @@ Website has been tested on Google Chrome, Microsoft Edge, Firefox, and Samsung I
 
 | Feature tested \  On browser | Google Chrome | Microsoft Edge | Firefox | Samsung Internet  |
 | --- | --- | --- | --- | --- |
-|  |  |  |  |  |
-| **Other features** |
-|  |  |  |  |  |
+| Works as intended | Pass  | Pass | Pass | Pass |
 
+
+### Devices
+Manually tested on mobile device (Xiaomi 12), tablet (Samsung Galaxy tab S4) laptop, and desktop computer.
+
+| Devices | Expected outcome / responsive | Achived |
+| --- | --- | --- | 
+| Mobile (Xiaomi 12) | Looks as intended on this small screen size | Fail |
+| Tablet (Galaxy tab S4) | Looks as intended on this screen size | Pass |
+| Laptop (1366x768px) | Looks as intended on medium size screen | Pass |
+| Desktop (1920x1080px) | Looks as intended on big size screen | Pass |
+
+Notes: 
+- This application uses a CLI terminal with a fixed size, it is not able to be displayed properly on a small screen such as mobile phone.
+- It works on tablet but it is not very convenient since the keyboard is displayed over the terminal window. On tablet using Samsung internet, there is a small visual bug where scroll bar is not displayed.
 
 
 ## Bugs
