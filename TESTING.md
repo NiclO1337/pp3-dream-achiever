@@ -66,8 +66,8 @@ Python code validated through [PEP8 validator](https://pep8ci.herokuapp.com/) - 
 | Negative value | Display error message | Attempt to enter the negative value " -5 " and press ENTER | Custom error message is displayed and data have to be entered again | Pass |
 | Too many characters | Display error message | Enter more than 20 characters | Custom error message is displayed and data have to be entered again | Pass |
 | **Text input validation** |
-| Empty field | Display error message | Press ENTER without writing anything into the terminal first | Custom error message is displayed and data have to be entered again | Pass |
-| Too many characters | Display error message | Enter more than 60 characters | Custom error message is displayed and data have to be entered again | Pass |
+| Empty field | Display error message | Press ENTER without writing anything into the terminal first | Custom error message is displayed and text have to be entered again | Pass |
+| Too many characters | Display error message | Enter more than 60 characters | Custom error message is displayed and text have to be entered again | Pass |
 | **Specific question validation** |
 | Enter valid data | Continue application | Enter one of the given valid options to the question | Input is accepted and application proceed according to the users choice | Pass |
 | Enter invalid data | Display error message | Enter something other then the valid responses | Custom error message is displayed and question is asked again | Pass |
@@ -82,9 +82,9 @@ Python code validated through [PEP8 validator](https://pep8ci.herokuapp.com/) - 
 | **Other features** |
 | Financial analysis | Show analysis with entered budget | Enter data in budget calculator and choose to continue with cost analysis | Cost analysis based on budget input is displayed and compared with general guidelines | Pass |
 | Bonus tip: Yes | Able to choose to see a bonus tip | Write "Yes" and press enter when prompted | Bonus tip is displayed | Pass |
-| Bonus tip: No | Able to skip bonus tip | Write "No" and press enter when prompted | Bonus tip is not displayed | Pass |
+| Bonus tip: No | Able to skip bonus tip | Write "No" and press enter when prompted | Bonus tip is not displayed, application continues to next step | Pass |
 | Start over: Yes | Able to start over with new calculation | Write "Yes" and press enter when prompted | Calculator is restarted and new goal and budget needs to be entered | Pass |
-| Start over: No | Able to choose to end application instead of starting over | Write "No" and press enter when prompted | A final message is displayed and application ends | Pass |
+| Start over: No | Able to choose to end application instead of starting over | Write "No" and press enter when prompted | A final message is displayed and the application is terminated | Pass |
 
 
 ### Browser
