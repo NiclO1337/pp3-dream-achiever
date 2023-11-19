@@ -9,8 +9,6 @@ Link to live website: [Dream Achiever](https://dream-achiever-3a6af54c4f68.herok
 
 ## Table of contents
 
-TODO: Update table of content
-
 * [User Experience (UX)](#user-experience-ux)
     * [User stories](#user-stories)
         * [Website goals](#website-goals)
@@ -27,6 +25,7 @@ TODO: Update table of content
     * [Input validation and error handling](#input-validation-and-error-handling)
     * [Fast re-use](#fast-re-use)
     * [Financial analysis](#financial-analysis)
+    * [Security](#security)
 * [Future features](#future-features)
 * [Technologies used](#technologies-used)
     * [Languages](#languages)
@@ -118,7 +117,7 @@ The user is prompted to enter a specific goal and their financial data into vari
 
 ### Input validation and error handling
 
-To prevent errors, each input is validated through different critera. Program will only accept the valid form of input to prevent various errors that might occur and cause the program to fail.
+Each input is validated through different critera. Program will only accept the valid form of input to prevent various errors that might occur and cause the program to fail.
 
 Program will also preemtivly check for ZeroDivisionError and adjust calculation and text output accordingly.
 
@@ -126,7 +125,7 @@ Program will also preemtivly check for ZeroDivisionError and adjust calculation 
 
 ### Fast re-use
 
-In order to make this a truly useful tool, the fast re-use feature was implemented. Right after the results the user can choose to try another calculation immediately. This makes the application much faster to use and re-use, and makes it a lot more user friendly.
+In order to make this a truly useful tool, the fast re-use feature was implemented. Right after getting the results, the user can choose to try another calculation immediately. This makes the application much faster to use and re-use.
 
 <details><summary>Screenshot of the fast re-use feature</summary> <p align="left"><img src="https://res.cloudinary.com/dmntcacug/image/upload/v1700236020/feature-fast-reuse_a1jyjk.jpg" alt="Picture of the fast re-use feature" width="600"/></p> </details>
 
@@ -238,8 +237,6 @@ If changes has been made in local development, the requirements.txt might need t
 Type 'git clone' into the terminal and then paste the link you copied in step 3. 
 5. Press enter.
 
-<br>Link to live website: [Dream Achiever](https://dream-achiever-3a6af54c4f68.herokuapp.com/) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
-
 
 ## Credits
 
@@ -262,7 +259,7 @@ Image by Clker-Free-Vector-Images: [Favicon](https://pixabay.com/vectors/cloud-d
 
 - Inspiration from my own previous portfolio projects.
 
-- Code institute for providing the template with the deployment terminal.
+- Code institute for providing the premade (HTML, JS, CSS) template with the deployment terminal.
 
 - Pyfiglet [tutorial](https://www.youtube.com/watch?v=U1aUteSg2a4)
 
