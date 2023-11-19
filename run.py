@@ -172,6 +172,7 @@ best quality of life improvement right now. Could be for example getting away \
  a \nnew place. Or buying an expensive watch. One thing that is important to \
 you.\n\nYou do not need to write any details here, can be just a keyword.\n\n')
 
+    # While loop to validate the input for goal
     while True:
 
         goal = input('Goal:\n')
@@ -212,6 +213,7 @@ def get_data(user, category):
     # Use the category name to create a proper attribute name for the class
     user_attribute = category.lower().replace(" ", "_").replace("&", "and")
 
+    # While loop to validate the input for all financial data
     while True:
 
         data_input = input(f'{category}:\n')
@@ -793,6 +795,7 @@ def ask_question(responses, question):
     return the response. Keep asking until the answer matches
     one of the valid options in the responses list.
     """
+    # While loop to validate the input
     while True:
 
         response = input(f'{question}:\n')
